@@ -1,22 +1,7 @@
 <body>
- <div class="header-logos">
-  {{ 'combo-shot-logo.png' | asset_url | img_tag: 'combo shot logo','combo-shot-logo' }}
-  {{ 'trustpilot-rating.png' | asset_url | img_tag: 'trustpilot rating','trustpilot-rating' }}
- </div>
- <h1 class="premium-title-mobile">PREMIUM PACKAGE</h1>
-  <div class="hero-section">
-    <div class="hero-left">
-      <h1 class="premium-title">PREMIUM PACKAGE</h1>
-      <p class="premium-text">
-        Our incredible premium package gives you the beauty of <strong>Collagen V12</strong> 
-        with the daily <strong>joint support</strong> serum and our <strong>health boosting vitamins</strong> 
-        for an all round premium daily package, keeping you <strong>healthy beautiful and young.</strong>
-      </p>
-      <button class="premium-btn">LEARN MORE</button>
-    </div>
-  </div>
-  <div class="premium-package">
-    <h1 class="package-title">PREMIUM PACKAGE</h1>
-    <span class="package-underline"></span>
-  </div>
+  {% section 'combo-hero'%}
+  {% section 'combo-info-section'%}
+  {% section 'combo-bottles-section'%}
+  {% section 'combo-review-section'%}
+  {% section 'combo-footer-section'%}
 </body>

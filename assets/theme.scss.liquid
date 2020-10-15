@@ -6908,7 +6908,7 @@ body{
 
 .hero-section{
   position: relative;
-  background:url({{ 'Combo-Shot-Background.png'}});
+  background:url({{ 'Combo-Shot-Background.svg'}});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -6945,6 +6945,10 @@ body{
   margin: auto;
 }
 
+.premium-header{
+  margin: 0 0 15px;
+}
+
 .premium-title{
   font-family: 'Magallanes Regular';
   font-size: 40px;
@@ -6952,6 +6956,7 @@ body{
   font-weight: 600;
   text-align: left;
   color: #3276AF;
+  margin: 0;
 }
 
 .premium-title-mobile{
@@ -6959,12 +6964,17 @@ body{
   display: none;
 }
 
+.premium-price{
+  font-family: 'Magallanes Regular';
+  font-size: 20px;
+}
+
 .premium-text{
   width: 700px;
   font-size: 25px;
 }
 
-.premium-btn{
+.buy-btn{
   background: #EAEAEA;
   border: 1.4px solid #4A4A4A;
   box-sizing: border-box;
@@ -6975,21 +6985,24 @@ body{
   transition: 0.25s;
 }
 
-.premium-btn:hover{
+.buy-btn:hover{
   background-color: #3276AF;
   color: white;
   border-color: #3276AF;
   transition: 0.25s;
 }
 
-.premium-package{
+.package-section{
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: auto;
-  height: 500px;
-  background:url({{ 'blue-vector.png'}});
-  background-size: cover;
+  background: url({{ 'blue-vector.png'}});
+  background-size: 100% 100%;
+}
+
+.package-content{
+  width: 100%;
 }
 
 .package-title{
@@ -6997,9 +7010,22 @@ body{
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
   color: white;
   margin: 100px 144px 25px;
+}
+
+.package-button-container{
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.package-btn{
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 .package-underline{
@@ -7008,13 +7034,173 @@ body{
   border-bottom: 2px solid white;
 }
 
-.purple-vector{
-  width: 100%;
-  margin-top: -5px;
-}
-
 .main-content{
   padding: 0;
+}
+
+.package-info{
+  width: 100%;
+  display: flex;
+  margin: 50px;
+}
+
+.box-img-container{
+  width: 50%;
+}
+
+.box-img{
+  margin: auto 15px auto auto;
+  display: flex;
+  width: 35%
+}
+
+.info-text{
+  padding: 15px 0
+}
+
+.info-text-container{
+  width: 50%;
+  color: white;
+}
+
+.info-header{
+  width: 50%;
+  margin: auto auto auto 15px;
+  font-family: 'Magallanes Regular';
+  padding-bottom: 10px;
+}
+
+.info-paragraph{
+  width: 50%;
+  margin: auto auto auto 15px;
+  color: white;
+}
+
+.bottles-group{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.bottle-container{
+  width: 30%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.bottle-name{
+  margin: 5px auto;
+}
+
+.bottle-properties{
+  margin: 5px auto;
+}
+
+.bottle-text{
+  margin: auto;
+}
+
+.combo-bottle-img{
+  width: 40%;
+  margin: 5px auto;
+}
+
+.stars-img{
+  width: 30%;
+}
+
+.buy-btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-section{
+  padding: 100px 0 300px;
+}
+
+.reviews-header{
+  width: 100%;
+  text-align: center;
+  font-family: 'Magallanes Regular';
+}
+
+.reviews-group{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.review-container{
+  width: 30%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #F5F5F5;
+  padding: 15px;
+}
+
+.reivew-text{
+  margin: auto;
+}
+
+.rating{
+  display: flex;
+  width: 100%;
+}
+
+.trust-time{
+  margin: auto 0 auto auto;
+}
+
+.review-title{
+  margin: 5px auto;
+}
+
+.review-paragraph{
+  margin: 5px auto;
+  min-height: 100px;
+}
+
+.footer-section{
+  width: 100%;
+  position: absolute;
+  background-color: #F5F5F5;
+  padding: 15px 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-logo-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-img{
+  padding: 10px;
+}
+
+.footer-info-container{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /*======================================================================================================================= RESPONSIVE CSS =====================================================================================================================================================
@@ -7034,7 +7220,7 @@ body{
       background-repeat: no-repeat;
       background-size: 100%;
       width: 100%;
-      padding: 350px 0;
+      padding: 200px 0;
   }
   
     .hero-left{
@@ -7090,7 +7276,7 @@ body{
     margin: auto 5px;
   }
   
-  .premium-btn{
+  .buy-btn{
     width: 100%;
     padding: 10px 0;
     margin: 20px auto;
