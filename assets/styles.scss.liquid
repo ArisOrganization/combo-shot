@@ -27,6 +27,7 @@
     background-color: #6241BB;
     border-color: #6241BB;
     transition: 0.25s;
+    border: 1px solid #6241BB;
 }
 
 .blue:hover{
@@ -34,6 +35,7 @@
     background-color: #3276AF;
     border-color: #3276AF;
     transition: 0.25s;
+    border: 1px solid #3276AF;
 }
 
 .yellow:hover{
@@ -41,6 +43,7 @@
     background-color: #E9C546;
     border-color: #E9C546;
     transition: 0.25s;
+    border: 1px solid #E9C546;
 }
 
 .main-content{
@@ -405,11 +408,34 @@
   }
   
   .bottle-container{
+    position: relative;
     width: 30%;
     justify-content: center;
     display: flex;
     flex-direction: column;
     margin: auto;
+  }
+
+  .bottle-overlay{
+      position: absolute;
+      width: 75%;
+      height: 85%;
+      background-color: rgba(245, 245, 245, 0.92);
+      opacity: 0;
+      transition: 0.25s;
+      right: 10%;
+      top: 0;
+  }
+
+  .bottle-overlay-text{
+      padding: 50px;
+      width: 75%;
+      margin-left: 50px;
+  }
+
+  .bottle-overlay:hover{
+      transition: 0.25s;
+      opacity: 1;
   }
   
   .bottle-name{
