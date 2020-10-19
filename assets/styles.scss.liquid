@@ -62,14 +62,25 @@
 ///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
     
+    .home-hero-section{
+        position: relative;
+        background:url({{ 'combo-home-hero.png'}});
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        padding: 300px 0;
+        display: flex;
+        flex-direction: row;
+    }
+
     .gold-hero-section{
-      position: relative;
-      background:url({{ 'hero-background-gold.jpeg'}});
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      background-position-y: -450px;
-      padding: 300px 0;
+        position: relative;
+        background:url({{ 'hero-background-gold.jpeg'}});
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        background-position-y: -450px;
+        padding: 300px 0;
     }
 
     .premium-hero-section{
@@ -115,14 +126,44 @@
       margin-left: auto;
       margin-right: 0;
     }
-    
+
+    .home-hero-left {
+        width: 25%;
+        margin: auto 0 auto auto;
+    }
+
+    .home-hero-right{
+        width: 37%;
+        margin: auto auto auto 0;
+    }
+
     .hero-left{
-      width: 65%;
-      margin: auto;
+        width: 58%;
+        margin: auto;
     }
     
+    .home-header{
+        margin: 0 0 30px;
+      }
+
     .premium-header{
       margin: 0 0 15px;
+    }
+
+    .home-title{
+        font-family: 'Magallanes Regular';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        text-align: left;
+        color: white;
+        margin: 0;
+    }
+
+    .home-text{
+        width: 700px;
+        font-size: 25px;
+        color: white;
     }
     
     .premium-title{
@@ -193,6 +234,82 @@
     width: 105px;
     height: 31px;
 }
+
+///////////////////////////////////////////////////ALL PACKAGES CSS/////////////////////////////////////////////////
+///////////////////////////////////////////////////ALL PACKAGES CSS/////////////////////////////////////////////////
+///////////////////////////////////////////////////ALL PACKAGES CSS/////////////////////////////////////////////////
+
+.all-packages-title{
+    width: 100%;
+    text-align: center;
+    font-family: 'Magallanes Regular';
+}
+    
+
+.all-packages-text{
+    font-size: 18px;
+    margin: 15px 155px 15px auto;
+    width: 50%;
+    text-align: left;
+  }
+
+.all-packages-sub-text{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.all-packages-group{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 100px auto;
+  }
+  
+  .all-packages-container{
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .all-packages-name{
+    margin: 5px auto;
+  }
+  
+  .all-packages-properties{
+    margin: 5px auto;
+  }
+
+  .all-packages-details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .all-packages-name {
+    margin: 5px 10px 5px 0;
+}
+
+  .all-packages-img{
+    width: 61%;
+    margin: 5px auto 5px 150px;
+  }
+
+  .packages-type-container{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .packages-buy-btn{
+    padding: 10px 95px;
+    margin: 20px auto;
+    color: #636363;
+    font-size: 25px;
+  }
 
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
@@ -308,8 +425,8 @@
   }
   
   .combo-bottle-img{
-    width: 30%;
-    margin: 5px auto 5px 175px;
+    width: 50%;
+    margin: 5px auto 5px 85px;
   }
   
   .stars-img{
