@@ -1,0 +1,45 @@
+$(".one-month").hover(function(){
+    $(".one-month").html("£19.99");
+}, function(){
+    $(".one-month").html("1 MONTH");
+});
+
+$(".three-month").hover(function(){
+    $(".three-month").html("£54.99");
+}, function(){
+    $(".three-month").html("3 MONTHS");
+});
+
+$(".one-year").hover(function(){
+    $(".one-year").html("£200.00");
+}, function(){
+    $(".one-year").html("1 YEAR");
+});
+
+
+$(".bronze-btn").click(function(){
+    $(".bronze-package").fadeIn()
+    $(".bronze-btn").addClass("active-tab");
+    $(".premium-package").fadeOut()
+    $(".premium-btn").removeClass("active-tab");
+    $(".gold-package").fadeOut()
+    $(".gold-btn").removeClass("active-tab");
+  });
+
+$(".premium-btn").click(function(){
+    $(".bronze-package").fadeOut()
+    $(".bronze-btn").removeClass("active-tab");
+    $(".premium-package").fadeIn()
+    $(".premium-btn").addClass("active-tab");
+    $(".gold-package").fadeOut()
+    $(".gold-btn").removeClass("active-tab");
+});
+
+$(".gold-btn").click(function(){
+    $(".bronze-package").fadeOut()
+    $(".bronze-btn").removeClass("active-tab");
+    $(".premium-package").fadeOut()
+    $(".premium-btn").removeClass("active-tab");
+    $(".gold-package").fadeIn()
+    $(".gold-btn").addClass("active-tab");
+});

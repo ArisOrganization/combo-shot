@@ -1,3 +1,416 @@
-@import "scss/hero-gold";
-@import "scss/reviews-section";
-@import "scss/footer";
+///////////////////////////////////////////////////////BASE CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////BASE CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////BASE CSS/////////////////////////////////////////////////////
+
+@font-face {
+    font-family: 'Magallanes Regular';
+    src: url('MagallanesRegular.eot');
+    src: url('MagallanesRegular.eot?#iefix') format('embedded-opentype'),
+    url('MagallanesRegular.woff') format('woff'),
+    url('MagallanesRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: bold;
+    }
+    
+    body{
+      position: relative;
+      min-height: 100vh;
+      background-color: white;
+      color: {{ settings.color_body_text }};
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      width: 100%;
+    }    
+
+.purple:hover{
+    color: white;
+    background-color: #6241BB;
+    border-color: #6241BB;
+    transition: 0.25s;
+}
+
+.blue:hover{
+    color: white;
+    background-color: #3276AF;
+    border-color: #3276AF;
+    transition: 0.25s;
+}
+
+.yellow:hover{
+    color: white;
+    background-color: #E9C546;
+    border-color: #E9C546;
+    transition: 0.25s;
+}
+
+.main-content{
+    padding-top: 0!important;
+}
+
+.bronze-package{
+    display: none;
+}
+
+.premium-package{
+}
+
+.gold-package{
+    display: none;
+}
+
+///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
+    
+    .gold-hero-section{
+      position: relative;
+      background:url({{ 'hero-background-gold.jpeg'}});
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      background-position-y: -450px;
+      padding: 300px 0;
+    }
+
+    .premium-hero-section{
+      position: relative;
+      background:url({{ 'hero-background-premium.jpeg'}});
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      background-position-y: -450px;
+      padding: 300px 0;
+    }
+
+    .bronze-hero-section{
+      position: relative;
+      background:url({{ 'hero-background-bronze.jpeg'}});
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      background-position-y: -450px;
+      padding: 300px 0;
+    }
+    
+    .header-logos{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: auto;
+      position: absolute;
+      width: 70%;
+      top: 2%;
+      left: 18%;
+      z-index: 1000;
+    }
+    
+    .combo-shot-logo{
+      margin-left: 0;
+      margin-right: auto;
+    }
+    
+    .trustpilot-rating{
+      width: 109px;
+      height: 47.7px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+    
+    .hero-left{
+      width: 65%;
+      margin: auto;
+    }
+    
+    .premium-header{
+      margin: 0 0 15px;
+    }
+    
+    .premium-title{
+      font-family: 'Magallanes Regular';
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      text-align: left;
+      color: #3276AF;
+      margin: 0;
+    }
+
+    .gold-title{
+      font-family: 'Magallanes Regular';
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      text-align: left;
+      color: #6241BB;
+      margin: 0;
+    }
+
+    .bronze-title{
+      font-family: 'Magallanes Regular';
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      text-align: left;
+      color: #E9C546;
+      margin: 0;
+    }
+    
+    .premium-price{
+      font-family: 'Magallanes Regular';
+      font-size: 20px;
+    }
+    
+    .premium-text{
+      width: 700px;
+      font-size: 25px;
+    }
+    
+    .buy-btn{
+      background: #EAEAEA;
+      border: 1.4px solid #4A4A4A;
+      box-sizing: border-box;
+      color: {{ settings.color_body_text }};
+      font-size: 25px;
+      padding: 10px 140px;
+      margin: 20px 0;
+      transition: 0.25s;
+    }
+
+    .gold-type-container{
+      width: 25%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .gold-type{
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      margin: 5px;
+    }
+
+.gold-type-btn{
+    width: 105px;
+    height: 31px;
+}
+
+///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
+
+.info-section{
+    width: 100%;
+}
+
+.premium-info-content{
+    width: 100%;
+    background:url({{ 'blue-vector.png'}});
+    background-size: 100% 100%;
+    padding-top: 50px;
+}
+
+.gold-info-content{
+    width: 100%;
+    background:url({{ 'purple-vector.png'}});
+    background-size: 100% 100%;
+    padding-top: 50px;
+}
+
+.bronze-info-content{
+    width: 100%;
+    background:url({{ 'yellow-vector.png'}});
+    background-size: 100% 100%;
+    padding-top: 50px;
+}
+
+.info-title{
+    font-family: 'Magallanes Regular';
+    text-align: center;
+    color: white;
+}
+
+.info-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.active-tab{
+    transform: scale(1.25);
+    margin: auto 25px;
+}
+
+.package-info{
+    display: flex;
+    width: 50%;
+    margin: 50px auto 50px;
+}
+
+.box-img-container{
+    margin-right: 15px;
+}
+
+.box-img{
+}
+
+.info-text-container{
+    color: white;
+    margin-left: 15px;
+}
+
+.info-header{
+    margin: 0;
+    font-family: 'Magallanes Regular';
+}
+
+.info-paragraph{
+    color: white;
+    padding-bottom: 25px;
+}
+
+.package-btn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Magallanes Regular';
+    text-align: center;
+}
+
+////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
+////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
+////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
+
+.bottles-group{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+  }
+  
+  .bottle-container{
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .bottle-name{
+    margin: 5px auto;
+  }
+  
+  .bottle-properties{
+    margin: 5px auto;
+  }
+  
+  .bottle-text{
+    margin: auto;
+  }
+  
+  .combo-bottle-img{
+    width: 30%;
+    margin: 5px auto 5px 175px;
+  }
+  
+  .stars-img{
+    width: 30%;
+  }
+  
+  .buy-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+/////////////////////////////////////////////////////REVIEW CSS///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////REVIEW CSS///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////REVIEW CSS///////////////////////////////////////////////////////
+
+  .reviews-section{
+    padding: 100px 0 300px;
+  }
+  
+  .reviews-header{
+    width: 100%;
+    text-align: center;
+    font-family: 'Magallanes Regular';
+  }
+  
+  .reviews-group{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+  }
+  
+  .review-container{
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #F5F5F5;
+    padding: 15px;
+  }
+  
+  .reivew-text{
+    margin: auto;
+  }
+  
+  .rating{
+    display: flex;
+    width: 100%;
+  }
+  
+  .trust-time{
+    margin: auto 0 auto auto;
+  }
+  
+  .review-title{
+    margin: 5px auto;
+  }
+  
+  .review-paragraph{
+    margin: 5px auto;
+    min-height: 100px;
+  }
+
+////////////////////////////////////////////////////FOOTER CSS/////////////////////////////////////////////////////
+////////////////////////////////////////////////////FOOTER CSS/////////////////////////////////////////////////////
+////////////////////////////////////////////////////FOOTER CSS/////////////////////////////////////////////////////
+
+
+.footer-section{
+    width: 100%;
+    position: absolute;
+    background-color: #F5F5F5;
+    padding: 15px 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .footer-logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-social-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-img{
+    padding: 10px;
+  }
+  
+  .footer-info-container{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
