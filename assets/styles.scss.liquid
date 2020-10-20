@@ -54,14 +54,14 @@
     padding-top: 0!important;
 }
 
-.bronze-package{
+.joint-package{
     display: none;
 }
 
 .premium-package{
 }
 
-.gold-package{
+.collagen-package{
     display: none;
 }
 
@@ -80,33 +80,33 @@
         flex-direction: row;
     }
 
-    .gold-hero-section{
+    .collagen-hero-section{
         position: relative;
-        background:url({{ 'hero-background-gold.jpeg'}});
+        background:url({{ 'hero-background-collagen.jpeg'}});
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        background-position-y: -450px;
+        background-position-y: -390px;
         padding: 300px 0;
     }
 
-    .premium-hero-section{
+    .premium-care-hero-section{
       position: relative;
-      background:url({{ 'hero-background-premium.jpeg'}});
+      background:url({{ 'hero-background-premium-care.jpeg'}});
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      background-position-y: -450px;
+      background-position-y: -390px;
       padding: 300px 0;
     }
 
-    .bronze-hero-section{
+    .joint-hero-section{
       position: relative;
-      background:url({{ 'hero-background-bronze.jpeg'}});
+      background:url({{ 'hero-background-joint.jpeg'}});
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      background-position-y: -450px;
+      background-position-y: -390px;
       padding: 300px 0;
     }
     
@@ -125,6 +125,13 @@
     .combo-shot-logo{
       margin-left: 0;
       margin-right: auto;
+      cursor: pointer;
+    }
+
+    .combo-shot-logo-light{
+      margin-left: 0;
+      margin-right: auto;
+      cursor: pointer;
     }
     
     .trustpilot-rating{
@@ -183,7 +190,7 @@
       margin: 0;
     }
 
-    .gold-title{
+    .collagen-title{
       font-family: 'Magallanes Regular';
       font-size: 40px;
       font-style: normal;
@@ -193,7 +200,7 @@
       margin: 0;
     }
 
-    .bronze-title{
+    .joint-title{
       font-family: 'Magallanes Regular';
       font-size: 40px;
       font-style: normal;
@@ -224,20 +231,20 @@
       transition: 0.25s;
     }
 
-    .gold-type-container{
+    .collagen-type-container{
       width: 25%;
       display: flex;
       justify-content: flex-start;
     }
 
-    .gold-type{
+    .collagen-type{
       width: 30%;
       display: flex;
       flex-direction: row;
       margin: 5px;
     }
 
-.gold-type-btn{
+.collagen-type-btn{
     width: 105px;
     height: 31px;
 }
@@ -305,17 +312,17 @@
     margin: 5px auto 5px 150px;
   }
 
-  .packages-type-container{
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-  }
-
   .packages-buy-btn{
     padding: 10px 95px;
     margin: 20px auto;
     color: #636363;
     font-size: 25px;
+  }
+
+  .starting-text{
+    margin: 5px auto;
+    font-size: 20px;
+    color: #3276AF;
   }
 
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
@@ -333,14 +340,14 @@
     padding-top: 50px;
 }
 
-.gold-info-content{
+.collagen-info-content{
     width: 100%;
     background:url({{ 'purple-vector.png'}});
     background-size: 100% 100%;
     padding-top: 50px;
 }
 
-.bronze-info-content{
+.joint-info-content{
     width: 100%;
     background:url({{ 'yellow-vector.png'}});
     background-size: 100% 100%;
@@ -404,7 +411,7 @@
 ////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
 
 .bottles-group{
-    width: 75%;
+    width: 77%;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -417,29 +424,28 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: auto;
   }
 
   .bottle-overlay{
-      position: absolute;
-      width: 80%;
-      height: 85%;
-      background-color: rgba(245, 245, 245, 0.92);
-      opacity: 0;
-      transition: 0.25s;
-      right: 10%;
-      top: 0;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(245,245,245,0.92);
+    opacity: 0;
+    transition: 0.25s;
+    right: 10%;
+    top: 0;
   }
 
   .bottle-overlay-text{
-      padding: 60px;
-      width: 75%;
-      margin-left: 75px;
+    padding: 50px;
+    width: 60%;
+    margin-left: 105px;
   }
 
   .bottle-overlay:hover{
-      transition: 0.25s;
-      opacity: 1;
+    transition: 0.25s;
+    opacity: 1;
   }
   
   .bottle-name{
@@ -455,8 +461,8 @@
   }
   
   .combo-bottle-img{
-    width: 50%;
-    margin: 5px auto 5px 85px;
+    width: 60%;
+    margin: 5px auto 5px 25px;
   }
   
   .stars-img{
@@ -591,11 +597,11 @@
     background-position-y: -100px;
   }
 
-  .gold-hero-section {
+  .collagen-hero-section {
     background-position-y: -100px;
   }
 
-  .bronze-hero-section {
+  .joint-hero-section {
     background-position-y: -100px;
   }
 
@@ -628,6 +634,12 @@
 
   .combo-bottle-img {
     margin: 5px auto 5px 65px;
+  }
+
+  .bottle-overlay-text {
+    padding: 10px 5px;
+    width: 75%;
+    margin-left: 75px;
   }
 
   ///////////////////////////////////////////////////////REVIEWS 1080/////////////////////////////////////////////////

@@ -1,3 +1,11 @@
+$(".combo-shot-logo").click(function(){
+    window.location = "/pages/home";
+});
+
+$(".combo-shot-logo-light").click(function(){
+    window.location = "/pages/home";
+});
+
 $(".one-month").hover(function(){
     $(".one-month").html("£19.99");
 }, function(){
@@ -36,67 +44,73 @@ $(".premium-one-year").hover(function(){
 });
 
 
-$(".gold-one-month").hover(function(){
-    $(".gold-one-month").html("£19.99");
+$(".collagen-one-month").hover(function(){
+    $(".collagen-one-month").html("£19.99");
 }, function(){
-    $(".gold-one-month").html("1 MONTH");
+    $(".collagen-one-month").html("1 MONTH");
 });
 
-$(".gold-three-month").hover(function(){
-    $(".gold-three-month").html("£54.99");
+$(".collagen-three-month").hover(function(){
+    $(".collagen-three-month").html("£54.99");
 }, function(){
-    $(".gold-three-month").html("3 MONTHS");
+    $(".collagen-three-month").html("3 MONTHS");
 });
 
-$(".gold-one-year").hover(function(){
-    $(".gold-one-year").html("£200.00");
+$(".collagen-one-year").hover(function(){
+    $(".collagen-one-year").html("£200.00");
 }, function(){
-    $(".gold-one-year").html("1 YEAR");
-});
-
-
-$(".bronze-one-month").hover(function(){
-    $(".bronze-one-month").html("£19.99");
-}, function(){
-    $(".bronze-one-month").html("1 MONTH");
-});
-
-$(".bronze-three-month").hover(function(){
-    $(".bronze-three-month").html("£54.99");
-}, function(){
-    $(".bronze-three-month").html("3 MONTHS");
-});
-
-$(".bronze-one-year").hover(function(){
-    $(".bronze-one-year").html("£200.00");
-}, function(){
-    $(".bronze-one-year").html("1 YEAR");
+    $(".collagen-one-year").html("1 YEAR");
 });
 
 
-$(".bronze-btn").click(function(){
-    $(".bronze-package").fadeIn()
-    $(".bronze-btn").addClass("active-tab");
+$(".joint-one-month").hover(function(){
+    $(".joint-one-month").html("£19.99");
+}, function(){
+    $(".joint-one-month").html("1 MONTH");
+});
+
+$(".joint-three-month").hover(function(){
+    $(".joint-three-month").html("£54.99");
+}, function(){
+    $(".joint-three-month").html("3 MONTHS");
+});
+
+$(".joint-one-year").hover(function(){
+    $(".joint-one-year").html("£200.00");
+}, function(){
+    $(".joint-one-year").html("1 YEAR");
+});
+
+
+$(".joint-btn").click(function(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    $(".joint-package").fadeIn()
+    $(".joint-btn").addClass("active-tab");
     $(".premium-package").fadeOut()
     $(".premium-btn").removeClass("active-tab");
-    $(".gold-package").fadeOut()
-    $(".gold-btn").removeClass("active-tab");
+    $(".collagen-package").fadeOut()
+    $(".collagen-btn").removeClass("active-tab");
   });
 
 $(".premium-btn").click(function(){
-    $(".bronze-package").fadeOut()
-    $(".bronze-btn").removeClass("active-tab");
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    $(".joint-package").fadeOut()
+    $(".joint-btn").removeClass("active-tab");
     $(".premium-package").fadeIn()
     $(".premium-btn").addClass("active-tab");
-    $(".gold-package").fadeOut()
-    $(".gold-btn").removeClass("active-tab");
+    $(".collagen-package").fadeOut()
+    $(".collagen-btn").removeClass("active-tab");
 });
 
-$(".gold-btn").click(function(){
-    $(".bronze-package").fadeOut()
-    $(".bronze-btn").removeClass("active-tab");
+$(".collagen-btn").click(function(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    $(".joint-package").fadeOut()
+    $(".joint-btn").removeClass("active-tab");
     $(".premium-package").fadeOut()
     $(".premium-btn").removeClass("active-tab");
-    $(".gold-package").fadeIn()
-    $(".gold-btn").addClass("active-tab");
+    $(".collagen-package").fadeIn()
+    $(".collagen-btn").addClass("active-tab");
 });
