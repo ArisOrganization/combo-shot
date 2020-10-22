@@ -116,7 +116,7 @@
           "zh-CN": "正文文本",
           "zh-TW": "內文"
         },
-        "default": "#333232"
+        "default": "#525252"
       },
       {
         "type": "color",
@@ -600,6 +600,93 @@
           "zh-TW": "背景"
         },
         "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "combo_color_primary",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "hi": "पृष्ठभूमि",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#5cdb97"
+      },
+      {
+        "type": "color",
+        "id": "combo_color_secondary",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "hi": "पृष्ठभूमि",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#05386b"
+      },
+      {
+        "type": "color",
+        "id": "combo_color_text",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "hi": "पृष्ठभूमि",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#edf5e1"
       }
     ]
   },

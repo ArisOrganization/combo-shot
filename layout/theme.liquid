@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
   <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
   <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   {%- assign header_font = settings.type_header_font -%}
   {%- assign base_font = settings.type_base_font -%}
@@ -17,7 +18,9 @@
   {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
-  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+
+  <link rel="preload" href="{{ 'theme.scss' | asset_url }}" as="style">
   <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
@@ -67,14 +70,14 @@
       performance.mark('debut:theme_stylesheet_loaded.end');
       performance.measure('debut:theme_stylesheet_loaded', 'debut:theme_stylesheet_loaded.start', 'debut:theme_stylesheet_loaded.end');
 
-      var url = "{{ 'theme.css' | asset_url }}";
+      var url = "{{ 'theme.scss' | asset_url }}";
       var link = document.querySelector('link[href="' + url + '"]');
       link.loaded = true;
       link.dispatchEvent(new Event('load'));
     }
   </script>
 
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+  <link rel="stylesheet" href="{{ 'theme.scss' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
 
   <style>
     {{ header_font | font_face: font_display: 'swap' }}
@@ -138,7 +141,7 @@
         predictiveSearchShowPrice: {{ settings.predictive_search_show_price | json }},
         predictiveSearchShowVendor: {{ settings.predictive_search_show_vendor | json }}
       },
-      stylesheet: "{{ 'theme.css' | asset_url }}"
+      stylesheet: "{{ 'theme.scss' | asset_url }}"
     }
 
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -149,6 +152,7 @@
   {%- endif -%}
 
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
 
   <script type="text/javascript">
@@ -163,6 +167,8 @@
   </script>
 
   {{ content_for_header }}
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body class="template-{{ request.page_type | handle }}">
@@ -173,7 +179,7 @@
     {% include 'cart-popup' %}
   {%- endif -%}
 
-  {% section 'header' %}
+     {% comment %}{% section 'header' %}{% endcomment %}
 
   <div class="page-container drawer-page-content" id="PageContainer">
 
@@ -181,11 +187,11 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+    <!--  {% comment %}{% section 'footer' %}{% endcomment %}
 
     <div id="slideshow-info" class="visually-hidden" aria-hidden="true">
       {{- 'sections.slideshow.navigation_instructions' | t -}}
-    </div>
+    </div> -->
 
   </div>
 
