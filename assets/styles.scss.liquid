@@ -15,15 +15,11 @@
     body{
       position: relative;
       min-height: 100vh;
-      background-color: white;
-      color: {{ settings.color_body_text }};
+      background-color: #F5F5F5!important;
+      color: #636363;
       font-family: 'Open Sans', sans-serif!important;
       font-size: 17px;
       width: 100%;
-    } 
-    
-    a{
-        margin: auto;
     }
 
 .purple:hover{
@@ -31,7 +27,6 @@
     background-color: #6241BB;
     border-color: #6241BB;
     transition: 0.25s;
-    border: 1px solid #6241BB;
 }
 
 .blue:hover{
@@ -39,7 +34,6 @@
     background-color: #3276AF;
     border-color: #3276AF;
     transition: 0.25s;
-    border: 1px solid #3276AF;
 }
 
 .yellow:hover{
@@ -47,11 +41,10 @@
     background-color: #E9C546;
     border-color: #E9C546;
     transition: 0.25s;
-    border: 1px solid #E9C546;
 }
 
 .main-content{
-    padding-top: 0!important;
+    padding: 0!important;
 }
 
 .joint-package{
@@ -65,19 +58,23 @@
     display: none;
 }
 
+section{
+  margin: 100px 0;
+}
+
 ///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////HERO CSS/////////////////////////////////////////////////////
     
     .home-hero-section{
-        position: relative;
-        background:url({{ 'combo-home-hero.png'}});
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        width: 100%;
-        padding: 300px 0;
-        display: flex;
-        flex-direction: row;
+      position: relative;
+      background: url(combo-home-hero.png);
+      background-repeat: no-repeat;
+      background-size: 100% 110%;
+      width: 100%;
+      padding: 300px 0 0;
+      display: flex;
+      flex-direction: row;
     }
 
     .collagen-hero-section{
@@ -86,18 +83,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        background-position-y: -390px;
-        padding: 300px 0;
+        background-position-y: -300px;
+        padding: 200px 0 150px;
     }
 
     .premium-care-hero-section{
-      position: relative;
       background:url({{ 'hero-background-premium-care.jpeg'}});
+      position: relative;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      background-position-y: -390px;
-      padding: 300px 0;
+      background-position-y: -300px;
+      padding: 200px 0 150px;
     }
 
     .joint-hero-section{
@@ -106,19 +103,19 @@
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      background-position-y: -390px;
-      padding: 300px 0;
+      background-position-y: -300px;
+      padding: 200px 0 150px;
     }
     
     .header-logos{
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin: auto;
+      margin: 0 auto 0;
       position: absolute;
-      width: 70%;
-      top: 2%;
-      left: 18%;
+      width: 80%;
+      top: 0.5%;
+      left: 10%;
       z-index: 1000;
     }
     
@@ -142,17 +139,17 @@
     }
 
     .home-hero-left {
-        width: 25%;
-        margin: auto 0 auto auto;
+      width: 40%;
+      margin: auto auto 150px 500px;
     }
 
     .home-hero-right{
-        width: 37%;
-        margin: auto auto auto 0;
+      width: 60%;
+      margin: -100px 150px auto auto;
     }
 
     .hero-left{
-        width: 58%;
+        width: 80%;
         margin: auto;
     }
     
@@ -221,14 +218,15 @@
     }
     
     .buy-btn{
-      background: #EAEAEA;
+      background: transparent;
       border: 1.4px solid #4A4A4A;
-      box-sizing: border-box;
       color: {{ settings.color_body_text }};
-      font-size: 25px;
-      padding: 10px 140px;
-      margin: 20px 0;
-      transition: 0.25s;
+      padding: 10px auto;
+      width: 350px;
+      height: 55px;
+      margin: 20px auto;
+      font-size: 20px;
+      text-align: center;
     }
 
     .collagen-type-container{
@@ -238,7 +236,7 @@
     }
 
     .collagen-type{
-      width: 100%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       margin: 5px 0;
@@ -247,11 +245,143 @@
     .collagen-type-btn{
       border-width: 1px;
       padding: 15px;
+      border-radius: 8px;
+      background-color: white;
+      text-align: left;
+    }
+
+    .payment-btn-text{
+      width: 75%;
+      text-align: center;
     }
 
     .collagen-buy-btn{
       border-width: 1px;
       padding: 15px;
+    }
+
+    .combo-packages-img{
+      width: 100%;
+    }
+
+    .find-btn-container{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 50px 0;
+    }
+
+    .about-btn-container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px 0;
+    }
+
+    .find-btn {
+      box-sizing: border-box;
+      font-size: 20px;
+      width: 380px;
+      height: 60px;
+      background-color: #EAEAEA;
+      border-style: solid;
+    }
+
+    .about-hero-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-header{
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-title{
+      font-family: 'Magallanes Regular';
+      color: #3476B0;
+    }
+
+    .details-container{
+      padding: 25px 0;
+    }
+
+    .details-title{
+      font-size: 17px;
+    }
+
+    .about-hero-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .questions-header{
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .questions-title{
+      font-family: 'Magallanes Regular';
+      color: #3476B0;
+    }
+
+    .number-group{
+      display: flex;
+      flex-direction: row;
+      width: 25%;
+    }
+
+    .number-container{
+      margin: auto;
+    }
+
+    .number{
+      background-color: white;
+      color: #525252;
+      padding: 10px 22px;
+      border-radius: 60px;
+      margin: 10px;
+      font-size: 30px;
+    }
+
+    .active-number{
+      background-color: #3476B0;
+      color: white;
+    }
+
+    .question{
+      margin: 75px 0 50px;
+      font-size: 22px;
+    }
+
+    .question-answers{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .answer-btn{
+      margin: 0 25px 25px 25px;
+      width: 165px;
+      height: 35px;
+      border-radius: 10px;
+      background-color: white;
+      border: 1px solid #4A4A4A;
+      transition: 0.25s;
+    }
+
+    .answer-btn:hover{
+      background-color: #3476B0;
+      color: white;
+      border: 1px solid #3476B0;
+      transition: 0.25s;
     }
 
 ///////////////////////////////////////////////////ALL PACKAGES CSS/////////////////////////////////////////////////
@@ -321,7 +451,8 @@
     padding: 10px 95px;
     margin: 20px auto;
     color: #636363;
-    font-size: 25px;
+    font-size: 20px;
+    display: flex;
   }
 
   .starting-text{
@@ -330,12 +461,17 @@
     color: #3276AF;
   }
 
+  .stars-img-packages{
+    width: 30%;
+  }
+
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////INFO CSS/////////////////////////////////////////////////////
 
 .info-section{
     width: 100%;
+    margin-top: 0;
 }
 
 .premium-info-content{
@@ -415,6 +551,8 @@
 ////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
 ////////////////////////////////////////////////////BOTTLES CSS/////////////////////////////////////////////////////
 
+.bottles-section{}
+
 .bottles-group{
     width: 77%;
     display: flex;
@@ -459,6 +597,7 @@
   
   .bottle-properties{
     margin: 5px auto;
+    color: #B1B1B1;
   }
   
   .bottle-text{
@@ -478,6 +617,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 50px 0;
   }
 
 /////////////////////////////////////////////////////REVIEW CSS///////////////////////////////////////////////////////
@@ -485,13 +625,19 @@
 /////////////////////////////////////////////////////REVIEW CSS///////////////////////////////////////////////////////
 
   .reviews-section{
-    padding: 100px 0 300px;
+    background-color: white;
+    padding: 50px 0;
+  }
+
+  .reviews-content{
+    padding-bottom: 100px;
   }
   
   .reviews-header{
     width: 100%;
     text-align: center;
     font-family: 'Magallanes Regular';
+    color: #000000;
   }
   
   .reviews-group{
@@ -509,13 +655,19 @@
     flex-direction: column;
     margin: auto;
     background-color: #F5F5F5;
-    padding: 15px;
+    padding: 24px;
+    border-radius: 10px;
   }
   
   .reivew-text{
     margin: auto;
+    color: #000000;
   }
   
+  .review-name{
+    font-size: 14px;
+  }
+
   .rating{
     display: flex;
     width: 100%;
@@ -527,11 +679,34 @@
   
   .review-title{
     margin: 5px auto;
+    color: #000000;
   }
   
   .review-paragraph{
     margin: 5px auto;
     min-height: 100px;
+    color: #000000;
+  }
+
+  .review-average{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .review-average-text{
+    color: #000000;
+  }
+
+  .review-underline{
+    text-decoration: underline;
+    text-decoration-color: #000000;
+  }
+
+  .trust-average-img{
+    margin: -15px 0 3px 5px;
   }
 
 ////////////////////////////////////////////////////FOOTER CSS/////////////////////////////////////////////////////
@@ -563,7 +738,8 @@
   }
   
   .social-img{
-    padding: 10px;
+    padding: 25px;
+    width: 80px;
   }
   
   .footer-info-container{
@@ -584,8 +760,7 @@
   //////////////////////////////////////////////////////HERO 1080////////////////////////////////////////////////////
   
   .find-btn {
-    width: 100%;
-    display: block;
+    box-sizing: border-box;
   }
 
   .buy-btn {
