@@ -1,0 +1,31 @@
+<section class="products-section">
+  {%- assign collection = collections['all'] -%}
+    <div class="all-packages-header">
+      <h2 class="all-packages-title">BROWSE OUR AMAZING PACKAGES</h1>
+      <p class="all-packages-sub-text">
+        Choose which package best suits you and the subscription options from
+        one month <span>to an annual package.</span>
+      </p>
+    </div>
+    <div class="all-packages-container">
+        {%- for item in collection.products -%}
+        <div class="package-card">
+            <div class="package-card-img">
+                <img src={{ item.featured_image | img_url: '450x450' }} alt="{{item.title}}">
+            </div>
+            <div class="title">
+                <p class='starts'>{{item.title}}</p>
+                 {{item.description | split: '#' | first }}
+            </div>
+            <div class="card-footer">
+                <div class="price">
+                    <p>Starting from {{item.price_max | divided_by: 12 | money}}</p>
+                </div>
+                  <a href="{{item.url}}" class="theme-button large">FIND OUT MORE</a>
+            </div>
+        </div>
+
+        {%- endfor -%}
+    </div>
+
+</section>

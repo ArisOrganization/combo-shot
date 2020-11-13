@@ -1,0 +1,29 @@
+{% include '1-header-light' %}
+<div class="shape"></div>
+<div class="home-hero">
+  <div class="home-hero-left">
+    <div class="home-header">
+      <h1 class="home-title">COMBO SHOT</h1>
+      <p class="home-text">
+        Your personal care package full of all your health needs.
+      </p>
+    </div>
+    <p class="home-text">
+      Our incredible premium package gives you the beauty of
+      <strong>Collagen V12</strong> with the daily
+      <strong>joint support</strong> serum and our
+      <strong>health boosting vitamins</strong> for an all round premium daily
+      package, keeping you <strong>healthy beautiful and young.</strong>
+    </p>
+    <div class="find-btn-container">
+      <a href="/pages/packages" class="theme-button purple"
+        >FIND YOUR PERFECT PACKAGE</a
+      >
+    </div>
+  </div>
+  <div class="home-hero-right">
+    <div class="img-container">
+      {{ 'combo-packages.png' | asset_url | img_tag: 'Combo Shot Packages','combo-packages-img' }}
+    </div>
+  </div>
+</div>
