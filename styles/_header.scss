@@ -1,0 +1,9 @@
+header {
+  &.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px clamp(20px, 10vw, 125px);
+    position: relative;
+    z-index: 1;
+  }
+}

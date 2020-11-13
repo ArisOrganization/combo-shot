@@ -1,0 +1,38 @@
+.product-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 70%;
+  height: 850px;
+}
+
+.product-info {
+  position: relative;
+  height: 750px;
+}
+
+#bronze-package {
+  .product-info {
+    background: url(#{'{{"bronze-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+#gold-package {
+  .product-info {
+    background: url(#{'{{"gold-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+#premium-package {
+  .product-info {
+    background: url(#{'{{"premiun-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
