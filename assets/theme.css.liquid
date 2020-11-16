@@ -229,8 +229,8 @@ header.header {
   font-weight: 700;
 }
 .all-bottles .bottle-card-img img {
-  width: 245.32px;
-  height: 426.79px;
+  width: 245px;
+  height: 425px;
 }
 .all-bottles .bottle-card-info {
   margin-top: -20px;
@@ -315,11 +315,6 @@ header.header {
   margin: 0 30px;
 }
 
-.social-img {
-  padding: 10px;
-  height: 50px;
-}
-
 .footer-other-links {
   padding: 10px;
   width: 100%;
@@ -369,4 +364,165 @@ header.header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+
+#about {
+  padding: 0 clamp(20px, 10vw, 125px);
+  margin-top: 75px;
+}
+#about .about-header {
+  margin-bottom: 55px;
+}
+#about .about-content .fact {
+  margin-bottom: 45px;
+}
+#about .about-content .fact p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+#about .about-content .fact p:first-of-type {
+  font-weight: 600;
+}
+#about .button-container .theme-button {
+  width: 100%;
+  max-width: 350px;
+  font-size: clamp(16px, 3vw, 18px);
+}
+
+#questions {
+  margin-top: 75px;
+}
+#questions .question-header {
+  margin-bottom: 45px;
+}
+#questions .question-header h1 {
+  text-align: center;
+  font-family: "Magallanes";
+  font-weight: 500;
+  font-size: 28px;
+  color: #3476b0;
+  text-transform: uppercase;
+}
+#questions .question-header p {
+  font-family: "Open Sans";
+  font-size: 18;
+  text-align: center;
+  color: #525252;
+}
+#questions .step-container {
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 750px;
+}
+#questions .step-container .step-question p {
+  font-family: "Open Sans";
+  font-size: 22px;
+  text-align: center;
+  color: #525252;
+  margin-bottom: 45px;
+}
+#questions .step-container .step-awnser {
+  display: flex;
+  justify-content: center;
+}
+#questions .step-container .step-awnser button {
+  width: 165px;
+  height: 37px;
+  margin: 15px;
+  border: none;
+  background: #ffffff;
+  border: 1px solid #4a4a4a;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 18px;
+  color: #4a4a4a;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+#questions .step-container .step-awnser button:hover {
+  background-color: #3476b0;
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 10px 2px #3476b0af;
+  border-color: #fff;
+  color: #fff;
+}
+
+#steps.steps-progress {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px auto;
+}
+#steps.steps-progress .single-step {
+  position: relative;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 30px;
+  color: #000;
+}
+#steps.steps-progress .single-step:not(:last-child):before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 5px;
+  background-color: #fff;
+  top: 28px;
+  left: 50%;
+  z-index: 1;
+}
+#steps.steps-progress .single-step:not(:last-child):after {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 5px;
+  background: black;
+  background: #3476b0;
+  top: 28px;
+  left: 50%;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#steps.steps-progress .single-step.current-step .step-number {
+  background: #3476b0;
+  animation: grow 0.5s ease-in-out 0.25s;
+}
+#steps.steps-progress .single-step.current-step p {
+  color: #ffffff;
+}
+#steps.steps-progress .single-step.step-completed::after {
+  width: 100% !important;
+}
+#steps.steps-progress .single-step .step-number {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: #fff;
+  transition: all 0.5s;
+  z-index: 2;
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.45);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
