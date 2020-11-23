@@ -50,6 +50,10 @@ header.header {
   transition: 0.25s;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .shape::after {
   content: "";
   position: absolute;
@@ -497,6 +501,12 @@ header.header {
   animation: grow 0.5s ease-in-out 0.25s;
 }
 #steps.steps-progress .single-step.current-step p {
+  color: #ffffff;
+}
+#steps.steps-progress .single-step.step-completed .step-number {
+  background: #3476b0;
+}
+#steps.steps-progress .single-step.step-completed p {
   color: #ffffff;
 }
 #steps.steps-progress .single-step.step-completed::after {
