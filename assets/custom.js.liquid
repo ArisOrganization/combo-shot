@@ -1,226 +1,226 @@
-var collagenPaymentCycle = 0;
-var jointPaymentCycle = 0;
-var premiumPaymentCycle = 0;
+// var collagenPaymentCycle = 0;
+// var jointPaymentCycle = 0;
+// var premiumPaymentCycle = 0;
 
-var oneYearSelected = 0;
-var sixMonthsSelected = 0;
-var threeMonthsSelected = 0;
-var oneMonthSelected = 0;
+// var oneYearSelected = 0;
+// var sixMonthsSelected = 0;
+// var threeMonthsSelected = 0;
+// var oneMonthSelected = 0;
 
-$(".one-year").click(function () {
-  oneYearSelected = 1;
-  sixMonthsSelected = 0;
-  threeMonthsSelected = 0;
-  oneMonthSelected = 0;
+// $(".one-year").click(function () {
+//   oneYearSelected = 1;
+//   sixMonthsSelected = 0;
+//   threeMonthsSelected = 0;
+//   oneMonthSelected = 0;
 
-  collagenPaymentCycle = 1;
-});
+//   collagenPaymentCycle = 1;
+// });
 
-$(".six-months").click(function () {
-  oneYearSelected = 0;
-  sixMonthsSelected = 1;
-  threeMonthsSelected = 0;
-  oneMonthSelected = 0;
+// $(".six-months").click(function () {
+//   oneYearSelected = 0;
+//   sixMonthsSelected = 1;
+//   threeMonthsSelected = 0;
+//   oneMonthSelected = 0;
 
-  collagenPaymentCycle = 2;
-});
+//   collagenPaymentCycle = 2;
+// });
 
-$(".three-months").click(function () {
-  oneYearSelected = 0;
-  sixMonthsSelected = 0;
-  threeMonthsSelected = 1;
-  oneMonthSelected = 0;
+// $(".three-months").click(function () {
+//   oneYearSelected = 0;
+//   sixMonthsSelected = 0;
+//   threeMonthsSelected = 1;
+//   oneMonthSelected = 0;
 
-  collagenPaymentCycle = 3;
-});
+//   collagenPaymentCycle = 3;
+// });
 
-$(".one-month").click(function () {
-  oneYearSelected = 0;
-  sixMonthsSelected = 0;
-  threeMonthsSelected = 0;
-  oneMonthSelected = 1;
+// $(".one-month").click(function () {
+//   oneYearSelected = 0;
+//   sixMonthsSelected = 0;
+//   threeMonthsSelected = 0;
+//   oneMonthSelected = 1;
 
-  collagenPaymentCycle = 4;
-});
+//   collagenPaymentCycle = 4;
+// });
 
-$(".collagen-buy-btn").click(function () {
-  console.log(collagenPaymentCycle);
-  if (collagenPaymentCycle == 0) {
-    alert("Please select a payment cycle");
-  } else if (collagenPaymentCycle == 1) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587731605:1";
-  } else if (collagenPaymentCycle == 2) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587764373:1";
-  } else if (collagenPaymentCycle == 3) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587797141:1";
-  } else if (collagenPaymentCycle == 4) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587829909:1";
-  }
-});
+// $(".collagen-buy-btn").click(function () {
+//   console.log(collagenPaymentCycle);
+//   if (collagenPaymentCycle == 0) {
+//     alert("Please select a payment cycle");
+//   } else if (collagenPaymentCycle == 1) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587731605:1";
+//   } else if (collagenPaymentCycle == 2) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587764373:1";
+//   } else if (collagenPaymentCycle == 3) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587797141:1";
+//   } else if (collagenPaymentCycle == 4) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587829909:1";
+//   }
+// });
 
-$(".collagen-buy-btn").click(function () {
-  console.log(collagenPaymentCycle);
-  if (collagenPaymentCycle == 0) {
-    alert("Please select a payment cycle");
-  } else if (collagenPaymentCycle == 1) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587731605:1";
-  } else if (collagenPaymentCycle == 2) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587764373:1";
-  } else if (collagenPaymentCycle == 3) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587797141:1";
-  } else if (collagenPaymentCycle == 4) {
-    window.location = "https://combo-shot.myshopify.com/cart/36971587829909:1";
-  }
-});
+// $(".collagen-buy-btn").click(function () {
+//   console.log(collagenPaymentCycle);
+//   if (collagenPaymentCycle == 0) {
+//     alert("Please select a payment cycle");
+//   } else if (collagenPaymentCycle == 1) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587731605:1";
+//   } else if (collagenPaymentCycle == 2) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587764373:1";
+//   } else if (collagenPaymentCycle == 3) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587797141:1";
+//   } else if (collagenPaymentCycle == 4) {
+//     window.location = "https://combo-shot.myshopify.com/cart/36971587829909:1";
+//   }
+// });
 
-$(".combo-shot-logo").click(function () {
-  window.location = "/pages/home";
-});
+// $(".combo-shot-logo").click(function () {
+//   window.location = "/pages/home";
+// });
 
-$(".combo-shot-logo-light").click(function () {
-  window.location = "/pages/home";
-});
+// $(".combo-shot-logo-light").click(function () {
+//   window.location = "/pages/home";
+// });
 
-$(".one-month").hover(
-  function () {
-    $(".one-month").html("£19.99");
-  },
-  function () {
-    $(".one-month").html("1 MONTH");
-  }
-);
+// $(".one-month").hover(
+//   function () {
+//     $(".one-month").html("£19.99");
+//   },
+//   function () {
+//     $(".one-month").html("1 MONTH");
+//   }
+// );
 
-$(".three-month").hover(
-  function () {
-    $(".three-month").html("£54.99");
-  },
-  function () {
-    $(".three-month").html("3 MONTHS");
-  }
-);
+// $(".three-month").hover(
+//   function () {
+//     $(".three-month").html("£54.99");
+//   },
+//   function () {
+//     $(".three-month").html("3 MONTHS");
+//   }
+// );
 
-$(".one-year").hover(
-  function () {
-    $(".one-year").html("£479.98");
-  },
-  function () {
-    $(".one-year").html("1 YEAR");
-  }
-);
+// $(".one-year").hover(
+//   function () {
+//     $(".one-year").html("£479.98");
+//   },
+//   function () {
+//     $(".one-year").html("1 YEAR");
+//   }
+// );
 
-$(".premium-one-month").hover(
-  function () {
-    $(".premium-one-month").html("£19.99");
-  },
-  function () {
-    $(".premium-one-month").html("1 MONTH");
-  }
-);
+// $(".premium-one-month").hover(
+//   function () {
+//     $(".premium-one-month").html("£19.99");
+//   },
+//   function () {
+//     $(".premium-one-month").html("1 MONTH");
+//   }
+// );
 
-$(".premium-three-month").hover(
-  function () {
-    $(".premium-three-month").html("£54.99");
-  },
-  function () {
-    $(".premium-three-month").html("3 MONTHS");
-  }
-);
+// $(".premium-three-month").hover(
+//   function () {
+//     $(".premium-three-month").html("£54.99");
+//   },
+//   function () {
+//     $(".premium-three-month").html("3 MONTHS");
+//   }
+// );
 
-$(".premium-one-year").hover(
-  function () {
-    $(".premium-one-year").html("£200.00");
-  },
-  function () {
-    $(".premium-one-year").html("1 YEAR");
-  }
-);
+// $(".premium-one-year").hover(
+//   function () {
+//     $(".premium-one-year").html("£200.00");
+//   },
+//   function () {
+//     $(".premium-one-year").html("1 YEAR");
+//   }
+// );
 
-$(".collagen-one-month").hover(
-  function () {
-    $(".collagen-one-month").html("£19.99");
-  },
-  function () {
-    $(".collagen-one-month").html("1 MONTH");
-  }
-);
+// $(".collagen-one-month").hover(
+//   function () {
+//     $(".collagen-one-month").html("£19.99");
+//   },
+//   function () {
+//     $(".collagen-one-month").html("1 MONTH");
+//   }
+// );
 
-$(".collagen-three-month").hover(
-  function () {
-    $(".collagen-three-month").html("£54.99");
-  },
-  function () {
-    $(".collagen-three-month").html("3 MONTHS");
-  }
-);
+// $(".collagen-three-month").hover(
+//   function () {
+//     $(".collagen-three-month").html("£54.99");
+//   },
+//   function () {
+//     $(".collagen-three-month").html("3 MONTHS");
+//   }
+// );
 
-$(".collagen-one-year").hover(
-  function () {
-    $(".collagen-one-year").html("£200.00");
-  },
-  function () {
-    $(".collagen-one-year").html("1 YEAR");
-  }
-);
+// $(".collagen-one-year").hover(
+//   function () {
+//     $(".collagen-one-year").html("£200.00");
+//   },
+//   function () {
+//     $(".collagen-one-year").html("1 YEAR");
+//   }
+// );
 
-$(".joint-one-month").hover(
-  function () {
-    $(".joint-one-month").html("£19.99");
-  },
-  function () {
-    $(".joint-one-month").html("1 MONTH");
-  }
-);
+// $(".joint-one-month").hover(
+//   function () {
+//     $(".joint-one-month").html("£19.99");
+//   },
+//   function () {
+//     $(".joint-one-month").html("1 MONTH");
+//   }
+// );
 
-$(".joint-three-month").hover(
-  function () {
-    $(".joint-three-month").html("£54.99");
-  },
-  function () {
-    $(".joint-three-month").html("3 MONTHS");
-  }
-);
+// $(".joint-three-month").hover(
+//   function () {
+//     $(".joint-three-month").html("£54.99");
+//   },
+//   function () {
+//     $(".joint-three-month").html("3 MONTHS");
+//   }
+// );
 
-$(".joint-one-year").hover(
-  function () {
-    $(".joint-one-year").html("£200.00");
-  },
-  function () {
-    $(".joint-one-year").html("1 YEAR");
-  }
-);
+// $(".joint-one-year").hover(
+//   function () {
+//     $(".joint-one-year").html("£200.00");
+//   },
+//   function () {
+//     $(".joint-one-year").html("1 YEAR");
+//   }
+// );
 
-$(".joint-btn").click(function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  $(".joint-package").fadeIn();
-  $(".joint-btn").addClass("active-tab");
-  $(".premium-package").fadeOut();
-  $(".premium-btn").removeClass("active-tab");
-  $(".collagen-package").fadeOut();
-  $(".collagen-btn").removeClass("active-tab");
-});
+// $(".joint-btn").click(function () {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+//   $(".joint-package").fadeIn();
+//   $(".joint-btn").addClass("active-tab");
+//   $(".premium-package").fadeOut();
+//   $(".premium-btn").removeClass("active-tab");
+//   $(".collagen-package").fadeOut();
+//   $(".collagen-btn").removeClass("active-tab");
+// });
 
-$(".premium-btn").click(function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  $(".joint-package").fadeOut();
-  $(".joint-btn").removeClass("active-tab");
-  $(".premium-package").fadeIn();
-  $(".premium-btn").addClass("active-tab");
-  $(".collagen-package").fadeOut();
-  $(".collagen-btn").removeClass("active-tab");
-});
+// $(".premium-btn").click(function () {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+//   $(".joint-package").fadeOut();
+//   $(".joint-btn").removeClass("active-tab");
+//   $(".premium-package").fadeIn();
+//   $(".premium-btn").addClass("active-tab");
+//   $(".collagen-package").fadeOut();
+//   $(".collagen-btn").removeClass("active-tab");
+// });
 
-$(".collagen-btn").click(function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  $(".joint-package").fadeOut();
-  $(".joint-btn").removeClass("active-tab");
-  $(".premium-package").fadeOut();
-  $(".premium-btn").removeClass("active-tab");
-  $(".collagen-package").fadeIn();
-  $(".collagen-btn").addClass("active-tab");
-});
+// $(".collagen-btn").click(function () {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+//   $(".joint-package").fadeOut();
+//   $(".joint-btn").removeClass("active-tab");
+//   $(".premium-package").fadeOut();
+//   $(".premium-btn").removeClass("active-tab");
+//   $(".collagen-package").fadeIn();
+//   $(".collagen-btn").addClass("active-tab");
+// });
 
 $(".top").on("click", function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -260,4 +260,21 @@ $(".slick-container").slick({
       },
     },
   ],
+});
+
+$(".next").on("click", function () {
+  let parent = $(this).parents(".step-container");
+  if (parent.next().length) {
+    $(".current-step")
+      .addClass("step-completed")
+      .removeClass("current-step")
+      .next()
+      .addClass("current-step");
+    parent.fadeOut("slow", function () {
+      parent.next().removeClass("d-none");
+    });
+  } else {
+    console.log("no next");
+    // window.location = '/'
+  }
 });

@@ -54,6 +54,12 @@
       }
 
       &.step-completed {
+        .step-number {
+          background: #3476b0;
+        }
+        p {
+          color: #ffffff;
+        }
         &::after {
           width: 100% !important;
         }
