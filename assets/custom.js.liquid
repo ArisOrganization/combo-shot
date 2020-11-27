@@ -283,3 +283,7 @@ $(".next").on("click", function () {
     // window.location = '/'
   }
 });
+
+$('.products-names p:not(".actual")').each(function (i) {
+  $(this).css({ order: `${i * 3}` });
+});
