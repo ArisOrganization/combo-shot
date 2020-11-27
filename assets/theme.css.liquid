@@ -1,7 +1,7 @@
 header.header {
   display: flex;
   justify-content: space-between;
-  padding: 25px clamp(20px, 10vw, 125px);
+  padding: 25px clamp(15px, 6vw, 125px);
   position: relative;
   z-index: 1;
 }
@@ -204,7 +204,7 @@ header.header {
 }
 .all-bottles .bottles-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .all-bottles .bottle-card {
@@ -351,6 +351,86 @@ header.header {
   height: 850px;
 }
 
+.direct-checkout {
+  max-width: 580px;
+  width: 100%;
+  padding: 0 clamp(15px, 6vw, 125px);
+}
+.direct-checkout-header {
+  max-width: 450px;
+  margin-top: clamp(2px, 6vw, 100px);
+}
+.direct-checkout-header h1 {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: 28px;
+  color: #3276af;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.direct-checkout-header p {
+  color: #515151;
+  font-family: "Open Sans";
+}
+.direct-checkout-header p.from_price {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: 18px;
+}
+.direct-checkout-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.direct-checkout-body .checkout-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  min-height: 50px;
+  background: #ffffff;
+  border: 1px solid #4a4a4a;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  padding: 8px 15px;
+}
+.direct-checkout-body .checkout-button.single-month .month-price:after {
+  display: none;
+}
+.direct-checkout-body .checkout-button.single-month span {
+  display: none;
+}
+.direct-checkout-body .checkout-button.single-month span.single {
+  display: inline;
+}
+.direct-checkout-body .checkout-button .price_info {
+  flex: 1;
+  max-width: 215px;
+}
+.direct-checkout-body .checkout-button .price_info .single {
+  display: none;
+}
+.direct-checkout-body .checkout-button .price_info .cross {
+  text-decoration: line-through;
+}
+.direct-checkout-body .checkout-button .month-price {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  color: #4a4a4a;
+}
+.direct-checkout-body .checkout-button .month-price:after {
+  content: "per month";
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
 .product-info {
   position: relative;
   padding: 0 clamp(10px, 6vw, 60px);
@@ -435,12 +515,24 @@ header.header {
   background-repeat: no-repeat;
   background-position: bottom center;
 }
+#bronze-package #collagen-bottle {
+  display: none;
+}
+#bronze-package h1 {
+  color: #e9c546;
+}
 
 #gold-package .product-info {
   background: url({{"gold-pack-shape.svg"}});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+#gold-package #joint-bottle {
+  display: none;
+}
+#gold-package h1 {
+  color: #6241bb;
 }
 
 #premium-package .product-info {
