@@ -262,6 +262,11 @@ $(".slick-container").slick({
   ],
 });
 
+$(".step-awnser button").on("click", function () {
+  $(".button_clicked").removeClass("button_clicked");
+  $(this).addClass("button_clicked");
+});
+
 $(".next").on("click", function () {
   let parent = $(this).parents(".step-container");
   if (parent.next().length) {
