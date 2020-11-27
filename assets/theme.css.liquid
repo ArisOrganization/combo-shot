@@ -54,6 +54,11 @@ header.header {
   display: none !important;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .shape::after {
   content: "";
   position: absolute;
@@ -373,9 +378,26 @@ header.header {
 #about {
   padding: 0 clamp(20px, 10vw, 125px);
   margin-top: 75px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 #about .about-header {
   margin-bottom: 55px;
+}
+#about .about-header h1 {
+  font-family: "Magallanes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  color: #3476b0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+#about .about-header p {
+  font-family: "Open Sans";
+  text-align: center;
+  color: #525252;
 }
 #about .about-content .fact {
   margin-bottom: 45px;
@@ -445,6 +467,12 @@ header.header {
   border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.4s;
+}
+#questions .step-container .step-awnser button.button_clicked {
+  background-color: #3476b0;
+  box-shadow: 1px 1px 10px 2px #3476b0af;
+  border-color: #fff;
+  color: #fff;
 }
 #questions .step-container .step-awnser button:hover {
   background-color: #3476b0;
