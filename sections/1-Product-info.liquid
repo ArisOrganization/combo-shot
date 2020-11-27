@@ -1,6 +1,28 @@
-
+{% for image in product.images %} {% if image.alt contains "package-box" %} {%-
+assign pack_img = image | img_url: 'original'-%} {% endif %} {% endfor %}
 
 <section class="product-info">
-  {{ product.title }}
-  {{pack}}
+  {%- assign collection = collections['all'] -%}
+  <div class="product-info-header">
+    <h2>WHAT ARE THE BENEFITS?</h2>
+    <div class="products-names">
+      {% for item in collection.products %}
+      <p class="{%- if product == item -%}actual{%- endif -%}">
+        {{ item.title }}
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="product-info-body">
+    <div class="img-container">
+      <div
+        class="info-img"
+        style="background-image: url({{ pack_img }});"
+      ></div>
+      <!-- <img src="{{ pack_img }}" alt="{{ pack_img.alt }}" /> -->
+    </div>
+    <div class="content">
+      {{ product.description }}
+    </div>
+  </div>
 </section>
