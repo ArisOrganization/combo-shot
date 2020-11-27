@@ -1,13 +1,88 @@
 .product-hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right 70%;
+  background-position: left 70%;
   height: 850px;
 }
 
 .product-info {
   position: relative;
-  height: 750px;
+  padding: 0 clamp(10px, 6vw, 60px);
+  min-height: 750px;
+  &-header {
+    padding-top: 55px;
+    h2 {
+      font-family: Magallanes;
+      font-weight: 600;
+      font-size: 34px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .products-names {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0 10px;
+        text-transform: uppercase;
+        &.actual {
+          font-size: 22px;
+          order: 2 !important;
+        }
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    div {
+      flex: 1;
+      width: 100%;
+      min-width: 500px;
+
+      &.img-container {
+        min-height: 500px;
+        position: relative;
+        .info-img {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: -15px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform: scale(1.2);
+          right: 10px;
+        }
+      }
+      &.content {
+        padding: 50px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          font-family: "Magallanes";
+          font-weight: 600;
+          font-size: 22px;
+          color: #ffffff;
+        }
+        p {
+          font-family: "Open Sans";
+          font-size: 16px;
+          color: #ffffff;
+          margin-bottom: 35px;
+          max-width: 475px;
+        }
+      }
+    }
+  }
 }
 
 #bronze-package {
