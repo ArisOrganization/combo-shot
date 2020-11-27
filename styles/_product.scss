@@ -5,6 +5,91 @@
   height: 850px;
 }
 
+.direct-checkout {
+  max-width: 580px;
+  width: 100%;
+  padding: 0 clamp(15px, 6vw, 125px);
+
+  &-header {
+    max-width: 450px;
+    margin-top: clamp(2px, 6vw, 100px);
+    h1 {
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: 28px;
+      color: #3276af;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #515151;
+      font-family: "Open Sans";
+
+      &.from_price {
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    .checkout-button {
+      &.single-month {
+        .month-price:after {
+          display: none;
+        }
+        span {
+          display: none;
+          &.single {
+            display: inline;
+          }
+        }
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 380px;
+      min-height: 50px;
+      background: #ffffff;
+      border: 1px solid #4a4a4a;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      padding: 8px 15px;
+      .price_info {
+        flex: 1;
+        max-width: 215px;
+        .single {
+          display: none;
+        }
+        .cross {
+          text-decoration: line-through;
+        }
+      }
+      .month-price {
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        color: #4a4a4a;
+        &:after {
+          content: "per month";
+          font-size: 10px;
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+        }
+      }
+    }
+  }
+}
+
 .product-info {
   position: relative;
   padding: 0 clamp(10px, 6vw, 60px);
@@ -92,6 +177,12 @@
     background-repeat: no-repeat;
     background-position: bottom center;
   }
+  #collagen-bottle {
+    display: none;
+  }
+  h1 {
+    color: #e9c546;
+  }
 }
 
 #gold-package {
@@ -100,6 +191,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+  }
+  #joint-bottle {
+    display: none;
+  }
+  h1 {
+    color: #6241bb;
   }
 }
 
