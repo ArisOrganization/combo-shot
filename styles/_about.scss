@@ -1,11 +1,27 @@
 #about {
   padding: 0 clamp(20px, 10vw, 125px);
   margin-top: 75px;
+  max-width: 1500px;
+  margin: 0 auto;
 
   .about {
     &-header {
       margin-bottom: 55px;
-
+      h1 {
+        font-family: "Magallanes";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        color: #3476b0;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      p {
+        font-family: "Open Sans";
+        text-align: center;
+        color: #525252;
+      }
     }
     &-content {
       .fact {
