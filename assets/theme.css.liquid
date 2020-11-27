@@ -97,7 +97,7 @@ header.header {
 .home-hero-left .home-header .home-title {
   font-family: "Magallanes";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   margin-bottom: 0;
   color: #f5f5f5;
@@ -119,7 +119,7 @@ header.header {
 }
 .products-section .all-packages-title {
   font-family: "Magallanes";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 34px;
   text-align: center;
   color: #525252;
@@ -215,6 +215,8 @@ header.header {
 }
 .all-bottles .bottle-card-img {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .all-bottles .bottle-card-img:hover .overlay-bottle {
   z-index: 0;
@@ -274,7 +276,7 @@ header.header {
   font-family: "Magallanes";
   text-align: center;
   margin-bottom: 55px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 34px;
   color: #000000;
 }
@@ -345,13 +347,86 @@ header.header {
 .product-hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right 70%;
+  background-position: left 70%;
   height: 850px;
 }
 
 .product-info {
   position: relative;
-  height: 750px;
+  padding: 0 clamp(10px, 6vw, 60px);
+  min-height: 750px;
+}
+.product-info-header {
+  padding-top: 55px;
+}
+.product-info-header h2 {
+  font-family: Magallanes;
+  font-weight: 600;
+  font-size: 34px;
+  color: #ffffff;
+  text-align: center;
+}
+.product-info-header .products-names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-info-header .products-names p {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+.product-info-header .products-names p.actual {
+  font-size: 22px;
+  order: 2 !important;
+}
+.product-info-body {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-info-body div {
+  flex: 1;
+  width: 100%;
+  min-width: 500px;
+}
+.product-info-body div.img-container {
+  min-height: 500px;
+  position: relative;
+}
+.product-info-body div.img-container .info-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+  right: 10px;
+}
+.product-info-body div.content {
+  padding: 50px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-info-body div.content h2 {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: 22px;
+  color: #ffffff;
+}
+.product-info-body div.content p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 35px;
+  max-width: 475px;
 }
 
 #bronze-package .product-info {
@@ -387,7 +462,7 @@ header.header {
 #about .about-header h1 {
   font-family: "Magallanes";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   color: #3476b0;
   text-align: center;
@@ -426,7 +501,7 @@ header.header {
 #questions .question-header h1 {
   text-align: center;
   font-family: "Magallanes";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   color: #3476b0;
   text-transform: uppercase;
@@ -467,12 +542,6 @@ header.header {
   border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.4s;
-}
-#questions .step-container .step-awnser button.button_clicked {
-  background-color: #3476b0;
-  box-shadow: 1px 1px 10px 2px #3476b0af;
-  border-color: #fff;
-  color: #fff;
 }
 #questions .step-container .step-awnser button:hover {
   background-color: #3476b0;
