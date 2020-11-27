@@ -10,4 +10,53 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
   class="product-hero"
 >
   {% include '1-header' %}
+
+  <div class="direct-checkout">
+    {% assign start_price = product.price_max | divided_by: 12 | money %}
+    <div class="direct-checkout-header">
+      <h1>{{ product.title }}</h1>
+      <p class="from_price">From {{ start_price }} per month</p>
+      <p></p>
+      <p>
+        Our incredible {{ product.title }} gives you the beauty of
+        <strong>Collagen V12</strong> and our
+        <strong>health boosting vitamin shot</strong> for an all round great
+        package, keeping you <strong>healthy beautiful and young.</strong>
+      </p>
+    </div>
+    <div class="direct-checkout-body">
+      {% for variant in product.variants %} {% assign months =
+      variant.metafields.price_maths.months %} {% assign variant_month_price=
+      variant.price| divided_by: months %} {% assign savings = product.price
+      |minus: variant_month_price | times: months %} {% assign max =
+      product.price | times: months %}
+      <div
+        class="checkout-button {% if months == 1 %}single-month{% endif%}"
+        id="{{ variant.id }}"
+      >
+        <div class="price_info">
+          <p>
+            {{ variant.title }}
+            <span>Subscription</span>
+            <span class="single">supply</span>
+            <span
+              >10% Discount (<span class="cross">{{ max | money }}</span>
+              )</span
+            >
+            <span class="save"
+              >Save {{ savings | money_without_trailing_zeros }}</span
+            >
+          </p>
+        </div>
+
+        <div class="month-price">
+          <p>
+            {{ variant_month_price | money }}
+          </p>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
 </div>
