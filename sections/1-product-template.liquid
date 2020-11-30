@@ -29,7 +29,8 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
       variant.metafields.price_maths.months %} {% assign variant_month_price=
       variant.price| divided_by: months %} {% assign savings = product.price
       |minus: variant_month_price | times: months %} {% assign max =
-      product.price | times: months %}
+      product.price | times: months %} {% assign discount =
+      variant.metafields.global.discount %}
       <div
         class="checkout-button {% if months == 1 %}single-month{% endif%}"
         id="{{ variant.id }}"
@@ -39,13 +40,12 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
             {{ variant.title }}
             <span>Subscription</span>
             <span class="single">supply</span>
-            <span
-              >10% Discount (<span class="cross">{{ max | money }}</span>
-              )</span
-            >
-            <span class="save"
-              >Save {{ savings | money_without_trailing_zeros }}</span
-            >
+            <br />
+            <span class="green"> {{ percentage }}% Discount</span>
+            <span class="cross">({{ max | money }})</span>
+            <span class="save green">
+              Save {{ savings | money_without_trailing_zeros }}
+            </span>
           </p>
         </div>
 
@@ -57,6 +57,12 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
       </div>
 
       {% endfor %}
+      <div class="direct-checkout-link">
+        <a href="#" class="theme-button">BUY NOW</a>
+        <div class="payment">
+          <img src={{ "payment.svg" | asset_url }} alt="payments">
+        </div>
+      </div>
     </div>
   </div>
 </div>
