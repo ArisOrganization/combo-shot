@@ -64,10 +64,11 @@ header.header {
   position: absolute;
   left: 0;
   top: -90px;
-  height: 1050px;
+  height: 730px;
   width: 100%;
-  background: url({{"hero-shape.svg"}});
+  background: url({{"hero-background.png"}});
   background-repeat: no-repeat;
+  background-position: left bottom;
   background-size: cover;
   z-index: 0;
 }
@@ -77,14 +78,14 @@ header.header {
   display: flex;
   width: 100%;
   z-index: 10;
-  padding: 0 clamp(20px, 10vw, 125px);
-  margin-top: 120px;
-  margin-bottom: 250px;
+  padding: 0 clamp(15px, 6vw, 125px);
+  margin-top: 90px;
+  margin-bottom: clamp(80px, 20vw, 250px);
 }
 .home-hero-left {
-  flex-basis: 45%;
-  padding-top: 50px;
   padding-right: 10px;
+  width: 100%;
+  max-width: 475px;
 }
 .home-hero-left .home-text {
   font-family: "Open Sans";
@@ -105,22 +106,14 @@ header.header {
 .home-hero-left .home-header .home-text {
   margin-bottom: 40px;
 }
-.home-hero-right {
-  display: flex;
-  flex-basis: 65%;
-}
-.home-hero .img-container {
-  right: -40px;
-  position: absolute;
-}
 
 .products-section {
-  min-height: 750px;
+  padding: 0 clamp(15px, 6vw, 125px);
 }
 .products-section .all-packages-title {
   font-family: "Magallanes";
   font-weight: 600;
-  font-size: 34px;
+  font-size: clamp(26px, 3vw, 34px);
   text-align: center;
   color: #525252;
 }
@@ -148,6 +141,15 @@ header.header {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+}
+.products-section .package-card.Premium .large:hover {
+  background-color: #3676a8;
+}
+.products-section .package-card.Collagen .large:hover {
+  background-color: #6241bb;
+}
+.products-section .package-card.Joint .large:hover {
+  background-color: #e2cc03;
 }
 .products-section .package-card .title {
   max-width: 300px;
@@ -182,6 +184,9 @@ header.header {
   width: 90%;
   padding: 5px;
   font-size: 16px;
+}
+.products-section .package-card .large:hover {
+  color: #ffffff;
 }
 .products-section .package-card .price {
   padding-top: 25px;
@@ -348,13 +353,12 @@ header.header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 70%;
-  height: 850px;
 }
 
 .direct-checkout {
-  max-width: 580px;
+  max-width: 720px;
   width: 100%;
-  padding: 0 clamp(15px, 6vw, 125px);
+  padding: 0 clamp(15px, 6vw, 125px) 30px;
 }
 .direct-checkout-header {
   max-width: 450px;
@@ -363,7 +367,7 @@ header.header {
 .direct-checkout-header h1 {
   font-family: "Magallanes";
   font-weight: 600;
-  font-size: 28px;
+  font-size: clamp(26px, 3vw, 28px);
   color: #3276af;
   text-transform: uppercase;
   margin-bottom: 5px;
@@ -376,27 +380,58 @@ header.header {
   font-family: "Magallanes";
   font-weight: 600;
   font-size: 18px;
+  margin: 0;
 }
 .direct-checkout-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
+  padding: 20px 15px 20px 0;
 }
 .direct-checkout-body .checkout-button {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 380px;
+  width: 425px;
   min-height: 50px;
   background: #ffffff;
   border: 1px solid #4a4a4a;
   border-radius: 10px;
   margin-bottom: 8px;
-  padding: 8px 15px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
-.direct-checkout-body .checkout-button.single-month .month-price:after {
-  display: none;
+.direct-checkout-body .checkout-button:first-of-type:after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 65px;
+  right: 0;
+  background-image: url({{"top-seller.svg"}});
+  background-size: cover;
+  right: 90px;
+  top: 0;
+}
+.direct-checkout-body .checkout-button:hover p {
+  color: #ffffff;
+}
+.direct-checkout-body .checkout-button:hover p:after {
+  color: #ffffff;
+}
+.direct-checkout-body .checkout-button:hover .green {
+  color: #40a737 !important;
+}
+.direct-checkout-body .checkout-button.selected p {
+  color: #ffffff;
+}
+.direct-checkout-body .checkout-button.selected p:after {
+  color: #ffffff;
+}
+.direct-checkout-body .checkout-button.selected .green {
+  color: #40a737 !important;
+}
+.direct-checkout-body .checkout-button.single-month .month-price p:after {
+  content: "";
 }
 .direct-checkout-body .checkout-button.single-month span {
   display: none;
@@ -406,29 +441,66 @@ header.header {
 }
 .direct-checkout-body .checkout-button .price_info {
   flex: 1;
-  max-width: 215px;
+  max-width: 280px;
+}
+.direct-checkout-body .checkout-button .price_info p {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 700;
+}
+.direct-checkout-body .checkout-button .price_info .green {
+  color: #005128;
+  font-weight: 600;
 }
 .direct-checkout-body .checkout-button .price_info .single {
   display: none;
 }
 .direct-checkout-body .checkout-button .price_info .cross {
   text-decoration: line-through;
+  font-weight: 100;
 }
 .direct-checkout-body .checkout-button .month-price {
+  min-width: 76px;
+}
+.direct-checkout-body .checkout-button .month-price p {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
   position: relative;
-  color: #4a4a4a;
 }
-.direct-checkout-body .checkout-button .month-price:after {
+.direct-checkout-body .checkout-button .month-price p:after {
   content: "per month";
-  font-size: 10px;
+  font-size: 14px;
   position: absolute;
-  left: 0;
-  bottom: -8px;
+  left: 4px;
+  bottom: -12px;
+}
+.direct-checkout-link {
+  width: 100%;
+  max-width: 425px;
+  margin-top: 10px;
+}
+.direct-checkout-link .theme-button {
+  display: block;
+  margin-top: 0;
+  background: #40a737;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 19px;
+  color: #ffffff;
+}
+.direct-checkout-link .payment {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.direct-checkout-link .payment img {
+  height: 100%;
+  width: 75%;
 }
 
 .product-info {
@@ -442,7 +514,7 @@ header.header {
 .product-info-header h2 {
   font-family: Magallanes;
   font-weight: 600;
-  font-size: 34px;
+  font-size: clamp(30px, 3vw, 34px);
   color: #ffffff;
   text-align: center;
 }
@@ -479,16 +551,6 @@ header.header {
   min-height: 500px;
   position: relative;
 }
-.product-info-body div.img-container .info-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: -15px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: scale(1.2);
-  right: 10px;
-}
 .product-info-body div.content {
   padding: 50px 25px;
   display: flex;
@@ -521,6 +583,12 @@ header.header {
 #bronze-package h1 {
   color: #e9c546;
 }
+#bronze-package .checkout-button:hover {
+  background-color: #e9c546;
+}
+#bronze-package .checkout-button.selected {
+  background-color: #e9c546;
+}
 
 #gold-package .product-info {
   background: url({{"gold-pack-shape.svg"}});
@@ -534,6 +602,12 @@ header.header {
 #gold-package h1 {
   color: #6241bb;
 }
+#gold-package .checkout-button:hover {
+  background-color: #6241bb;
+}
+#gold-package .checkout-button.selected {
+  background-color: #6241bb;
+}
 
 #premium-package .product-info {
   background: url({{"premiun-pack-shape.svg"}});
@@ -541,7 +615,56 @@ header.header {
   background-repeat: no-repeat;
   background-position: bottom center;
 }
+#premium-package .checkout-button:hover {
+  background-color: #3276af;
+}
+#premium-package .checkout-button:hover .green {
+  color: #e9c546;
+}
+#premium-package .checkout-button.selected {
+  background-color: #3276af;
+}
+#premium-package .checkout-button.selected .green {
+  color: #e9c546;
+}
 
+@media screen and (max-width: 1120px) {
+  .product-info-body div {
+    align-items: center;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .products-names p:not(.actual) {
+    display: none;
+  }
+}
+@media screen and (max-width: 675px) {
+  .direct-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .direct-checkout-body {
+    padding: 15px 0 0;
+  }
+  .direct-checkout-header {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .direct-checkout-body {
+    width: 100%;
+  }
+  .direct-checkout-body .checkout-button {
+    width: 100%;
+  }
+  .direct-checkout-link {
+    max-width: 100%;
+  }
+}
 #about {
   padding: 0 clamp(20px, 10vw, 125px);
   margin-top: 75px;
@@ -621,6 +744,7 @@ header.header {
   justify-content: center;
 }
 #questions .step-container .step-awnser button {
+  outline: transparent;
   width: 165px;
   height: 37px;
   margin: 15px;
@@ -634,6 +758,15 @@ header.header {
   border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.4s;
+}
+#questions .step-container .step-awnser button:focus {
+  outline: transparent;
+}
+#questions .step-container .step-awnser button.button_clicked {
+  background-color: #3476b0;
+  box-shadow: 1px 1px 10px 2px #3476b0af;
+  border-color: #fff;
+  color: #fff;
 }
 #questions .step-container .step-awnser button:hover {
   background-color: #3476b0;
