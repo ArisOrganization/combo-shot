@@ -2,13 +2,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 70%;
-  height: 850px;
 }
 
 .direct-checkout {
-  max-width: 580px;
+  max-width: 720px;
   width: 100%;
-  padding: 0 clamp(15px, 6vw, 125px);
+  padding: 0 clamp(15px, 6vw, 125px) 30px;
 
   &-header {
     max-width: 450px;
@@ -16,7 +15,7 @@
     h1 {
       font-family: "Magallanes";
       font-weight: 600;
-      font-size: 28px;
+      font-size: clamp(26px, 3vw, 28px);
       color: #3276af;
       text-transform: uppercase;
       margin-bottom: 5px;
@@ -29,19 +28,72 @@
         font-family: "Magallanes";
         font-weight: 600;
         font-size: 18px;
+        margin: 0;
       }
     }
   }
   &-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
+    padding: 20px 15px 20px 0;
     .checkout-button {
-      &.single-month {
-        .month-price:after {
-          display: none;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 425px;
+      min-height: 50px;
+      background: #ffffff;
+      border: 1px solid #4a4a4a;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:first-of-type {
+        &:after {
+          position: absolute;
+          content: "";
+          width: 60px;
+          height: 65px;
+          right: 0;
+          background-image: url(#{'{{"top-seller.svg"}}'});
+          background-size: cover;
+          right: 90px;
+          top: 0;
         }
+      }
+
+      &:hover {
+        p {
+          color: #ffffff;
+          &:after {
+            color: #ffffff;
+          }
+        }
+        .green {
+          color: #40a737 !important;
+        }
+      }
+      &.selected {
+        p {
+          color: #ffffff;
+          &:after {
+            color: #ffffff;
+          }
+        }
+        .green {
+          color: #40a737 !important;
+        }
+      }
+
+      &.single-month {
+        .month-price {
+          p:after {
+            content: "";
+          }
+        }
+
         span {
           display: none;
           &.single {
@@ -50,41 +102,71 @@
         }
       }
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 380px;
-      min-height: 50px;
-      background: #ffffff;
-      border: 1px solid #4a4a4a;
-      border-radius: 10px;
-      margin-bottom: 8px;
-      padding: 8px 15px;
       .price_info {
         flex: 1;
-        max-width: 215px;
+        max-width: 280px;
+
+        p {
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .green {
+          color: #005128;
+          font-weight: 600;
+        }
+
         .single {
           display: none;
         }
         .cross {
           text-decoration: line-through;
+          font-weight: 100;
         }
       }
       .month-price {
-        font-family: "Open Sans";
-        font-weight: 600;
-        font-size: 16px;
-        text-align: center;
-        margin: 0;
-        position: relative;
-        color: #4a4a4a;
-        &:after {
-          content: "per month";
-          font-size: 10px;
-          position: absolute;
-          left: 0;
-          bottom: -8px;
+        min-width: 76px;
+        p {
+          font-family: "Open Sans";
+          font-weight: 600;
+          font-size: 18px;
+          text-align: center;
+          margin: 0;
+          position: relative;
+          &:after {
+            content: "per month";
+            font-size: 14px;
+            position: absolute;
+            left: 4px;
+            bottom: -12px;
+          }
         }
+      }
+    }
+  }
+  &-link {
+    width: 100%;
+    max-width: 425px;
+    margin-top: 10px;
+    .theme-button {
+      display: block;
+      margin-top: 0;
+      background: #40a737;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 19px;
+      color: #ffffff;
+    }
+    .payment {
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 75%;
       }
     }
   }
@@ -99,7 +181,7 @@
     h2 {
       font-family: Magallanes;
       font-weight: 600;
-      font-size: 34px;
+      font-size: clamp(30px, 3vw, 34px);
       color: #ffffff;
       text-align: center;
     }
@@ -136,16 +218,16 @@
       &.img-container {
         min-height: 500px;
         position: relative;
-        .info-img {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          top: -15px;
-          background-size: contain;
-          background-repeat: no-repeat;
-          transform: scale(1.2);
-          right: 10px;
-        }
+        // .info-img {
+        //   position: absolute;
+        //   height: 100%;
+        //   width: 100%;
+        //   top: -15px;
+        //   background-size: contain;
+        //   background-repeat: no-repeat;
+        //   transform: scale(1.2);
+        //   right: 10px;
+        // }
       }
       &.content {
         padding: 50px 25px;
@@ -183,6 +265,14 @@
   h1 {
     color: #e9c546;
   }
+  .checkout-button {
+    &:hover {
+      background-color: #e9c546;
+    }
+    &.selected {
+      background-color: #e9c546;
+    }
+  }
 }
 
 #gold-package {
@@ -198,6 +288,14 @@
   h1 {
     color: #6241bb;
   }
+  .checkout-button {
+    &:hover {
+      background-color: #6241bb;
+    }
+    &.selected {
+      background-color: #6241bb;
+    }
+  }
 }
 
 #premium-package {
@@ -206,5 +304,60 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+  }
+  .checkout-button {
+    &:hover {
+      background-color: #3276af;
+      .green {
+        color: #e9c546;
+      }
+    }
+    &.selected {
+      background-color: #3276af;
+      .green {
+        color: #e9c546;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .product-info-body div {
+    align-items: center;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .products-names {
+    p:not(.actual) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .direct-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-body {
+      padding: 15px 0 0;
+    }
+    &-header {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    &-body {
+      width: 100%;
+      .checkout-button {
+        width: 100%;
+      }
+    }
+    &-link {
+      max-width: 100%;
+    }
   }
 }
