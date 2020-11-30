@@ -15,11 +15,10 @@ assign pack_img = image | img_url: 'original'-%} {% endif %} {% endfor %}
   </div>
   <div class="product-info-body">
     <div class="img-container">
-      <div
-        class="info-img"
-        style="background-image: url({{ pack_img }});"
-      ></div>
-      <!-- <img src="{{ pack_img }}" alt="{{ pack_img.alt }}" /> -->
+      <div class="info-img">
+        <!-- style="background-image: url({{ pack_img }});" -->
+        <img src="{{ pack_img }}" alt="{{ pack_img.alt }}" />
+      </div>
     </div>
     <div class="content">
       {{ product.description }}
