@@ -9,7 +9,7 @@
     </div>
     <div class="all-packages-container">
         {%- for item in collection.products -%}
-        <div class="package-card">
+        <div class="package-card {{ item.title | split: ' ' | first}}">
             <div class="package-card-img">
                 <img src={{ item.featured_image | img_url: '450x450' }} alt="{{item.title}}">
             </div>
