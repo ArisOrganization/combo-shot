@@ -39,6 +39,7 @@
       justify-content: center;
 
       button {
+        outline: transparent;
         width: 165px;
         height: 37px;
         margin: 15px;
@@ -52,6 +53,16 @@
         border-radius: 10px;
         text-transform: uppercase;
         transition: all 0.4s;
+        &:focus {
+          outline: transparent;
+        }
+
+        &.button_clicked {
+          background-color: #3476b0;
+          box-shadow: 1px 1px 10px 2px #3476b0af;
+          border-color: #fff;
+          color: #fff;
+        }
 
         &:hover {
           background-color: #3476b0;
