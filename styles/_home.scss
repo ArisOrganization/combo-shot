@@ -4,10 +4,11 @@
     position: absolute;
     left: 0;
     top: -90px;
-    height: 1050px;
+    height: 730px;
     width: 100%;
-    background: url(#{'{{"hero-shape.svg"}}'});
+    background: url(#{'{{"hero-background.png"}}'});
     background-repeat: no-repeat;
+    background-position: left bottom;
     background-size: cover;
     z-index: 0;
   }
@@ -18,14 +19,14 @@
   display: flex;
   width: 100%;
   z-index: 10;
-  padding: 0 clamp(20px, 10vw, 125px);
-  margin-top: 120px;
-  margin-bottom: 250px;
+  padding: 0 clamp(15px, 6vw, 125px);
+  margin-top: 90px;
+  margin-bottom: clamp(80px, 20vw, 250px);
 
   &-left {
-    flex-basis: 45%;
-    padding-top: 50px;
     padding-right: 10px;
+    width: 100%;
+    max-width: 475px;
 
     .home-text {
       font-family: "Open Sans";
@@ -51,23 +52,29 @@
     }
   }
 
-  &-right {
-    display: flex;
-    flex-basis: 65%;
-  }
-  .img-container {
-    right: -40px;
-    position: absolute;
-  }
+  // &-right {
+  //   display: flex;
+  //   background-color: red;
+  //   height: 600px;
+  //   flex: 1;
+  //   position: relative;
+  //   .img-container {
+  //     background-color: #3676a8;
+  //     position: absolute;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
 }
 
 .products-section {
-  min-height: 750px;
+  padding: 0 clamp(15px, 6vw, 125px);
   .all-packages {
     &-title {
       font-family: "Magallanes";
       font-weight: 600;
-      font-size: 34px;
+      font-size: clamp(26px, 3vw, 34px);
       text-align: center;
       color: #525252;
     }
@@ -96,6 +103,22 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+
+    &.Premium {
+      .large:hover {
+        background-color: #3676a8;
+      }
+    }
+    &.Collagen {
+      .large:hover {
+        background-color: #6241bb;
+      }
+    }
+    &.Joint {
+      .large:hover {
+        background-color: #e2cc03;
+      }
+    }
 
     .title {
       // background-color: blue;
@@ -137,6 +160,9 @@
       width: 90%;
       padding: 5px;
       font-size: 16px;
+      &:hover {
+        color: #ffffff;
+      }
     }
 
     .price {
