@@ -246,7 +246,7 @@ $(".slick-container").slick({
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 775,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -265,6 +265,12 @@ $(".slick-container").slick({
 $(".step-awnser button").on("click", function () {
   $(".button_clicked").removeClass("button_clicked");
   $(this).addClass("button_clicked");
+});
+
+$(".checkout-button").on("click", function () {
+  $(".selected").removeClass("selected");
+  $(this).addClass("selected");
+  $(".direct-checkout-link a").attr("href", `/cart/${this.id}:1`);
 });
 
 $(".next").on("click", function () {
@@ -286,4 +292,11 @@ $(".next").on("click", function () {
 
 $('.products-names p:not(".actual")').each(function (i) {
   $(this).css({ order: `${i * 3}` });
+});
+
+$(".direct-checkout-link a").on("click", function (e) {
+  if ($(this).attr("href") === "#") {
+    e.preventDefault();
+    alert("please select a package before continue");
+  }
 });
