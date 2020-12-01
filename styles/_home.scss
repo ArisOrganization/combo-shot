@@ -20,7 +20,7 @@
   width: 100%;
   z-index: 10;
   padding: 0 clamp(15px, 6vw, 125px);
-  margin-top: 90px;
+  margin-top: clamp(35px, 6vw, 90px);
   margin-bottom: clamp(80px, 20vw, 250px);
 
   &-left {
@@ -70,6 +70,8 @@
 
 .products-section {
   padding: 0 clamp(15px, 6vw, 125px);
+  position: relative;
+  z-index: 100;
   .all-packages {
     &-title {
       font-family: "Magallanes";

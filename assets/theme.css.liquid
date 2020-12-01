@@ -79,7 +79,7 @@ header.header {
   width: 100%;
   z-index: 10;
   padding: 0 clamp(15px, 6vw, 125px);
-  margin-top: 90px;
+  margin-top: clamp(35px, 6vw, 90px);
   margin-bottom: clamp(80px, 20vw, 250px);
 }
 .home-hero-left {
@@ -109,6 +109,8 @@ header.header {
 
 .products-section {
   padding: 0 clamp(15px, 6vw, 125px);
+  position: relative;
+  z-index: 100;
 }
 .products-section .all-packages-title {
   font-family: "Magallanes";
@@ -633,6 +635,10 @@ header.header {
     align-items: center;
     min-width: 100%;
   }
+
+  .info-img img {
+    transform: translateX(-15%);
+  }
 }
 @media screen and (max-width: 800px) {
   .products-names p:not(.actual) {
@@ -663,6 +669,12 @@ header.header {
   }
   .direct-checkout-link {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .direct-checkout-body .checkout-button:first-of-type:after {
+    right: 0;
+    top: -23px;
   }
 }
 #about {
@@ -708,16 +720,16 @@ header.header {
 }
 
 #questions {
-  margin-top: 75px;
+  margin-top: clamp(1px, 3vw, 75px);
 }
 #questions .question-header {
-  margin-bottom: 45px;
+  margin-bottom: clamp(15px, 3vw, 45px);
 }
 #questions .question-header h1 {
   text-align: center;
   font-family: "Magallanes";
   font-weight: 600;
-  font-size: 28px;
+  font-size: clamp(23px, 3vw, 28px);
   color: #3476b0;
   text-transform: uppercase;
 }

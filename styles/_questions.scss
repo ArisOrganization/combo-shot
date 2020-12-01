@@ -1,13 +1,13 @@
 #questions {
-  margin-top: 75px;
+  margin-top: clamp(1px, 3vw, 75px);
   .question {
     &-header {
-      margin-bottom: 45px;
+      margin-bottom: clamp(15px, 3vw, 45px);
       h1 {
         text-align: center;
         font-family: "Magallanes";
         font-weight: 600;
-        font-size: 28px;
+        font-size: clamp(23px, 3vw, 28px);
         color: #3476b0;
         text-transform: uppercase;
       }

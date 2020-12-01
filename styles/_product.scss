@@ -325,6 +325,11 @@
     align-items: center;
     min-width: 100%;
   }
+  .info-img {
+    img {
+      transform: translateX(-15%);
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -358,6 +363,19 @@
     }
     &-link {
       max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .direct-checkout-body {
+    .checkout-button {
+      &:first-of-type {
+        &:after {
+          right: 0;
+          top: -23px;
+        }
+      }
     }
   }
 }
