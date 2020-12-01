@@ -25,12 +25,14 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
       </p>
     </div>
     <div class="direct-checkout-body">
-      {% for variant in product.variants %} {% assign months =
-      variant.metafields.price_maths.months %} {% assign variant_month_price=
-      variant.price| divided_by: months %} {% assign savings = product.price
-      |minus: variant_month_price | times: months %} {% assign max =
-      product.price | times: months %} {% assign discount =
-      variant.metafields.global.discount %}
+      {% for variant in product.variants %} 
+        {%- liquid
+        assign months =  variant.metafields.price_maths.months  
+        assign variant_month_price= variant.price | divided_by: months  
+        assign savings = product.price |minus: variant_month_price | times: months  
+        assign max =  product.price | times: months  
+        assign percentage =  variant_month_price | times: 1.00 | divided_by: product.price | times: 100
+        -%}
       <div
         class="checkout-button {% if months == 1 %}single-month{% endif%}"
         id="{{ variant.id }}"
@@ -41,10 +43,11 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
             <span>Subscription</span>
             <span class="single">supply</span>
             <br />
-            <span class="green"> {{ percentage }}% Discount</span>
+            <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
             <span class="cross">({{ max | money }})</span>
             <span class="save green">
               Save {{ savings | money_without_trailing_zeros }}
+
             </span>
           </p>
         </div>
@@ -55,7 +58,7 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
           </p>
         </div>
       </div>
-
+        <h1>  {{ discount }}</h1>
       {% endfor %}
       <div class="direct-checkout-link">
         <a href="#" class="theme-button">BUY NOW</a>
@@ -65,4 +68,5 @@ assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
       </div>
     </div>
   </div>
+
 </div>
