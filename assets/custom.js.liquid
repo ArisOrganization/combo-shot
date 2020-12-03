@@ -275,6 +275,9 @@ $(".checkout-button").on("click", function () {
 
 $(".next").on("click", function () {
   let parent = $(this).parents(".step-container");
+  this.parentElement.dataset[
+    Object.keys(this.parentElement.dataset)[0]
+  ] = this.textContent;
   if (parent.next().length) {
     $(".current-step")
       .addClass("step-completed")
@@ -300,3 +303,97 @@ $(".direct-checkout-link a").on("click", function (e) {
     alert("please select a package before continue");
   }
 });
+
+$("#modal-button").on("click", function () {
+  window.location = this.href;
+  $(".modal-overlay").addClass("d-none");
+});
+
+$(".open-modal").on("click", function () {
+  let awnsers = getData();
+  let recommended = getRecommended(awnsers);
+  if (recommended) {
+    $(".recommended").text(recommended.name);
+    $("#modal-button").attr("href", recommended.link);
+    $(".modal-overlay").removeClass("d-none");
+    $(".modal-img").attr("src", recommended.img);
+  }
+  console.log(recommended);
+});
+
+function getRecommended(object) {
+  const { question1, question2, question3 } = object;
+  let product = "";
+  let name = "";
+  let shopifyProduct = {};
+
+  switch (true) {
+    case question1 == "yes" && question2 == "yes" && question3 == "yes":
+      name = "Premium Care Package";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    case question1 == "yes" && question2 == "yes":
+      name = "Joint Care Package";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    case question1 == "yes" && question3 == "yes":
+      name = "Collagen Care Package";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    case question1 == "yes":
+      name = "Joint Support";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    case question2 == "yes":
+      name = "Ultra vitamins+";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    case question3 == "yes":
+      name = "Collagen V12";
+      shopifyProduct = products.find((e) => e.title.includes(name));
+      product = {
+        link: "/products/" + shopifyProduct.handle,
+        name,
+        img: shopifyProduct.featured_image,
+      };
+      break;
+    default:
+      window.location = "/";
+      break;
+  }
+  return product;
+}
+
+function getData() {
+  let awnsers = {};
+  $(".step-awnser").each(function () {
+    let key = Object.keys($(this).data())[0];
+    awnsers[key] = $(this).data(key);
+  });
+  return awnsers;
+}
