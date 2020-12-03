@@ -1,7 +1,8 @@
 .product-hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left 70%;
+  background-position: center;
+  background-image: url(#{"{{ 'product-background.svg' }}"});
 }
 
 .direct-checkout {
@@ -252,7 +253,45 @@
   }
 }
 
-#bronze-package {
+#ultra-vitamins-shot,
+#collagen-v12-with-added-vitamins,
+#joint-support-with-added-vitamins {
+  .buy-now-container {
+    display: none;
+  }
+}
+#bronze-package,
+#gold-package,
+#premium-package {
+  .bottle-container {
+    display: none;
+  }
+}
+
+#ultra-vitamins-shot {
+  #collagen-bottle {
+    display: block !important ;
+  }
+  #ultra-bottle {
+    display: none;
+  }
+}
+#collagen-v12-with-added-vitamins {
+  #collagen-bottle {
+    display: none;
+  }
+  #joint-bottle {
+    display: block !important;
+  }
+}
+#joint-support-with-added-vitamins {
+  #joint-bottle {
+    display: none;
+  }
+}
+
+#bronze-package,
+#ultra-vitamins-shot {
   .product-info {
     background: url(#{'{{"bronze-pack-shape.svg"}}'});
     background-size: cover;
@@ -275,7 +314,8 @@
   }
 }
 
-#gold-package {
+#gold-package,
+#collagen-v12-with-added-vitamins {
   .product-info {
     background: url(#{'{{"gold-pack-shape.svg"}}'});
     background-size: cover;
@@ -298,7 +338,8 @@
   }
 }
 
-#premium-package {
+#premium-package,
+#joint-support-with-added-vitamins {
   .product-info {
     background: url(#{'{{"premiun-pack-shape.svg"}}'});
     background-size: cover;

@@ -94,7 +94,7 @@ header.header {
   content: "";
   position: absolute;
   background: linear-gradient(180deg, #2a6aa3 0%, #2586db 150%);
-  height: 355px;
+  height: 365px;
   width: 100%;
   top: 0;
   left: 0;
@@ -247,9 +247,8 @@ header.header {
 
 .all-bottles {
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 45px auto 65px auto;
   padding: 0 25px;
-  margin-top: 45px;
 }
 .all-bottles .bottles-container {
   display: flex;
@@ -306,6 +305,22 @@ header.header {
   font-family: "Open Sans";
   font-size: 16px;
   color: #b1b1b1;
+}
+.all-bottles .bottle-card .button-container {
+  margin: 25px 0;
+}
+.all-bottles .bottle-card .button-container .theme-button {
+  width: 100%;
+  color: #fff;
+}
+.all-bottles .bottle-card .button-container .theme-button.blue {
+  background-color: #3276af;
+}
+.all-bottles .bottle-card .button-container .theme-button.bronze {
+  background-color: #e2cc03;
+}
+.all-bottles .bottle-card .button-container .theme-button.purple {
+  background-color: #6241bb;
 }
 
 .button-container {
@@ -414,7 +429,8 @@ header.header {
 .product-hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left 70%;
+  background-position: center;
+  background-image: url({{ 'product-background.svg' }});
 }
 
 .direct-checkout {
@@ -633,60 +649,105 @@ header.header {
   max-width: 475px;
 }
 
-#bronze-package .product-info {
+#ultra-vitamins-shot .buy-now-container,
+#collagen-v12-with-added-vitamins .buy-now-container,
+#joint-support-with-added-vitamins .buy-now-container {
+  display: none;
+}
+
+#bronze-package .bottle-container,
+#gold-package .bottle-container,
+#premium-package .bottle-container {
+  display: none;
+}
+
+#ultra-vitamins-shot #collagen-bottle {
+  display: block !important;
+}
+#ultra-vitamins-shot #ultra-bottle {
+  display: none;
+}
+
+#collagen-v12-with-added-vitamins #collagen-bottle {
+  display: none;
+}
+#collagen-v12-with-added-vitamins #joint-bottle {
+  display: block !important;
+}
+
+#joint-support-with-added-vitamins #joint-bottle {
+  display: none;
+}
+
+#bronze-package .product-info,
+#ultra-vitamins-shot .product-info {
   background: url({{"bronze-pack-shape.svg"}});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
 }
-#bronze-package #collagen-bottle {
+#bronze-package #collagen-bottle,
+#ultra-vitamins-shot #collagen-bottle {
   display: none;
 }
-#bronze-package h1 {
+#bronze-package h1,
+#ultra-vitamins-shot h1 {
   color: #e9c546;
 }
-#bronze-package .checkout-button:hover {
+#bronze-package .checkout-button:hover,
+#ultra-vitamins-shot .checkout-button:hover {
   background-color: #e9c546;
 }
-#bronze-package .checkout-button.selected {
+#bronze-package .checkout-button.selected,
+#ultra-vitamins-shot .checkout-button.selected {
   background-color: #e9c546;
 }
 
-#gold-package .product-info {
+#gold-package .product-info,
+#collagen-v12-with-added-vitamins .product-info {
   background: url({{"gold-pack-shape.svg"}});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
 }
-#gold-package #joint-bottle {
+#gold-package #joint-bottle,
+#collagen-v12-with-added-vitamins #joint-bottle {
   display: none;
 }
-#gold-package h1 {
+#gold-package h1,
+#collagen-v12-with-added-vitamins h1 {
   color: #6241bb;
 }
-#gold-package .checkout-button:hover {
+#gold-package .checkout-button:hover,
+#collagen-v12-with-added-vitamins .checkout-button:hover {
   background-color: #6241bb;
 }
-#gold-package .checkout-button.selected {
+#gold-package .checkout-button.selected,
+#collagen-v12-with-added-vitamins .checkout-button.selected {
   background-color: #6241bb;
 }
 
-#premium-package .product-info {
+#premium-package .product-info,
+#joint-support-with-added-vitamins .product-info {
   background: url({{"premiun-pack-shape.svg"}});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
 }
-#premium-package .checkout-button:hover {
+#premium-package .checkout-button:hover,
+#joint-support-with-added-vitamins .checkout-button:hover {
   background-color: #3276af;
 }
-#premium-package .checkout-button:hover .green {
+#premium-package .checkout-button:hover .green,
+#joint-support-with-added-vitamins .checkout-button:hover .green {
   color: #e9c546;
 }
-#premium-package .checkout-button.selected {
+#premium-package .checkout-button.selected,
+#joint-support-with-added-vitamins .checkout-button.selected {
   background-color: #3276af;
 }
-#premium-package .checkout-button.selected .green {
+#premium-package .checkout-button.selected .green,
+#joint-support-with-added-vitamins .checkout-button.selected .green {
   color: #e9c546;
 }
 
