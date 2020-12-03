@@ -14,14 +14,49 @@
   }
 }
 
+#shopify-section-1-Combo-hero-home {
+  background-color: transparent;
+  margin-bottom: 300px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background: url(#{'{{"hero-shape.svg"}}'});
+    height: 350px;
+    width: 100%;
+    bottom: -172px;
+    background-position-y: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #2a6aa3 0%, #2586db 150%);
+    height: 355px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+#shopify-section-1-Combo-all-packages {
+  padding-top: 50px;
+}
+
 .home-hero {
   position: relative;
   display: flex;
   width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // max-width: 1800px;
+  // margin: 0 auto;
   z-index: 10;
   padding: 0 clamp(15px, 6vw, 125px);
   margin-top: clamp(35px, 6vw, 90px);
-  margin-bottom: clamp(80px, 20vw, 250px);
+  // margin-bottom: clamp(80px, 20vw, 250px);
 
   &-left {
     padding-right: 10px;
@@ -52,20 +87,17 @@
     }
   }
 
-  // &-right {
-  //   display: flex;
-  //   background-color: red;
-  //   height: 600px;
-  //   flex: 1;
-  //   position: relative;
-  //   .img-container {
-  //     background-color: #3676a8;
-  //     position: absolute;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  // }
+  &-right {
+    display: flex;
+
+    flex: 1;
+    position: relative;
+    width: 600px;
+    max-width: 600px;
+    img {
+      transform: scale(1.2) translateX(-100px);
+    }
+  }
 }
 
 .products-section {
@@ -295,5 +327,23 @@
     margin-top: 25px;
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #shopify-section-1-Combo-hero-home::before {
+    background: linear-gradient(rgb(42, 106, 163) 0%, rgb(37, 134, 219) 188%);
+    height: 695px;
+  }
+  .home-hero {
+    flex-direction: column;
+    align-items: center;
+    &-right {
+      margin-top: 85px;
+      width: 100%;
+      img {
+        transform: scale(1.2) translateX(-60px);
+      }
+    }
   }
 }
