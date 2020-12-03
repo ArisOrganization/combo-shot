@@ -1,11 +1,10 @@
-{%- if product.title contains "Collagen"-%} {%- assign pack = 'gold-package' -%}
-{% elsif product.title contains 'Joint' %} {%- assign pack = 'bronze-package'
--%} {%- else -%} {%- assign pack = 'premium-package' -%} {%- endif -%}
-
-<div id="{{ pack }}">
-  {% section '1-product-template' %} {% section '1-Product-info' %} {% section
-  '1-Combo-all-bottles'%} {% section '1-Combo-review-section'%} {% section
-  '1-Combo-footer-section'%}
+<div id="{{ product.handle }}">
+    
+  {% section '1-product-template' %} 
+  {% section '1-Product-info' %} 
+  {% section '1-Combo-all-bottles'%} 
+  {% section '1-Combo-review-section'%} 
+  {% section '1-Combo-footer-section'%}
 </div>
 
 <!-- {% section 'product-recommendations' %}  -->
