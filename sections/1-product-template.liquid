@@ -1,12 +1,12 @@
 {% for image in product.images %} {% if image.alt contains "background" %} {%-
 assign background = image | img_url: 'x2048' -%} {% endif %} {% endfor %}
 
+<!-- style="background-image: url({{ background }});" -->
 <div
   data-section-id="{{ section.id }}"
   data-section-type="product"
   data-enable-history-state="true"
   data-ajax-enabled="{{ settings.enable_ajax }}"
-  style="background-image: url({{ background }});"
   class="product-hero"
 >
   {% include '1-header' %}
