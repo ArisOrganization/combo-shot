@@ -34,7 +34,7 @@
     content: "";
     position: absolute;
     background: linear-gradient(180deg, #2a6aa3 0%, #2586db 150%);
-    height: 355px;
+    height: 365px;
     width: 100%;
     top: 0;
     left: 0;
@@ -216,9 +216,8 @@
 
 .all-bottles {
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 45px auto 65px auto;
   padding: 0 25px;
-  margin-top: 45px;
   .bottles-container {
     display: flex;
     justify-content: space-evenly;
@@ -279,6 +278,23 @@
           font-family: "Open Sans";
           font-size: 16px;
           color: #b1b1b1;
+        }
+      }
+    }
+
+    .button-container {
+      margin: 25px 0;
+      .theme-button {
+        width: 100%;
+        color: #fff;
+        &.blue {
+          background-color: #3276af;
+        }
+        &.bronze {
+          background-color: #e2cc03;
+        }
+        &.purple {
+          background-color: #6241bb;
         }
       }
     }
