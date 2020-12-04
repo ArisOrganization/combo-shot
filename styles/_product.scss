@@ -256,8 +256,11 @@
 #ultra-vitamins-shot,
 #collagen-v12-with-added-vitamins,
 #joint-support-with-added-vitamins {
-  .buy-now-container {
+  .buy-now-container, .pack, .single, .subscription {
     display: none;
+  }
+  .product-info-header {
+    opacity: 0;
   }
 }
 #bronze-package,

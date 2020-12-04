@@ -84,7 +84,7 @@ header.header {
   background: url({{"hero-shape.svg"}});
   height: 350px;
   width: 100%;
-  bottom: -172px;
+  bottom: -145px;
   background-position-y: 75%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -142,17 +142,15 @@ header.header {
   display: flex;
   flex: 1;
   position: relative;
-  width: 600px;
-  max-width: 600px;
-}
-.home-hero-right img {
-  transform: scale(1.2) translateX(-100px);
+  width: 750px;
+  max-width: 750px;
 }
 
 .products-section {
   padding: 0 clamp(15px, 6vw, 125px);
   position: relative;
   z-index: 100;
+  transform: translateY(-165px);
 }
 .products-section .all-packages-title {
   font-family: "Magallanes";
@@ -186,17 +184,23 @@ header.header {
   flex-direction: column;
   margin-top: 50px;
 }
+.products-section .package-card img {
+  max-height: 310px;
+}
 .products-section .package-card.Premium .large:hover {
   background-color: #3676a8;
+}
+.products-section .package-card.Premium p {
+  text-align: center;
+}
+.products-section .package-card.Premium .fake-center {
+  transform: translateX(-11%);
 }
 .products-section .package-card.Collagen .large:hover {
   background-color: #6241bb;
 }
 .products-section .package-card.Joint .large:hover {
   background-color: #e2cc03;
-}
-.products-section .package-card .title {
-  max-width: 300px;
 }
 .products-section .package-card .title p {
   position: relative;
@@ -224,10 +228,11 @@ header.header {
   margin-top: auto;
 }
 .products-section .package-card .large {
-  margin-top: 10px;
-  width: 90%;
+  width: 100%;
   padding: 5px;
   font-size: 16px;
+  max-width: 310px;
+  margin: 10px auto;
 }
 .products-section .package-card .large:hover {
   color: #ffffff;
@@ -246,7 +251,7 @@ header.header {
 }
 
 .all-bottles {
-  max-width: 1250px;
+  max-width: 1650px;
   margin: 45px auto 65px auto;
   padding: 0 25px;
 }
@@ -365,9 +370,12 @@ header.header {
 }
 
 @media screen and (max-width: 1200px) {
-  #shopify-section-1-Combo-hero-home::before {
+  #shopify-section-1-Combo-hero-home:before {
     background: linear-gradient(#2a6aa3 0%, #2586db 188%);
     height: 695px;
+  }
+  #shopify-section-1-Combo-hero-home:after {
+    bottom: -90px;
   }
 
   .home-hero {
@@ -377,9 +385,6 @@ header.header {
   .home-hero-right {
     margin-top: 85px;
     width: 100%;
-  }
-  .home-hero-right img {
-    transform: scale(1.2) translateX(-60px);
   }
 }
 .footer-section {
@@ -649,10 +654,21 @@ header.header {
   max-width: 475px;
 }
 
-#ultra-vitamins-shot .buy-now-container,
+#ultra-vitamins-shot .buy-now-container, #ultra-vitamins-shot .pack, #ultra-vitamins-shot .single, #ultra-vitamins-shot .subscription,
 #collagen-v12-with-added-vitamins .buy-now-container,
-#joint-support-with-added-vitamins .buy-now-container {
+#collagen-v12-with-added-vitamins .pack,
+#collagen-v12-with-added-vitamins .single,
+#collagen-v12-with-added-vitamins .subscription,
+#joint-support-with-added-vitamins .buy-now-container,
+#joint-support-with-added-vitamins .pack,
+#joint-support-with-added-vitamins .single,
+#joint-support-with-added-vitamins .subscription {
   display: none;
+}
+#ultra-vitamins-shot .product-info-header,
+#collagen-v12-with-added-vitamins .product-info-header,
+#joint-support-with-added-vitamins .product-info-header {
+  opacity: 0;
 }
 
 #bronze-package .bottle-container,
@@ -1012,4 +1028,7 @@ header.header {
   top: 50vh;
   transform: translate(-50%, -50%);
   padding: 20px;
+}
+.modal-overlay .modal-container .modal-body img {
+  height: 125px;
 }

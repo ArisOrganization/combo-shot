@@ -24,7 +24,7 @@
     background: url(#{'{{"hero-shape.svg"}}'});
     height: 350px;
     width: 100%;
-    bottom: -172px;
+    bottom: -145px;
     background-position-y: 75%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,11 +92,8 @@
 
     flex: 1;
     position: relative;
-    width: 600px;
-    max-width: 600px;
-    img {
-      transform: scale(1.2) translateX(-100px);
-    }
+    width: 750px;
+    max-width: 750px;
   }
 }
 
@@ -104,6 +101,7 @@
   padding: 0 clamp(15px, 6vw, 125px);
   position: relative;
   z-index: 100;
+  transform: translateY(-165px);
   .all-packages {
     &-title {
       font-family: "Magallanes";
@@ -138,9 +136,18 @@
     flex-direction: column;
     margin-top: 50px;
 
+    img {
+      max-height: 310px;
+    }
     &.Premium {
       .large:hover {
         background-color: #3676a8;
+      }
+      p {
+        text-align: center;
+      }
+      .fake-center {
+        transform: translateX(-11%);
       }
     }
     &.Collagen {
@@ -155,9 +162,6 @@
     }
 
     .title {
-      // background-color: blue;
-      max-width: 300px;
-
       p {
         position: relative;
         font-family: "Open Sans";
@@ -190,10 +194,12 @@
     }
 
     .large {
-      margin-top: 10px;
-      width: 90%;
+      width: 100%;
       padding: 5px;
       font-size: 16px;
+      max-width: 310px;
+      margin: 10px auto;
+
       &:hover {
         color: #ffffff;
       }
@@ -215,7 +221,7 @@
 }
 
 .all-bottles {
-  max-width: 1250px;
+  max-width: 1650px;
   margin: 45px auto 65px auto;
   padding: 0 25px;
   .bottles-container {
@@ -347,9 +353,14 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #shopify-section-1-Combo-hero-home::before {
-    background: linear-gradient(rgb(42, 106, 163) 0%, rgb(37, 134, 219) 188%);
-    height: 695px;
+  #shopify-section-1-Combo-hero-home {
+    &:before {
+      background: linear-gradient(rgb(42, 106, 163) 0%, rgb(37, 134, 219) 188%);
+      height: 695px;
+    }
+    &:after {
+      bottom: -90px;
+    }
   }
   .home-hero {
     flex-direction: column;
@@ -357,9 +368,6 @@
     &-right {
       margin-top: 85px;
       width: 100%;
-      img {
-        transform: scale(1.2) translateX(-60px);
-      }
     }
   }
 }
