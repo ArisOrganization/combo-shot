@@ -11,10 +11,10 @@
         {%- for item in collection.products -%}
         <div class="package-card {{ item.title | split: ' ' | first}}">
             <div class="package-card-img">
-                <img src={{ item.featured_image | img_url: '450x450' }} alt="{{item.title}}">
+                <img src={{ item.featured_image | img_url: '650x650' }} alt="{{item.title}}">
             </div>
             <div class="title">
-                <p class='starts'>{{item.title}}</p>
+                <p class='starts fake-center'>{{item.title}}</p>
                  {{item.metafields.global.short_description }}
             </div>
             <div class="card-footer">
