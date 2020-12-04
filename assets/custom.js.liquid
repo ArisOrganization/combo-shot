@@ -50,6 +50,7 @@ $(".checkout-button").on("click", function () {
 });
 
 $(".next").on("click", function () {
+  this.disabled = true;
   let parent = $(this).parents(".step-container");
   this.parentElement.dataset[
     Object.keys(this.parentElement.dataset)[0]
