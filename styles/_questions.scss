@@ -27,10 +27,36 @@
     .step-question {
       p {
         font-family: "Open Sans";
-        font-size: 22px;
+        font-size: 21px;
         text-align: center;
         color: #525252;
         margin-bottom: 45px;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        flex-wrap: wrap;
+        li {
+          position: relative;
+          font-family: "Open Sans";
+          font-size: 16px;
+          padding-left: 40px;
+          margin-top: 15px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-image: url(green-tick.svg);
+            background-size: cover;
+            left: 0px;
+            top: 0;
+          }
+        }
       }
     }
 
@@ -72,6 +98,26 @@
           color: #fff;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #questions .step-container .step-question {
+    .step-3 {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      margin-top: -20px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: 0 auto;
     }
   }
 }

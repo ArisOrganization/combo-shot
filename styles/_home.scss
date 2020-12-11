@@ -22,9 +22,9 @@
     content: "";
     position: absolute;
     background: url(#{'{{"hero-shape.svg"}}'});
-    height: 350px;
+    height: 420px;
     width: 100%;
-    bottom: -145px;
+    bottom: 110px;
     background-position-y: 75%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@
   &:before {
     content: "";
     position: absolute;
-    background: linear-gradient(180deg, #2a6aa3 0%, #2586db 150%);
+    background: linear-gradient(180deg, #2a6aa3 0%, #2586db 175%);
     height: 365px;
     width: 100%;
     top: 0;
@@ -55,7 +55,7 @@
   // margin: 0 auto;
   z-index: 10;
   padding: 0 clamp(15px, 6vw, 125px);
-  margin-top: clamp(35px, 6vw, 90px);
+  margin-top: clamp(35px, 11vw, 150px);
   // margin-bottom: clamp(80px, 20vw, 250px);
 
   &-left {
@@ -94,6 +94,7 @@
     position: relative;
     width: 750px;
     max-width: 750px;
+    transform: translateY(-20%);
   }
 }
 
@@ -135,9 +136,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    display: flex;
 
     img {
       max-height: 310px;
+      margin: 0 auto;
     }
     &.Premium {
       .large:hover {
@@ -174,6 +177,9 @@
           font-size: 16px;
           display: block;
           font-weight: 400;
+          max-width: 295px;
+          margin: 0 auto;
+          text-align: left;
         }
         &.starts {
           &::after {
@@ -354,20 +360,54 @@
 
 @media screen and (max-width: 1200px) {
   #shopify-section-1-Combo-hero-home {
+    margin-bottom: 100px;
     &:before {
-      background: linear-gradient(rgb(42, 106, 163) 0%, rgb(37, 134, 219) 188%);
-      height: 695px;
+      background: linear-gradient(#2a6aa3 0%, #2586db 330%);
+      height: 680px;
     }
     &:after {
-      bottom: -90px;
+      bottom: 215px;
+    }
+    .home-hero {
+      &-left {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    .products-section .package-card .title p {
+      text-align: left;
+      &.fake-center {
+        text-align: initial;
+        transform: none;
+      }
+      &.starts {
+        padding-bottom: 10px;
+        &:after {
+          margin-left: 0;
+          top: 30px;
+          left: 0;
+        }
+      }
     }
   }
   .home-hero {
     flex-direction: column;
     align-items: center;
     &-right {
-      margin-top: 85px;
+      margin-top: 140px;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+}
+@media screen and (max-width: 575px) {
+  #shopify-section-1-Combo-hero-home {
+    &:before {
+      background: linear-gradient(rgb(42, 106, 163) 0%, rgb(37, 134, 219) 340%);
+      height: 600px;
     }
   }
 }

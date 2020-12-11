@@ -1,12 +1,34 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
 .product-hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(#{"{{ 'product-background.svg' }}"});
+
+  &-img {
+    flex: 1;
+    min-width: 725px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img {
+      max-height: 530px;
+      transform: scale(2) translate(0%, -27%);
+    }
+  }
 }
 
 .direct-checkout {
-  max-width: 720px;
+  margin: 0 auto;
+  max-width: 525px;
   width: 100%;
   padding: 0 clamp(15px, 6vw, 125px) 30px;
 
@@ -125,6 +147,10 @@
           text-decoration: line-through;
           font-weight: 100;
         }
+        .save {
+          display: block;
+          font-size: 18px;
+        }
       }
       .month-price {
         min-width: 76px;
@@ -158,6 +184,7 @@
       font-family: "Open Sans";
       font-size: 19px;
       color: #ffffff;
+      min-width: 425px;
     }
     .payment {
       width: 100%;
@@ -177,6 +204,8 @@
   position: relative;
   padding: 0 clamp(10px, 6vw, 60px);
   min-height: 750px;
+  padding-bottom: 5vw;
+
   &-header {
     padding-top: 55px;
     h2 {
@@ -215,6 +244,9 @@
       flex: 1;
       width: 100%;
       min-width: 500px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
 
       &.img-container {
         min-height: 500px;
@@ -235,6 +267,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
         h2 {
           font-family: "Magallanes";
           font-weight: 600;
@@ -247,6 +280,13 @@
           color: #ffffff;
           margin-bottom: 35px;
           max-width: 475px;
+
+          &.content-title {
+            font-family: "Magallanes";
+            font-size: 34px;
+            color: #ffffff;
+            text-transform: uppercase;
+          }
         }
       }
     }
@@ -256,17 +296,24 @@
 #ultra-vitamins-shot,
 #collagen-v12-with-added-vitamins,
 #joint-support-with-added-vitamins {
-  .buy-now-container, .pack, .single, .subscription {
+  .buy-now-container,
+  .pack,
+  .single,
+  .subscription {
     display: none;
   }
   .product-info-header {
     opacity: 0;
   }
+  .product-hero-img img {
+    transform: scale(1) translate(0%, -12%);
+  }
 }
 #bronze-package,
 #gold-package,
 #premium-package {
-  .bottle-container {
+  .bottle-container,
+  .content-title {
     display: none;
   }
 }
@@ -364,14 +411,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1255px) {
+  .product-hero-img {
+    img {
+      transform: scale(1);
+    }
+  }
+}
+
 @media screen and (max-width: 1120px) {
-  .product-info-body div {
-    align-items: center;
-    min-width: 100%;
+  .product-info-body {
+    div.content {
+      align-items: center;
+      min-width: 100%;
+      text-align: center;
+    }
+    div.img-container {
+      min-height: 200px;
+    }
   }
   .info-img {
     img {
-      transform: translateX(-15%);
+      margin: 0 auto;
     }
   }
 }
@@ -409,6 +471,9 @@
       max-width: 100%;
     }
   }
+  .product-hero-img {
+    min-width: 100%;
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -419,6 +484,11 @@
           right: 0;
           top: -23px;
         }
+      }
+    }
+    .direct-checkout-link {
+      .theme-button {
+        min-width: 100%;
       }
     }
   }
