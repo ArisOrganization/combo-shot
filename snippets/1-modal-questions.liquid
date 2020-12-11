@@ -2,12 +2,20 @@
 <script>
   var products = {{ all | json }}
 </script>
-<div class="modal-overlay d-none">
+<div class="modal-overlay d-none" >
   <div class="modal-container">
     <div class="modal-body">
-      <p>We have found the perfect solution</p>
       <p class="recommended"></p>
-      <img class='modal-img' src="" alt="modal-img">
+      <div class="modal-content">
+        <div class="modal-img">
+          <img class='modal-img' src="" alt="modal-img">
+        </div>
+        <div class="modal-bullet-points">
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
     </div>
     <a href="#" class="theme-button large" id="modal-button">FIND OUT MORE</a>
   </div>
