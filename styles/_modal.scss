@@ -127,3 +127,25 @@
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .modal-overlay .modal-container {
+    padding: 20px;
+    .modal-body img {
+      height: 50vw;
+    }
+    .recommended {
+      font-size: 19px;
+    }
+
+    .modal-content .modal-bullet-points {
+      ul {
+        margin: 0 10px;
+        li {
+          font-size: 14px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
