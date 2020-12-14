@@ -974,7 +974,7 @@ header.header {
   text-align: center;
   font-family: "Magallanes";
   font-weight: 600;
-  font-size: clamp(23px, 3vw, 28px);
+  font-size: clamp(21px, 3vw, 28px);
   color: #3476b0;
   text-transform: uppercase;
 }
@@ -1268,5 +1268,23 @@ header.header {
 #gold-package .modal-content .modal-bullet-points ul li,
 #premium-package .modal-content .modal-bullet-points ul li {
     margin: 20px 20px 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .modal-overlay .modal-container {
+    padding: 20px;
+  }
+  .modal-overlay .modal-container .modal-body img {
+    height: 50vw;
+  }
+  .modal-overlay .modal-container .recommended {
+    font-size: 19px;
+  }
+  .modal-overlay .modal-container .modal-content .modal-bullet-points ul {
+    margin: 0 10px;
+  }
+  .modal-overlay .modal-container .modal-content .modal-bullet-points ul li {
+    font-size: 14px;
+    margin: 10px;
   }
 }

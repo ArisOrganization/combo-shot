@@ -1,3 +1,5 @@
+window.onunload = function () {};
+
 $(".top").on("click", function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
 });
@@ -128,7 +130,7 @@ function getRecommended(object) {
       };
       break;
     case question1 == "yes" && question2 == "yes":
-      name = "Joint Care Package";
+      name = "Joint Support Care Package";
       shopifyProduct = products.find((e) => e.title.includes(name));
       product = {
         id: shopifyProduct.handle,
