@@ -19,7 +19,8 @@
       <div class="direct-checkout-header">
         <h1>{{ product.title }}</h1>
         <p class="from_price">From 
-          <span class="pack">{{ start_price }} per month</span>
+         
+          <span class="pack">{{ product.price_max |  divided_by: 12 | money }} per month</span>
           <span class="bottle">{{ start_price }}</span>
   
          </p>
