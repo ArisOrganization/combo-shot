@@ -1,5 +1,6 @@
 #questions {
   margin-top: clamp(1px, 3vw, 75px);
+  padding: 0 clamp(15px, 6vw, 125px);
   .question {
     &-header {
       margin-bottom: clamp(15px, 3vw, 45px);
@@ -103,11 +104,9 @@
 }
 
 @media screen and (max-width: 750px) {
-  #questions .step-container .step-question {
-    .step-3 {
-      p {
-        margin-bottom: 0;
-      }
+  #questions .step-container.step-3 .step-question {
+    p {
+      margin-bottom: 0;
     }
     ul {
       display: flex;
@@ -117,7 +116,7 @@
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
-      margin: 0 auto;
+      margin: 10px auto;
     }
   }
 }

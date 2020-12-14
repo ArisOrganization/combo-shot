@@ -23,7 +23,6 @@
   margin: 0 30px;
 }
 
-
 .footer-other-links {
   padding: 10px;
   width: 100%;
@@ -41,5 +40,15 @@
 
   .trustpilot-footer {
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer-other-links {
+    flex-direction: column;
+    p {
+      text-align: center;
+      margin-top: 10px;
+    }
   }
 }

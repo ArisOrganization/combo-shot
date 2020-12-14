@@ -1,6 +1,7 @@
 header.header {
   display: flex;
   justify-content: space-between;
+  padding: 25px 15px;
   padding: 25px clamp(15px, 6vw, 125px);
   position: relative;
   z-index: 1;
@@ -13,7 +14,7 @@ header.header {
 .main-content {
   padding: 0 !important;
   margin: 0 !important;
-  background: #e5e5e5;
+  background: #f5f5f5;
 }
 
 .theme-button {
@@ -81,20 +82,22 @@ header.header {
 #shopify-section-1-Combo-hero-home:after {
   content: "";
   position: absolute;
-  background: url({{"hero-shape.svg"}});
-  height: 420px;
+  background: url({{"hero-shape-trans.svg"}});
+  height: 33vw;
   width: 100%;
   bottom: 110px;
-  background-position-y: 75%;
+  background-position-y: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   left: 0;
+  bottom: 0;
+  transform: scale(1.2);
 }
 #shopify-section-1-Combo-hero-home:before {
   content: "";
   position: absolute;
-  background: linear-gradient(180deg, #2a6aa3 0%, #2586db 175%);
-  height: 365px;
+  background: linear-gradient(180deg, #2a6aa3 0%, #2586db 102%);
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -110,6 +113,8 @@ header.header {
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
   z-index: 10;
   padding: 0 clamp(15px, 6vw, 125px);
   margin-top: clamp(35px, 11vw, 150px);
@@ -145,6 +150,9 @@ header.header {
   width: 750px;
   max-width: 750px;
   transform: translateY(-20%);
+}
+.home-hero img {
+  align-self: center;
 }
 
 .products-section {
@@ -193,11 +201,11 @@ header.header {
 .products-section .package-card.Premium .large:hover {
   background-color: #3676a8;
 }
-.products-section .package-card.Premium p {
-  text-align: center;
+.products-section .package-card.Premium p.fake-center {
+  transform: translateX(25px);
 }
-.products-section .package-card.Premium .fake-center {
-  transform: translateX(-11%);
+.products-section .package-card.Premium p.fake-center + p {
+  margin: 0 auto;
 }
 .products-section .package-card.Collagen .large:hover {
   background-color: #6241bb;
@@ -210,6 +218,7 @@ header.header {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 20px;
+  padding-bottom: 20px;
   margin: 5px;
   color: #636363;
 }
@@ -220,6 +229,7 @@ header.header {
   max-width: 295px;
   margin: 0 auto;
   text-align: left;
+  margin-left: 5px;
 }
 .products-section .package-card .title p.starts::after {
   content: "";
@@ -227,8 +237,8 @@ header.header {
   background: url({{"stars.svg"}});
   height: 15px;
   width: 88px;
-  margin-left: 10px;
-  top: 7px;
+  left: 0;
+  top: 30px;
 }
 .products-section .package-card .card-footer {
   margin-top: auto;
@@ -365,7 +375,7 @@ header.header {
   height: 200px;
   background: #f5f5f5;
   border-radius: 10px;
-  margin-right: 20px;
+  margin: 10px;
   color: white;
   text-align: center;
 }
@@ -377,18 +387,22 @@ header.header {
 
 @media screen and (max-width: 1200px) {
   #shopify-section-1-Combo-hero-home {
-    margin-bottom: 100px;
+    margin-bottom: 160px;
   }
-  #shopify-section-1-Combo-hero-home:before {
-    background: linear-gradient(#2a6aa3 0%, #2586db 330%);
-    height: 680px;
-  }
-  #shopify-section-1-Combo-hero-home:after {
-    bottom: 215px;
+  #shopify-section-1-Combo-hero-home .home-hero {
+    flex-direction: column;
+    align-items: center;
   }
   #shopify-section-1-Combo-hero-home .home-hero-left {
     max-width: 100%;
     text-align: center;
+  }
+  #shopify-section-1-Combo-hero-home .home-hero-right {
+    margin-top: 140px;
+    width: 100%;
+  }
+  #shopify-section-1-Combo-hero-home .home-hero-right img {
+    transform: translateY(50px);
   }
   #shopify-section-1-Combo-hero-home .products-section .package-card .title p {
     text-align: left;
@@ -404,21 +418,6 @@ header.header {
     margin-left: 0;
     top: 30px;
     left: 0;
-  }
-
-  .home-hero {
-    flex-direction: column;
-    align-items: center;
-  }
-  .home-hero-right {
-    margin-top: 140px;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 575px) {
-  #shopify-section-1-Combo-hero-home:before {
-    background: linear-gradient(#2a6aa3 0%, #2586db 340%);
-    height: 600px;
   }
 }
 .footer-section {
@@ -465,6 +464,15 @@ header.header {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 360px) {
+  .footer-other-links {
+    flex-direction: column;
+  }
+  .footer-other-links p {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
 .checkout-container {
   display: flex;
   justify-content: space-between;
@@ -901,6 +909,7 @@ header.header {
 
   .product-hero-img {
     min-width: 100%;
+    margin-top: 60px;
   }
 }
 @media screen and (max-width: 460px) {
@@ -956,6 +965,7 @@ header.header {
 
 #questions {
   margin-top: clamp(1px, 3vw, 75px);
+  padding: 0 clamp(15px, 6vw, 125px);
 }
 #questions .question-header {
   margin-bottom: clamp(15px, 3vw, 45px);
@@ -1048,10 +1058,10 @@ header.header {
 }
 
 @media screen and (max-width: 750px) {
-  #questions .step-container .step-question .step-3 p {
+  #questions .step-container.step-3 .step-question p {
     margin-bottom: 0;
   }
-  #questions .step-container .step-question ul {
+  #questions .step-container.step-3 .step-question ul {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -1059,7 +1069,7 @@ header.header {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 0 auto;
+    margin: 10px auto;
   }
 }
 #steps.steps-progress {
