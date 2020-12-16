@@ -110,7 +110,9 @@ $(".open-modal").on("click", function () {
     $(".modal-img").attr("src", recommended.img);
     if (recommended.bullets) {
       $(".modal-bullet-points ul").append(
-        recommended.bullets.map((e) => `<li>${e}</li>`).join(" ")
+        recommended.bullets
+          .map((e) => `<li>${e.replace(">", "")}</li>`)
+          .join(" ")
       );
     } else {
       $(".modal-bullet-points").append(recommended.description);
@@ -137,7 +139,7 @@ function getRecommended(object) {
         link: "/products/" + shopifyProduct.handle,
         name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
-        bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
+        bullets: shopifyProduct.description.match(/>[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes" && question2 == "yes":
@@ -148,7 +150,7 @@ function getRecommended(object) {
         link: "/products/" + shopifyProduct.handle,
         name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
-        bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
+        bullets: shopifyProduct.description.match(/>[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes" && question3 == "yes":
@@ -159,7 +161,7 @@ function getRecommended(object) {
         link: "/products/" + shopifyProduct.handle,
         name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
-        bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
+        bullets: shopifyProduct.description.match(/>[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes":
