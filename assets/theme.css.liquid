@@ -381,6 +381,26 @@ header.header {
   margin: 10px;
   color: white;
   text-align: center;
+  padding: 10px;
+}
+.reviews-section .review-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.reviews-section .review-text p {
+  text-align: left;
+}
+.reviews-section .review-text .rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.reviews-section .review-text .review-name {
+  color: #515151;
 }
 .reviews-section .trust-line {
   margin-top: 25px;
@@ -423,10 +443,14 @@ header.header {
     left: 0;
   }
 }
+.bussines {
+  margin: 20px auto;
+  border-top: 1px solid #d6d4d4;
+  max-width: 1250px;
+}
 .bussines p {
   text-align: center;
-  margin: 20px auto;
-  max-width: 75ch;
+  padding: 10px;
 }
 
 .footer-section {

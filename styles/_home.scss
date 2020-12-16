@@ -76,8 +76,6 @@
     }
 
     .home-header {
-
-     
       .home-title {
         font-family: "Magallanes";
         font-style: normal;
@@ -86,7 +84,6 @@
         margin-bottom: 0;
         color: #f5f5f5;
       }
-    
     }
   }
 
@@ -117,7 +114,6 @@
     margin: 0 auto;
   }
   .all-packages {
- 
     &-title {
       font-family: "Magallanes";
       font-weight: 600;
@@ -366,6 +362,27 @@
     margin: 10px;
     color: white;
     text-align: center;
+    padding: 10px;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      p {
+        text-align: left;
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .review-name {
+        color: #515151;
+      }
+    }
   }
   .trust-line {
     margin-top: 25px;
