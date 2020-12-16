@@ -16,7 +16,7 @@
 
 #shopify-section-1-Combo-hero-home {
   background-color: transparent;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
   position: relative;
   &:after {
     content: "";
@@ -69,12 +69,15 @@
       font-family: "Open Sans";
       font-size: 17px;
       color: #ffffff;
+      margin-top: 20px;
       strong {
         font-weight: 600;
       }
     }
 
     .home-header {
+
+     
       .home-title {
         font-family: "Magallanes";
         font-style: normal;
@@ -83,9 +86,7 @@
         margin-bottom: 0;
         color: #f5f5f5;
       }
-      .home-text {
-        margin-bottom: 40px;
-      }
+    
     }
   }
 
@@ -109,7 +110,14 @@
   position: relative;
   z-index: 100;
   transform: translateY(-165px);
+
+  .first-header {
+    padding-bottom: 50px;
+    max-width: 115ch;
+    margin: 0 auto;
+  }
   .all-packages {
+ 
     &-title {
       font-family: "Magallanes";
       font-weight: 600;

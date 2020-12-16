@@ -125,72 +125,72 @@ $(".buy-now-container").on("click", function (e) {
 function getRecommended(object) {
   const { question1, question2, question3 } = object;
   let product = "";
-  let name = "";
+  let id = "";
   let shopifyProduct = {};
 
   switch (true) {
     case question1 == "yes" && question2 == "yes" && question3 == "yes":
-      name = "Premium Care Package";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 5972978630805;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes" && question2 == "yes":
-      name = "Joint Support Care Package";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 5972985643157;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes" && question3 == "yes":
-      name = "Collagen Care Package";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 5972994654357;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         bullets: shopifyProduct.description.match(/[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
     case question1 == "yes":
-      name = "Joint Support";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 6097037099157;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         description: shopifyProduct.description,
       };
       break;
     case question2 == "yes":
-      name = "Ultra Vitamins+";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 6097059053717;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         description: shopifyProduct.description,
       };
       break;
     case question3 == "yes":
-      name = "Collagen V12";
-      shopifyProduct = products.find((e) => e.title.includes(name));
+      id = 6096950362261;
+      shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
         link: "/products/" + shopifyProduct.handle,
-        name,
+        name: shopifyProduct.title,
         img: shopifyProduct.featured_image,
         description: shopifyProduct.description,
       };

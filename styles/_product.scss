@@ -278,7 +278,6 @@
           font-family: "Open Sans";
           font-size: 16px;
           color: #ffffff;
-          margin-bottom: 35px;
           max-width: 475px;
 
           &.content-title {
@@ -286,6 +285,30 @@
             font-size: 34px;
             color: #ffffff;
             text-transform: uppercase;
+          }
+        }
+
+        ul {
+          color: #fff;
+          padding-bottom: 17px;
+          li {
+            position: relative;
+            position: relative;
+            font-family: "Open Sans";
+            font-size: 18px;
+            padding-left: 30px;
+            margin: 12px;
+            margin-left: 0;
+            &:before {
+              content: '';
+              position: absolute;
+              height: 15px;
+              width: 15px;
+              background-image: url(green-tick.svg);
+              background-size: cover;
+              left: 0;
+              top: 6px;
+            }
           }
         }
       }
