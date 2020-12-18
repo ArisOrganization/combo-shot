@@ -1,0 +1,51 @@
+#about {
+  padding: 0 clamp(20px, 10vw, 125px);
+  margin-top: 75px;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  .about {
+    &-header {
+      margin-bottom: 55px;
+      h1 {
+        font-family: "Magallanes";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        color: #3476b0;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      p {
+        font-family: "Open Sans";
+        text-align: center;
+        color: #525252;
+      }
+    }
+    &-content {
+      .fact {
+        margin-bottom: 45px;
+
+        p {
+          font-family: "Open Sans";
+          font-weight: 400;
+          font-size: 16px;
+          color: #000000;
+
+          &:first-of-type {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .button-container {
+    .theme-button {
+      width: 100%;
+      max-width: 350px;
+      font-size: clamp(16px, 3vw, 18px);
+    }
+  }
+}

@@ -1,0 +1,435 @@
+.shape {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -90px;
+    height: 730px;
+    width: 100%;
+    background: url(#{'{{"hero-background.png"}}'});
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    z-index: 0;
+  }
+}
+
+#shopify-section-1-Combo-hero-home {
+  background-color: transparent;
+  margin-bottom: 200px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background: url(#{'{{"hero-shape-trans.svg"}}'});
+    height: 33vw;
+    width: 100%;
+    bottom: 110px;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    bottom: 0;
+    transform: scale(1.2);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #2a6aa3 0%, #2586db 102%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+#shopify-section-1-Combo-all-packages {
+  padding-top: 50px;
+}
+
+.home-hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
+  z-index: 10;
+  padding: 0 clamp(15px, 6vw, 125px);
+  margin-top: clamp(35px, 11vw, 150px);
+  // margin-bottom: clamp(80px, 20vw, 250px);
+
+  &-left {
+    padding-right: 10px;
+    width: 100%;
+    max-width: 475px;
+
+    .home-text {
+      font-family: "Open Sans";
+      font-size: 17px;
+      color: #ffffff;
+      margin-top: 20px;
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .home-header {
+      .home-title {
+        font-family: "Magallanes";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 0;
+        color: #f5f5f5;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+
+    flex: 1;
+    position: relative;
+    width: 750px;
+    max-width: 750px;
+    transform: translateY(-20%);
+  }
+
+  img {
+    align-self: center;
+  }
+}
+
+.products-section {
+  padding: 0 clamp(15px, 6vw, 125px);
+  position: relative;
+  z-index: 100;
+  transform: translateY(-165px);
+
+  .first-header {
+    padding-bottom: 50px;
+    max-width: 115ch;
+    margin: 0 auto;
+  }
+  .all-packages {
+    &-title {
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(26px, 3vw, 34px);
+      text-align: center;
+      color: #525252;
+    }
+    &-sub-text {
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 18px;
+      text-align: center;
+      color: #525252;
+      span {
+        display: block;
+      }
+    }
+    &-container {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 0 25px;
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+  .package-card {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    display: flex;
+
+    img {
+      max-height: 310px;
+      margin: 0 auto;
+    }
+    &.Premium {
+      .large:hover {
+        background-color: #3676a8;
+      }
+      p.fake-center {
+        transform: translateX(25px);
+      }
+      p.fake-center + p {
+        margin: 0 auto;
+      }
+    }
+    &.Collagen {
+      .large:hover {
+        background-color: #6241bb;
+      }
+    }
+    &.Joint {
+      .large:hover {
+        background-color: #e2cc03;
+      }
+    }
+
+    .title {
+      p {
+        position: relative;
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 20px;
+        padding-bottom: 20px;
+        margin: 5px;
+        color: #636363;
+
+        &:last-of-type {
+          font-size: 16px;
+          display: block;
+          font-weight: 400;
+          max-width: 295px;
+          margin: 0 auto;
+          text-align: left;
+          margin-left: 5px;
+        }
+        &.starts {
+          &::after {
+            content: "";
+            position: absolute;
+            background: url(#{'{{"stars.svg"}}'});
+            height: 15px;
+            width: 88px;
+            left: 0;
+            top: 30px;
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      margin-top: auto;
+    }
+
+    .large {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      max-width: 310px;
+      margin: 10px auto;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .price {
+      padding-top: 25px;
+      p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: #3676a8;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.all-bottles {
+  max-width: 1650px;
+  margin: 45px auto 65px auto;
+  padding: 0 25px;
+  .bottles-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .bottle-card {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    &-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        .overlay-bottle {
+          z-index: 0;
+          opacity: 1;
+        }
+      }
+
+      .overlay-bottle {
+        position: absolute;
+        height: 95%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.65);
+        padding: 35px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 1s;
+        p {
+          font-size: 16px;
+          line-height: 18px;
+
+          &:first-of-type {
+            font-weight: 700;
+          }
+        }
+      }
+
+      img {
+        width: 245px;
+        height: 425px;
+      }
+    }
+
+    &-info {
+      margin-top: -20px;
+      p {
+        font-family: "Open Sans";
+        line-height: 1;
+        margin: 0;
+        font-size: 18px;
+        &.tags {
+          margin: 5px 0 10px;
+          font-family: "Open Sans";
+          font-size: 16px;
+          color: #b1b1b1;
+        }
+      }
+    }
+
+    .button-container {
+      margin: 25px 0;
+      .theme-button {
+        width: 100%;
+        color: #fff;
+        &.blue {
+          background-color: #3276af;
+        }
+        &.bronze {
+          background-color: #e2cc03;
+        }
+        &.purple {
+          background-color: #6241bb;
+        }
+      }
+    }
+  }
+}
+
+.button-container {
+  margin: 75px 0;
+  .theme-button {
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+
+.reviews-section {
+  background-color: #fff;
+  min-height: 500px;
+  padding: 95px 0 20px 0;
+
+  h2 {
+    font-family: "Magallanes";
+    text-align: center;
+    margin-bottom: 55px;
+    font-weight: 600;
+    font-size: 34px;
+
+    color: #000000;
+  }
+
+  .slick-container {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .review {
+    width: 305px;
+    height: 200px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      p {
+        text-align: left;
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .review-name {
+        color: #515151;
+      }
+    }
+  }
+  .trust-line {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #shopify-section-1-Combo-hero-home {
+    margin-bottom: 160px;
+
+    .home-hero {
+      flex-direction: column;
+      align-items: center;
+      &-left {
+        max-width: 100%;
+        text-align: center;
+      }
+      &-right {
+        margin-top: 140px;
+        width: 100%;
+        img {
+          transform: translateY(50px);
+        }
+      }
+    }
+
+    .products-section .package-card .title p {
+      text-align: left;
+      &.fake-center {
+        text-align: initial;
+        transform: none;
+      }
+      &.starts {
+        padding-bottom: 10px;
+        &:after {
+          margin-left: 0;
+          top: 30px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+}
+@media screen and (max-width: 575px) {
+}

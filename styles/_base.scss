@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Magallanes";
+  src: url(#{'{{"MagallanesRegular.ttf" | asset_url}}'}) format("truetype");
+}
+
+.main-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #f5f5f5;
+}
+
+.theme-button {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 25px;
+  color: #4a4a4a;
+  background: #eaeaea;
+  border: 1px solid #4a4a4a;
+  padding: 12px 32px;
+  margin-top: 50px;
+  display: inline-block;
+  text-align: center;
+
+  &.large {
+    display: block;
+  }
+
+  &.purple:hover {
+    color: white;
+    background-color: #6241bb;
+    border-color: #6241bb;
+    transition: 0.25s;
+  }
+
+  &.blue:hover {
+    color: white;
+    background-color: #3276af;
+    border-color: #3276af;
+    transition: 0.25s;
+  }
+
+  &.yellow:hover {
+    color: white;
+    background-color: #e9c546;
+    border-color: #e9c546;
+    transition: 0.25s;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

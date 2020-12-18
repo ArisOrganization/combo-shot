@@ -1,0 +1,519 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.product-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(#{"{{ 'product-background.svg' }}"});
+
+  &-img {
+    flex: 1;
+    min-width: 725px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img {
+      max-height: 530px;
+      transform: scale(2) translate(0%, -27%);
+    }
+  }
+}
+
+.direct-checkout {
+  margin: 0 auto;
+  max-width: 575px;
+  width: 100%;
+  padding: 0 clamp(15px, 6vw, 125px) 30px;
+
+  &-header {
+    max-width: 450px;
+    margin-top: clamp(2px, 6vw, 100px);
+    h1 {
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(26px, 3vw, 28px);
+      color: #3276af;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #515151;
+      font-family: "Open Sans";
+
+      &.from_price {
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px 20px 0;
+    .checkout-button {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 425px;
+      min-height: 50px;
+      background: #ffffff;
+      border: 1px solid #4a4a4a;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:first-of-type {
+        &:after {
+          position: absolute;
+          content: "";
+          width: 60px;
+          height: 65px;
+          right: 0;
+          background-image: url(#{'{{"top-seller.svg"}}'});
+          background-size: cover;
+          right: 90px;
+          top: 0;
+        }
+      }
+
+      &:hover {
+        p {
+          color: #ffffff;
+          &:after {
+            color: #ffffff;
+          }
+        }
+        .green {
+          color: #40a737 !important;
+        }
+      }
+      &.selected {
+        p {
+          color: #ffffff;
+          &:after {
+            color: #ffffff;
+          }
+        }
+        .green {
+          color: #40a737 !important;
+        }
+      }
+
+      &.single-month {
+        .month-price {
+          p:after {
+            content: "";
+          }
+        }
+
+        span {
+          display: none;
+          &.single {
+            display: inline;
+          }
+        }
+      }
+
+      .price_info {
+        flex: 1;
+        max-width: 280px;
+
+        p {
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .green {
+          color: #005128;
+          font-weight: 600;
+        }
+
+        .single {
+          display: none;
+        }
+        .cross {
+          text-decoration: line-through;
+          font-weight: 100;
+        }
+        .save {
+          display: block;
+          font-size: 18px;
+        }
+      }
+      .month-price {
+        min-width: 76px;
+        p {
+          font-family: "Open Sans";
+          font-weight: 600;
+          font-size: 18px;
+          text-align: center;
+          margin: 0;
+          position: relative;
+          &:after {
+            content: "per month";
+            font-size: 14px;
+            position: absolute;
+            left: 4px;
+            bottom: -12px;
+          }
+        }
+      }
+    }
+  }
+  &-link {
+    width: 100%;
+    max-width: 425px;
+    margin-top: 10px;
+    .theme-button {
+      display: block;
+      margin-top: 0;
+      background: #40a737;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 19px;
+      color: #ffffff;
+      min-width: 425px;
+    }
+    .payment {
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 75%;
+      }
+    }
+  }
+}
+
+.product-info {
+  position: relative;
+  padding: 0 clamp(10px, 6vw, 60px);
+  min-height: 750px;
+  padding-bottom: 5vw;
+
+  &-header {
+    padding-top: 55px;
+    h2 {
+      font-family: Magallanes;
+      font-weight: 600;
+      font-size: clamp(30px, 3vw, 34px);
+      color: #ffffff;
+      text-align: center;
+    }
+    .products-names {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0 10px;
+        text-transform: uppercase;
+        &.actual {
+          font-size: 22px;
+          order: 2 !important;
+        }
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    div {
+      flex: 1;
+      width: 100%;
+      min-width: 500px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &.img-container {
+        min-height: 500px;
+        position: relative;
+        // .info-img {
+        //   position: absolute;
+        //   height: 100%;
+        //   width: 100%;
+        //   top: -15px;
+        //   background-size: contain;
+        //   background-repeat: no-repeat;
+        //   transform: scale(1.2);
+        //   right: 10px;
+        // }
+      }
+      &.content {
+        padding: 50px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h2 {
+          font-family: "Magallanes";
+          font-weight: 600;
+          font-size: 22px;
+          color: #ffffff;
+        }
+        p {
+          font-family: "Open Sans";
+          font-size: 16px;
+          color: #ffffff;
+          max-width: 475px;
+
+          &.content-title {
+            font-family: "Magallanes";
+            font-size: 34px;
+            color: #ffffff;
+            text-transform: uppercase;
+          }
+        }
+
+        ul {
+          color: #fff;
+          padding-bottom: 17px;
+          li {
+            position: relative;
+            position: relative;
+            font-family: "Open Sans";
+            font-size: 18px;
+            padding-left: 30px;
+            margin: 12px;
+            margin-left: 0;
+            &:before {
+              content: '';
+              position: absolute;
+              height: 15px;
+              width: 15px;
+              background-image: url(green-tick.svg);
+              background-size: cover;
+              left: 0;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#ultra-vitamins-shot,
+#collagen-v12-with-added-vitamins,
+#joint-support-with-added-vitamins {
+  .buy-now-container,
+  .pack,
+  .single,
+  .subscription {
+    display: none;
+  }
+  .product-info-header {
+    opacity: 0;
+  }
+  .product-hero-img img {
+    transform: scale(1) translate(0%, -12%);
+  }
+}
+#bronze-package,
+#gold-package,
+#premium-package {
+  .bottle-container,
+  .content-title {
+    display: none;
+  }
+}
+
+#ultra-vitamins-shot {
+  #collagen-bottle {
+    display: block !important ;
+  }
+  #ultra-bottle {
+    display: none;
+  }
+}
+#collagen-v12-with-added-vitamins {
+  #collagen-bottle {
+    display: none;
+  }
+  #joint-bottle {
+    display: block !important;
+  }
+}
+#joint-support-with-added-vitamins {
+  #joint-bottle {
+    display: none;
+  }
+}
+
+#bronze-package,
+#ultra-vitamins-shot {
+  .product-info {
+    background: url(#{'{{"bronze-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  #collagen-bottle {
+    display: none;
+  }
+  h1 {
+    color: #e9c546;
+  }
+  .checkout-button {
+    &:hover {
+      background-color: #e9c546;
+    }
+    &.selected {
+      background-color: #e9c546;
+    }
+  }
+}
+
+#gold-package,
+#collagen-v12-with-added-vitamins {
+  .product-info {
+    background: url(#{'{{"gold-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  #joint-bottle {
+    display: none;
+  }
+  h1 {
+    color: #6241bb;
+  }
+  .checkout-button {
+    &:hover {
+      background-color: #6241bb;
+    }
+    &.selected {
+      background-color: #6241bb;
+    }
+  }
+}
+
+#premium-package,
+#joint-support-with-added-vitamins {
+  .product-info {
+    background: url(#{'{{"premiun-pack-shape.svg"}}'});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .checkout-button {
+    &:hover {
+      background-color: #3276af;
+      .green {
+        color: #e9c546;
+      }
+    }
+    &.selected {
+      background-color: #3276af;
+      .green {
+        color: #e9c546;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1255px) {
+  .product-hero-img {
+    img {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .product-info-body {
+    div.content {
+      align-items: center;
+      min-width: 100%;
+      text-align: center;
+    }
+    div.img-container {
+      min-height: 200px;
+    }
+  }
+  .info-img {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .products-names {
+    p:not(.actual) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .direct-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-body {
+      padding: 15px 0 0;
+    }
+    &-header {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    &-body {
+      width: 100%;
+      .checkout-button {
+        width: 100%;
+      }
+    }
+    &-link {
+      max-width: 100%;
+    }
+  }
+  .product-hero-img {
+    min-width: 100%;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .direct-checkout-body {
+    .checkout-button {
+      &:first-of-type {
+        &:after {
+          right: 0;
+          top: -23px;
+        }
+      }
+    }
+    .direct-checkout-link {
+      .theme-button {
+        min-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{%- assign all = collections['ALL-PRODUCTS'].products -%}
+<script>
+  var products = {{ all | json }}
+</script>
+<div class="modal-overlay d-none" >
+  <div class="modal-container">
+    <div class="modal-body">
+      <p class="recommended"></p>
+      <div class="modal-content">
+        <div class="modal-img">
+          <img class='modal-img' src="" alt="modal-img">
+        </div>
+        <div class="modal-bullet-points">
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="theme-button large" id="modal-button">FIND OUT MORE</a>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+.modal-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #2c75bf73;
+  top: 0;
+  z-index: 1000;
+
+  .modal-container {
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    max-width: 960px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 2px #3476b0af;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    padding: 50px 20px;
+
+    .modal-body {
+      img {
+        height: 275px;
+      }
+    }
+    .recommended {
+      text-align: center;
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+
+    .modal-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .modal-bullet-points {
+        max-width: 475px;
+        margin-left: 30px;
+        color: #474747;
+        h2 {
+          font-family: "Magallanes";
+          font-size: 22px;
+        }
+
+        p {
+          font-family: "Open Sans";
+          font-size: 16px;
+        }
+        li {
+          position: relative;
+          font-family: "Open Sans";
+          font-size: 16px;
+          padding-left: 40px;
+          margin: 40px 20px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-image: url(green-tick.svg);
+            background-size: cover;
+            left: 0px;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .theme-button {
+      max-width: 480px;
+      background-color: #40a737;
+      color: #fff;
+      margin: 0 auto;
+    }
+  }
+}
+
+#joint-support-with-added-vitamins,
+#premium-package {
+  .recommended {
+    color: #3476b0;
+  }
+}
+
+#collagen-v12-with-added-vitamins,
+#gold-package {
+  .recommended {
+    color: #6241bb;
+  }
+}
+
+#bronze-package,
+#ultra-vitamins-shot {
+  .recommended {
+    color: #e2cc03;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #ultra-vitamins-shot,
+  #collagen-v12-with-added-vitamins,
+  #joint-support-with-added-vitamins {
+    .modal-bullet-points {
+      display: none;
+    }
+  }
+
+  #bronze-package,
+  #gold-package,
+  #premium-package {
+    .modal-content {
+      flex-direction: column;
+      .modal-bullet-points {
+        margin: 0 0 35px 0;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          li {
+            margin: 20px 20px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modal-overlay .modal-container {
+    padding: 20px;
+    .modal-body img {
+      height: 50vw;
+    }
+    .recommended {
+      font-size: 19px;
+    }
+
+    .modal-content .modal-bullet-points {
+      ul {
+        margin: 0 10px;
+        li {
+          font-size: 14px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

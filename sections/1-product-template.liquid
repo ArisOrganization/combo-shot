@@ -1,0 +1,82 @@
+{% for image in product.images %} 
+  {% if image.alt contains "background" %} 
+  {%- assign background = image | img_url: 'x2048' -%} 
+  {% endif %} 
+{% endfor %}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
+  data-enable-history-state="true"
+  data-ajax-enabled="{{ settings.enable_ajax }}"
+  class="product-hero"
+>
+  {% include '1-header' %}
+
+  <div class="checkout-container">
+    <div class="direct-checkout">
+      {% assign start_price = product.price_max | divided_by: product.metafields.global.divided | money %}
+      <div class="direct-checkout-header">
+        <h1>{{ product.title }}</h1>
+        <p class="from_price">From 
+         
+          <span class="pack">{{ product.price_max |  divided_by: 12 | money }} per month</span>
+          <span class="bottle">{{ start_price }}</span>
+  
+         </p>
+        <p></p>
+        <p>
+          {{ product.metafields.global.checkout_description }}
+        </p>
+      </div>
+      <div class="direct-checkout-body">
+        {% for variant in product.variants %} 
+          {%- liquid
+          assign months =  variant.metafields.price_maths.months  
+          assign variant_month_price= variant.price | divided_by: months  
+          assign savings = product.price |minus: variant_month_price | times: months  
+          assign max =  product.price | times: months  
+          assign percentage =  variant_month_price | times: 1.00 | divided_by: product.price | times: 100
+          -%}
+        <div
+          class="checkout-button {% if months == 1 %}single-month{% endif%}"
+          id="{{ variant.id }}"
+        >
+          <div class="price_info">
+            <p>
+              {{ variant.title }}
+              <span class='subscription'>Subscription</span>
+              <span class="single">supply</span>
+              <br />
+              <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
+              <span class="cross">({{ max | money }})</span>
+              <span class="save green">
+                Save {{ savings | money_without_trailing_zeros }}
+  
+              </span>
+            </p>
+          </div>
+  
+          <div class="month-price">
+            <p>
+              {{ variant_month_price | money }}
+            </p>
+          </div>
+        </div>
+          <h1>  {{ discount }}</h1>
+        {% endfor %}
+        <div class="direct-checkout-link">
+          <a href="#" class="theme-button">BUY NOW</a>
+          <div class="payment">
+            <img src={{ "payment.svg" | asset_url }} alt="payments">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-hero-img">
+      {{ background | img_tag }}
+  
+    </div>
+  </div>
+
+</div>

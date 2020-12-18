@@ -1,0 +1,56 @@
+{%- if settings.social_email_link != blank -%}
+<li class="social-icons">
+  <a
+    class="social-icons__link"
+    href="mailto:{{ settings.social_email_link | strip }}"
+    aria-describedby="a11y-external-message"
+  >
+    {{ 'social-email.svg' | asset_url | img_tag: 'Email','social-img' }}
+    <span class="icon__fallback-text">Email</span>
+  </a>
+</li>
+{%- endif -%}{%- if settings.social_instagram_link != blank -%}
+<li class="social-icons">
+  <a
+    class="social-icons__link"
+    href="{{ settings.social_instagram_link | escape }}"
+    aria-describedby="a11y-external-message"
+  >
+    {{ 'social-instagram.svg' | asset_url | img_tag: 'Instagram logo','social-img' }}
+    <span class="icon__fallback-text">Instagram</span>
+  </a>
+</li>
+{%- endif -%} {%- if settings.social_facebook_link != blank -%}
+<li class="social-icons">
+  <a
+    class="social-icons__link"
+    href="{{ settings.social_facebook_link | escape }}"
+    aria-describedby="a11y-external-message"
+  >
+    {{ 'social-facebook.svg' | asset_url | img_tag: 'facebook logo','social-img' }}
+    <span class="icon__fallback-text">Facebook</span>
+  </a>
+</li>
+{%- endif -%} {%- if settings.social_twitter_link != blank -%}
+<li class="social-icons">
+  <a
+    class="social-icons__link"
+    href="{{ settings.social_twitter_link | escape }}"
+    aria-describedby="a11y-external-message"
+  >
+    {{ 'social-twitter.svg' | asset_url | img_tag: 'Twitter logo','social-img' }}
+    <span class="icon__fallback-text">Twitter</span>
+  </a>
+</li>
+{%- endif -%} {%- if settings.social_linkedIn_link != blank -%}
+<li class="social-icons">
+  <a
+    class="social-icons__link"
+    href="{{ settings.social_linkedIn_link | escape }}"
+    aria-describedby="a11y-external-message"
+  >
+    {{ 'social-linkedin.svg' | asset_url | img_tag: 'LinkedIn logo','social-img' }}
+    <span class="icon__fallback-text">LinkedIn</span>
+  </a>
+</li>
+{%- endif -%}
