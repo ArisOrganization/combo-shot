@@ -153,6 +153,17 @@ function getRecommended(object) {
         bullets: shopifyProduct.description.match(/>[A-Z]{3}(?:(?!<).)*/g),
       };
       break;
+    case question2 == "yes" && question3 == "yes":
+      id = 5972994654357;
+      shopifyProduct = products.find((e) => e.id == id);
+      product = {
+        id: shopifyProduct.handle,
+        link: "/products/" + shopifyProduct.handle,
+        name: shopifyProduct.title,
+        img: shopifyProduct.featured_image,
+        bullets: shopifyProduct.description.match(/>[A-Z]{3}(?:(?!<).)*/g),
+      };
+      break;
     case question1 == "yes" && question3 == "yes":
       id = 5972994654357;
       shopifyProduct = products.find((e) => e.id == id);
