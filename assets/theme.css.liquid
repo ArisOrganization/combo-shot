@@ -298,18 +298,43 @@ header.header {
   position: absolute;
   height: 95%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgba(245, 245, 245, 0.9);
   padding: 35px;
   opacity: 0;
   z-index: -1;
   transition: opacity 1s;
+  overflow-y: auto;
 }
 .all-bottles .bottle-card-img .overlay-bottle p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
+  font-weight: 700;
 }
 .all-bottles .bottle-card-img .overlay-bottle p:first-of-type {
-  font-weight: 700;
+  text-decoration: underline;
+}
+.all-bottles .bottle-card-img .overlay-bottle p:last-of-type {
+  font-size: 10px;
+}
+.all-bottles .bottle-card-img .overlay-bottle p.green {
+  color: #40a737;
+}
+.all-bottles .bottle-card-img .overlay-bottle ul {
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: dimgrey;
+}
+.all-bottles .bottle-card-img .overlay-bottle::-webkit-scrollbar {
+  width: 5px;
+}
+.all-bottles .bottle-card-img .overlay-bottle::-webkit-scrollbar-track {
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: 20px;
+}
+.all-bottles .bottle-card-img .overlay-bottle::-webkit-scrollbar-thumb {
+  background: #dadada;
+  border-radius: 20px;
 }
 .all-bottles .bottle-card-img img {
   width: 245px;
