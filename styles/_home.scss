@@ -152,7 +152,7 @@
       max-height: 310px;
       margin: 0 auto;
     }
-    &.Premium {
+    &.premium-package {
       .large:hover {
         background-color: #3676a8;
       }
@@ -163,12 +163,12 @@
         margin: 0 auto;
       }
     }
-    &.Collagen {
+    &.gold-package {
       .large:hover {
         background-color: #6241bb;
       }
     }
-    &.Joint {
+    &.bronze-package {
       .large:hover {
         background-color: #e2cc03;
       }

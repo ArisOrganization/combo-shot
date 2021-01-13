@@ -18,7 +18,7 @@
     </div>
     <div class="all-packages-container">
         {%- for item in collection.products -%}
-        <div class="package-card {{ item.title | split: ' ' | first}}">
+        <div class="package-card {{ item.handle }}">
             <div class="package-card-img">
                 <img src={{ item.featured_image | img_url: '650x650' }} alt="{{item.title}}">
             </div>
