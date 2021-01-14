@@ -3,25 +3,46 @@ assign pack_img = image | img_url: 'original'-%} {% endif %} {% endfor %}
 
 <section class="product-info">
   {%- assign collection = collections['all'] -%}
+
   <div class="product-info-header">
+    {% if product.handle contains 'package' %}
     <h2>WHY YOU NEED COMBO SHOT</h2>
     <div class="products-names">
       {% for item in collection.products %}
       <p class="{%- if product == item -%}actual{%- endif -%}">
-        {{ item.title }}
+        <a href="{{ item.url }}">
+          {{ item.title }}
+        </a>
       </p>
       {% endfor %}
     </div>
+    {% else %}
+    <h2>WHATS INSIDE</h2>
+    <div class="link-names bottles-info-links">
+      <p class="active">Description</p>
+      <p>Ingredients</p>
+    </div>
+
+    {% endif %}
   </div>
   <div class="product-info-body">
     <div class="img-container">
       <div class="info-img">
-        {{ product.featured_image | img_url: 'large' | img_tag }}
+        {{ product.featured_image | img_url: "large" | img_tag }}
       </div>
     </div>
-    <div class="content">
+    <div class="content" id="info">
       <p class="content-title">{{ product.title }}</p>
       {{ product.description }}
     </div>
+    {% if product.metafields.global.ingredients %}
+    <div class="content d-none" id="ingredients">
+      <p class="content-title">Ingredients</p>
+      <div class="small_container">
+        {{ product.metafields.global.ingredients }}
+      </div>
+    </div>
+
+    {% endif %}
   </div>
 </section>
