@@ -15,12 +15,13 @@
 
   <div class="checkout-container">
     <div class="direct-checkout">
+      
       {% assign start_price = product.price_max | divided_by: product.metafields.global.divided | money %}
       <div class="direct-checkout-header">
         <h1>{{ product.title }}</h1>
         <p class="from_price">From 
          
-          <span class="pack">{{ product.price_max |  divided_by: 12 | money }} per month</span>
+          <span class="pack">{{ product.price_max |  divided_by: 12 | money }} per package</span>
           <span class="bottle">{{ start_price }}</span>
   
          </p>
@@ -31,31 +32,57 @@
       </div>
       <div class="direct-checkout-body">
         {% for variant in product.variants %} 
-          {%- liquid
+
+        <div
+          class="checkout-button {% if months == 1 %}single-month{% endif%}"
+          id="{{ variant.id }}"
+        >
+
+        {% if product.handle contains 'package' %}
+        {%- liquid 
+            assign percentage =  variant.price | times: 1.00 | divided_by: variant.metafields.price_maths.RRP | times: 100 
+            assign variant_month_price= variant.price
+        -%}
+          <div class="price_info">
+            <p>
+              {{ variant.title }} test
+              <span class='subscription'>bundle</span>
+              <span class="single">supply</span>
+              <br />
+              <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
+              <span class="cross">({{ variant.metafields.price_maths.RRP | money }})</span>
+              <span class="save green">
+                Save {{ variant.metafields.price_maths.RRP |minus: variant.price | money_without_trailing_zeros }}
+
+
+              </span>
+            </p>
+          </div>
+        {% else %}
+        {%- liquid
           assign months =  variant.metafields.price_maths.months  
           assign variant_month_price= variant.price | divided_by: months  
           assign savings = product.price |minus: variant_month_price | times: months  
           assign max =  product.price | times: months  
           assign percentage =  variant_month_price | times: 1.00 | divided_by: product.price | times: 100
-          -%}
-        <div
-          class="checkout-button {% if months == 1 %}single-month{% endif%}"
-          id="{{ variant.id }}"
-        >
+          -%} 
+          
           <div class="price_info">
             <p>
               {{ variant.title }}
-              <span class='subscription'>Subscription</span>
-              <span class="single">supply</span>
-              <br />
-              <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
-              <span class="cross">({{ max | money }})</span>
-              <span class="save green">
-                Save {{ savings | money_without_trailing_zeros }}
-  
-              </span>
+              {% if months != 1  %}
+                <span class='subscription'>bundle</span>
+                <span class="single">supply</span>
+                <br />
+                <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
+                <span class="cross">({{ max | money }})</span>
+                <span class="save green">
+                  Save {{ savings | money_without_trailing_zeros }}
+                </span>
+              {% endif %}
             </p>
           </div>
+        {% endif %}
   
           <div class="month-price">
             <p>

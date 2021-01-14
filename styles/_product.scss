@@ -162,11 +162,12 @@
           text-align: center;
           margin: 0;
           position: relative;
+          margin-top: -10px;
           &:after {
-            content: "per month";
+            content: "per pack";
             font-size: 14px;
             position: absolute;
-            left: 4px;
+            left: 10px;
             bottom: -12px;
           }
         }
@@ -386,6 +387,17 @@
 
   .product-hero-img img {
     transform: scale(1) translate(0%, -12%);
+  }
+  .month-price {
+   
+    p {
+         margin-top: -10px;
+      &:after {
+        content: "per bottle";
+        left: 6px;
+        
+      }
+    }
   }
 }
 #bronze-package,
