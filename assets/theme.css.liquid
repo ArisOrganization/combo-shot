@@ -60,6 +60,26 @@ header.header {
   justify-content: center;
 }
 
+.choose-package {
+  margin-top: 130px;
+}
+.choose-package .first-header {
+  display: none;
+}
+
+.slick-prev:before, .slick-next:before {
+  height: 20px;
+  width: 20px;
+  background-image: url(slick-arrow.svg);
+  background-size: contain;
+  color: #ffffff00 !important;
+  background-repeat: no-repeat;
+}
+
+.slick-next:before {
+  background-image: url(slick-arrow-right.svg);
+}
+
 .shape::after {
   content: "";
   position: absolute;
@@ -296,10 +316,10 @@ header.header {
 }
 .all-bottles .bottle-card-img .overlay-bottle {
   position: absolute;
-  height: 95%;
+  height: 92%;
   width: 100%;
   background-color: rgba(245, 245, 245, 0.9);
-  padding: 35px;
+  padding: 35px 10px 35px 0;
   opacity: 0;
   z-index: -1;
   transition: opacity 1s;
@@ -391,6 +411,7 @@ header.header {
   margin-bottom: 55px;
   font-weight: 600;
   font-size: 34px;
+  text-decoration: underline;
   color: #000000;
 }
 .reviews-section .slick-container {
@@ -503,6 +524,11 @@ header.header {
   margin: 0 30px;
 }
 
+.legal-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .footer-other-links {
   padding: 10px;
   width: 100%;
@@ -531,9 +557,10 @@ header.header {
   }
 }
 .checkout-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   max-width: 1800px;
   margin: 0 auto;
   padding-bottom: 60px;
@@ -547,7 +574,7 @@ header.header {
 }
 .product-hero-img {
   flex: 1;
-  min-width: 725px;
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -727,12 +754,14 @@ header.header {
   color: #ffffff;
   text-align: center;
 }
-.product-info-header .products-names {
+.product-info-header .products-names,
+.product-info-header .link-names {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.product-info-header .products-names p {
+.product-info-header .products-names p,
+.product-info-header .link-names p {
   font-family: "Magallanes";
   font-weight: 600;
   font-size: 14px;
@@ -740,9 +769,28 @@ header.header {
   margin: 0 10px;
   text-transform: uppercase;
 }
-.product-info-header .products-names p.actual {
+.product-info-header .products-names p.actual,
+.product-info-header .link-names p.actual {
   font-size: 22px;
   order: 2 !important;
+}
+.product-info-header .products-names p a,
+.product-info-header .link-names p a {
+  color: inherit;
+}
+.product-info-header .products-names.bottles-info-links,
+.product-info-header .link-names.bottles-info-links {
+  margin-bottom: 35px;
+}
+.product-info-header .products-names.bottles-info-links p,
+.product-info-header .link-names.bottles-info-links p {
+  cursor: pointer;
+  font-size: 22px;
+  margin: 0 20px;
+}
+.product-info-header .products-names.bottles-info-links p.active,
+.product-info-header .link-names.bottles-info-links p.active {
+  border-bottom: 1px solid white;
 }
 .product-info-body {
   display: flex;
@@ -780,7 +828,12 @@ header.header {
   font-family: "Open Sans";
   font-size: 16px;
   color: #ffffff;
-  max-width: 475px;
+  max-width: 560px;
+}
+.product-info-body div.content p.green {
+  color: #40a737;
+  font-size: 18px;
+  font-weight: 800;
 }
 .product-info-body div.content p.content-title {
   font-family: "Magallanes";
@@ -791,6 +844,7 @@ header.header {
 .product-info-body div.content ul {
   color: #fff;
   padding-bottom: 17px;
+  text-align: left;
 }
 .product-info-body div.content ul li {
   position: relative;
@@ -804,12 +858,42 @@ header.header {
 .product-info-body div.content ul li:before {
   content: "";
   position: absolute;
-  height: 15px;
-  width: 15px;
-  background-image: url(green-tick.svg);
+  height: 20px;
+  width: 20px;
+  background-image: url(GreenTick.svg);
   background-size: cover;
   left: 0;
-  top: 6px;
+  top: 4px;
+}
+
+.bottles-header {
+  text-align: center;
+  margin-top: 85px;
+  font-family: "Magallanes";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 34px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #525252;
+}
+
+#ingredients .small_container {
+  display: block;
+  max-height: 350px;
+  overflow-y: auto;
+}
+#ingredients .small_container::-webkit-scrollbar {
+  width: 5px;
+}
+#ingredients .small_container::-webkit-scrollbar-track {
+  background: rgba(245, 245, 245, 0);
+  border-radius: 20px;
+}
+#ingredients .small_container::-webkit-scrollbar-thumb {
+  background: #dadada;
+  border-radius: 20px;
 }
 
 #ultra-vitamins-shot .buy-now-container,
@@ -825,11 +909,6 @@ header.header {
 #joint-support-with-added-vitamins .single,
 #joint-support-with-added-vitamins .subscription {
   display: none;
-}
-#ultra-vitamins-shot .product-info-header,
-#collagen-v12-with-added-vitamins .product-info-header,
-#joint-support-with-added-vitamins .product-info-header {
-  opacity: 0;
 }
 #ultra-vitamins-shot .product-hero-img img,
 #collagen-v12-with-added-vitamins .product-hero-img img,
@@ -879,13 +958,15 @@ header.header {
 #ultra-vitamins-shot h1 {
   color: #e9c546;
 }
-#bronze-package .checkout-button:hover,
-#ultra-vitamins-shot .checkout-button:hover {
-  background-color: #e9c546;
-}
-#bronze-package .checkout-button.selected,
+#bronze-package .checkout-button:hover, #bronze-package .checkout-button.selected,
+#ultra-vitamins-shot .checkout-button:hover,
 #ultra-vitamins-shot .checkout-button.selected {
   background-color: #e9c546;
+}
+#bronze-package .checkout-button:hover:after, #bronze-package .checkout-button.selected:after,
+#ultra-vitamins-shot .checkout-button:hover:after,
+#ultra-vitamins-shot .checkout-button.selected:after {
+  background-image: url(top-seller-purple.svg);
 }
 
 #gold-package .product-info,
@@ -936,9 +1017,46 @@ header.header {
   color: #e9c546;
 }
 
-@media screen and (max-width: 1255px) {
+@media screen and (max-width: 1022px) {
+  .header .combo-shot-logo {
+    height: 50px;
+  }
+  .header .trustpilot-rating {
+    height: 30px;
+  }
+
+  .checkout-container {
+    flex-direction: column-reverse;
+  }
+
+  .direct-checkout-header {
+    width: 100%;
+    position: absolute;
+    top: -5vh;
+    text-align: center;
+  }
+  .direct-checkout-header h1 {
+    font-size: 22px;
+  }
+  .direct-checkout-header p {
+    font-size: 10px;
+    max-width: 54ch;
+    margin: 15px auto;
+  }
+  .direct-checkout-header p.from_price {
+    font-size: 12px;
+    margin: 0 auto;
+  }
+  .direct-checkout-body .checkout-button {
+    width: 100%;
+  }
+
+  .product-hero-img {
+    margin-top: 23vh;
+  }
   .product-hero-img img {
-    transform: scale(1);
+    height: 200px;
+    transform: none !important;
   }
 }
 @media screen and (max-width: 1120px) {
@@ -947,8 +1065,18 @@ header.header {
     min-width: 100%;
     text-align: center;
   }
+  .product-info-body div.content .small_container {
+    min-width: 100%;
+  }
+  .product-info-body div.content .small_container p {
+    text-align: center;
+    max-width: 100%;
+  }
   .product-info-body div.img-container {
     min-height: 200px;
+  }
+  .product-info-body .direct-checkout-link {
+    max-width: 100%;
   }
 
   .info-img img {
@@ -988,7 +1116,6 @@ header.header {
 
   .product-hero-img {
     min-width: 100%;
-    margin-top: 60px;
   }
 }
 @media screen and (max-width: 460px) {
@@ -1240,6 +1367,14 @@ header.header {
   top: 0;
   z-index: 1000;
 }
+.modal-overlay .base {
+  text-align: center;
+  font-family: "Magallanes";
+  font-size: 24px;
+  line-height: 24px;
+  color: #5c5c5c;
+  text-decoration: underline;
+}
 .modal-overlay .modal-container {
   width: 100%;
   position: fixed;
@@ -1251,6 +1386,13 @@ header.header {
   top: 50vh;
   transform: translate(-50%, -50%);
   padding: 50px 20px;
+}
+.modal-overlay .modal-container .close {
+  font-size: 22px;
+  position: absolute;
+  right: 25px;
+  top: 12px;
+  font-weight: 800;
 }
 .modal-overlay .modal-container .modal-body img {
   height: 275px;
@@ -1277,6 +1419,11 @@ header.header {
 .modal-overlay .modal-container .modal-content .modal-bullet-points p {
   font-family: "Open Sans";
   font-size: 16px;
+}
+.modal-overlay .modal-container .modal-content .modal-bullet-points p.recommended {
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
 }
 .modal-overlay .modal-container .modal-content .modal-bullet-points li {
   position: relative;
