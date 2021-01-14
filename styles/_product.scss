@@ -1,7 +1,8 @@
 .checkout-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   max-width: 1800px;
   margin: 0 auto;
   padding-bottom: 60px;
@@ -15,7 +16,7 @@
 
   &-img {
     flex: 1;
-    min-width: 725px;
+    min-width: 400px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -215,7 +216,8 @@
       color: #ffffff;
       text-align: center;
     }
-    .products-names {
+    .products-names,
+    .link-names {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -229,6 +231,20 @@
         &.actual {
           font-size: 22px;
           order: 2 !important;
+        }
+        a {
+          color: inherit;
+        }
+      }
+      &.bottles-info-links {
+        margin-bottom: 35px;
+        p {
+          cursor: pointer;
+          font-size: 22px;
+          margin: 0 20px;
+          &.active {
+            border-bottom: 1px solid white;
+          }
         }
       }
     }
@@ -278,7 +294,14 @@
           font-family: "Open Sans";
           font-size: 16px;
           color: #ffffff;
-          max-width: 475px;
+          max-width: 560px;
+
+          &.green {
+            color: #40a737;
+            font-size: 18px;
+            font-weight: 800;
+          }
+          
 
           &.content-title {
             font-family: "Magallanes";
@@ -291,6 +314,8 @@
         ul {
           color: #fff;
           padding-bottom: 17px;
+          text-align: left;
+          
           li {
             position: relative;
             position: relative;
@@ -300,18 +325,51 @@
             margin: 12px;
             margin-left: 0;
             &:before {
-              content: '';
+              content: "";
               position: absolute;
-              height: 15px;
-              width: 15px;
-              background-image: url(green-tick.svg);
+              height: 20px;
+              width: 20px;
+              background-image: url(GreenTick.svg);
               background-size: cover;
               left: 0;
-              top: 6px;
+              top: 4px;
             }
           }
         }
       }
+    }
+  }
+}
+
+.bottles-header {
+  text-align: center;
+  margin-top: 85px;
+  font-family: "Magallanes";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 34px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #525252;
+}
+
+#ingredients {
+  .small_container {
+    display: block;
+    max-height: 350px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(245, 245, 245, 0);
+      border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgb(218, 218, 218);
+      border-radius: 20px;
     }
   }
 }
@@ -325,9 +383,7 @@
   .subscription {
     display: none;
   }
-  .product-info-header {
-    opacity: 0;
-  }
+
   .product-hero-img img {
     transform: scale(1) translate(0%, -12%);
   }
@@ -378,11 +434,12 @@
     color: #e9c546;
   }
   .checkout-button {
-    &:hover {
-      background-color: #e9c546;
-    }
+    &:hover,
     &.selected {
       background-color: #e9c546;
+      &:after {
+        background-image: url(top-seller-purple.svg);
+      }
     }
   }
 }
@@ -435,10 +492,49 @@
   }
 }
 
-@media screen and (max-width: 1255px) {
+@media screen and (max-width: 1022px) {
+  .header {
+    .combo-shot-logo {
+      height: 50px;
+    }
+
+    .trustpilot-rating {
+      height: 30px;
+    }
+  }
+  .checkout-container {
+    flex-direction: column-reverse;
+  }
+  .direct-checkout {
+    &-header {
+      width: 100%;
+      position: absolute;
+      top: -5vh;
+      text-align: center;
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 10px;
+        max-width: 54ch;
+        margin: 15px auto;
+        &.from_price {
+          font-size: 12px;
+          margin: 0 auto;
+        }
+      }
+    }
+    &-body {
+      .checkout-button {
+        width: 100%;
+      }
+    }
+  }
   .product-hero-img {
+    margin-top: 23vh;
     img {
-      transform: scale(1);
+      height: 200px;
+      transform: none !important;
     }
   }
 }
@@ -449,9 +545,20 @@
       align-items: center;
       min-width: 100%;
       text-align: center;
+      .small_container {
+        min-width: 100%;
+
+        p {
+          text-align: center;
+          max-width: 100%;
+        }
+      }
     }
     div.img-container {
       min-height: 200px;
+    }
+    .direct-checkout-link {
+      max-width: 100%;
     }
   }
   .info-img {
@@ -496,7 +603,6 @@
   }
   .product-hero-img {
     min-width: 100%;
-    margin-top: 60px;
   }
 }
 
