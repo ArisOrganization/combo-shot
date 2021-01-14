@@ -242,6 +242,23 @@
   max-width: 1650px;
   margin: 45px auto 65px auto;
   padding: 0 25px;
+  &-title {
+    font-family: "Magallanes";
+    font-weight: 600;
+    font-size: clamp(26px, 3vw, 34px);
+    text-align: center;
+    color: #525252;
+  }
+  &-sub-text {
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 18px;
+    text-align: center;
+    color: #525252;
+    span {
+      display: block;
+    }
+  }
   .bottles-container {
     display: flex;
     justify-content: space-evenly;
@@ -416,22 +433,29 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   #shopify-section-1-Combo-hero-home {
     margin-bottom: 160px;
 
     .home-hero {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
+      .home-header {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
       &-left {
         max-width: 100%;
         text-align: center;
       }
       &-right {
-        margin-top: 140px;
+        margin-top: 90px;
         width: 100%;
         img {
-          transform: translateY(50px);
+          transform: translateY(80px);
         }
       }
     }

@@ -21,7 +21,7 @@
         <h1>{{ product.title }}</h1>
         <p class="from_price">From 
          
-          <span class="pack">{{ product.price_max |  divided_by: 12 | money }} per package</span>
+          <span class="pack">{{ product.price_max |  money }} per package</span>
           <span class="bottle">{{ start_price }}</span>
   
          </p>
@@ -45,7 +45,7 @@
         -%}
           <div class="price_info">
             <p>
-              {{ variant.title }} test
+              {{ variant.title }}
               <span class='subscription'>bundle</span>
               <span class="single">supply</span>
               <br />

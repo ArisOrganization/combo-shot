@@ -25,6 +25,14 @@
     display: block;
   }
 
+  &.green:hover {
+    color: white;
+    background-color: #00ae73;
+    border-color: #00ae73;
+    transition: 0.25s;
+  
+  }
+
   &.purple:hover {
     color: white;
     background-color: #6241bb;
