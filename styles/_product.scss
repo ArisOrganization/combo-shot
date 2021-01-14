@@ -22,7 +22,7 @@
     align-items: flex-end;
     img {
       max-height: 530px;
-      transform: scale(2) translate(0%, -27%);
+      transform: scale(1.5) translate(0%, -27%);
     }
   }
 }
@@ -302,7 +302,6 @@
             font-size: 18px;
             font-weight: 800;
           }
-          
 
           &.content-title {
             font-family: "Magallanes";
@@ -316,7 +315,7 @@
           color: #fff;
           padding-bottom: 17px;
           text-align: left;
-          
+
           li {
             position: relative;
             position: relative;
@@ -381,21 +380,20 @@
   .buy-now-container,
   .pack,
   .single,
-  .subscription {
+  .subscription,
+  .all-bottles-header {
     display: none;
   }
 
   .product-hero-img img {
-    transform: scale(1) translate(0%, -12%);
+    transform: scale(1.1) translate(0%, -12%);
   }
   .month-price {
-   
     p {
-         margin-top: -10px;
+      margin-top: -10px;
       &:after {
         content: "per bottle";
         left: 6px;
-        
       }
     }
   }
@@ -404,7 +402,8 @@
 #gold-package,
 #premium-package {
   .bottle-container,
-  .content-title {
+  .content-title,
+  .all-bottles-header {
     display: none;
   }
 }
@@ -527,9 +526,10 @@
         font-size: 22px;
       }
       p {
-        font-size: 10px;
+        font-size: 14px;
         max-width: 54ch;
         margin: 15px auto;
+        padding: 0 15px;
         &.from_price {
           font-size: 12px;
           margin: 0 auto;
@@ -546,7 +546,7 @@
     margin-top: 23vh;
     img {
       height: 200px;
-      transform: none !important;
+      transform: scale(1.1) translate(0%, -12%);
     }
   }
 }
@@ -584,6 +584,9 @@
   .products-names {
     p:not(.actual) {
       display: none;
+    }
+    p.actual {
+      text-align: center;
     }
   }
 }

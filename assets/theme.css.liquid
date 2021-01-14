@@ -20,6 +20,24 @@ header.header.light .all_products a {
   color: #fff;
 }
 
+@media screen and (max-width: 750px) {
+  header.header a:first-of-type {
+    order: 2;
+  }
+  header.header a:last-of-type {
+    order: 1;
+    height: 35px;
+  }
+  header.header div.all_products {
+    order: 3;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  header.header div.all_products a {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
 @font-face {
   font-family: "Magallanes";
   src: url({{"MagallanesRegular.ttf" | asset_url}}) format("truetype");
@@ -45,11 +63,16 @@ header.header.light .all_products a {
 .theme-button.large {
   display: block;
 }
-.theme-button.green:hover {
+.theme-button.green {
   color: white;
   background-color: #00ae73;
   border-color: #00ae73;
   transition: 0.25s;
+}
+.theme-button.green:hover {
+  color: #4a4a4a;
+  background: #eaeaea;
+  border: 1px solid #4a4a4a;
 }
 .theme-button.purple:hover {
   color: white;
@@ -86,7 +109,8 @@ header.header.light .all_products a {
   display: none;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   height: 20px;
   width: 20px;
   background-image: url(slick-arrow.svg);
@@ -398,21 +422,32 @@ header.header.light .all_products a {
 }
 .all-bottles .bottle-card-info {
   margin-top: -20px;
+  min-height: 130px;
 }
 .all-bottles .bottle-card-info p {
   font-family: "Open Sans";
   line-height: 1;
   margin: 0;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 .all-bottles .bottle-card-info p.tags {
   margin: 5px 0 10px;
   font-family: "Open Sans";
   font-size: 16px;
-  color: #b1b1b1;
+  color: #636363;
 }
 .all-bottles .bottle-card .button-container {
-  margin: 25px 0;
+  margin: 0;
+}
+.all-bottles .bottle-card .button-container p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #3676a8;
+  text-align: center;
+  width: 100%;
 }
 .all-bottles .bottle-card .button-container .theme-button {
   width: 100%;
@@ -480,6 +515,10 @@ header.header.light .all_products a {
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
+}
+.reviews-section .review-text .rating img {
+  max-width: 50%;
+  max-height: 20px;
 }
 .reviews-section .review-text .review-name {
   color: #515151;
@@ -624,7 +663,7 @@ header.header.light .all_products a {
 }
 .product-hero-img img {
   max-height: 530px;
-  transform: scale(2) translate(0%, -27%);
+  transform: scale(1.5) translate(0%, -27%);
 }
 
 .direct-checkout {
@@ -944,20 +983,23 @@ header.header.light .all_products a {
 #ultra-vitamins-shot .pack,
 #ultra-vitamins-shot .single,
 #ultra-vitamins-shot .subscription,
+#ultra-vitamins-shot .all-bottles-header,
 #collagen-v12-with-added-vitamins .buy-now-container,
 #collagen-v12-with-added-vitamins .pack,
 #collagen-v12-with-added-vitamins .single,
 #collagen-v12-with-added-vitamins .subscription,
+#collagen-v12-with-added-vitamins .all-bottles-header,
 #joint-support-with-added-vitamins .buy-now-container,
 #joint-support-with-added-vitamins .pack,
 #joint-support-with-added-vitamins .single,
-#joint-support-with-added-vitamins .subscription {
+#joint-support-with-added-vitamins .subscription,
+#joint-support-with-added-vitamins .all-bottles-header {
   display: none;
 }
 #ultra-vitamins-shot .product-hero-img img,
 #collagen-v12-with-added-vitamins .product-hero-img img,
 #joint-support-with-added-vitamins .product-hero-img img {
-  transform: scale(1) translate(0%, -12%);
+  transform: scale(1.1) translate(0%, -12%);
 }
 #ultra-vitamins-shot .month-price p,
 #collagen-v12-with-added-vitamins .month-price p,
@@ -973,10 +1015,13 @@ header.header.light .all_products a {
 
 #bronze-package .bottle-container,
 #bronze-package .content-title,
+#bronze-package .all-bottles-header,
 #gold-package .bottle-container,
 #gold-package .content-title,
+#gold-package .all-bottles-header,
 #premium-package .bottle-container,
-#premium-package .content-title {
+#premium-package .content-title,
+#premium-package .all-bottles-header {
   display: none;
 }
 
@@ -1094,9 +1139,10 @@ header.header.light .all_products a {
     font-size: 22px;
   }
   .direct-checkout-header p {
-    font-size: 10px;
+    font-size: 14px;
     max-width: 54ch;
     margin: 15px auto;
+    padding: 0 15px;
   }
   .direct-checkout-header p.from_price {
     font-size: 12px;
@@ -1111,7 +1157,7 @@ header.header.light .all_products a {
   }
   .product-hero-img img {
     height: 200px;
-    transform: none !important;
+    transform: scale(1.1) translate(0%, -12%);
   }
 }
 @media screen and (max-width: 1120px) {
@@ -1141,6 +1187,9 @@ header.header.light .all_products a {
 @media screen and (max-width: 800px) {
   .products-names p:not(.actual) {
     display: none;
+  }
+  .products-names p.actual {
+    text-align: center;
   }
 }
 @media screen and (max-width: 675px) {

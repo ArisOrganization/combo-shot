@@ -26,3 +26,25 @@ header {
     }
   }
 }
+@media screen and (max-width: 750px) {
+  header.header {
+    a {
+      &:first-of-type {
+        order: 2;
+      }
+      &:last-of-type {
+        order: 1;
+        height: 35px;
+      }
+    }
+    div.all_products {
+      order: 3;
+      margin-left: 0;
+      margin-right: 0;
+      a {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+}

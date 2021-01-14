@@ -334,22 +334,33 @@
 
     &-info {
       margin-top: -20px;
+      min-height: 130px;
       p {
         font-family: "Open Sans";
         line-height: 1;
         margin: 0;
         font-size: 18px;
+        padding-bottom: 5px;
         &.tags {
           margin: 5px 0 10px;
           font-family: "Open Sans";
           font-size: 16px;
-          color: #b1b1b1;
+          color: #636363;
         }
       }
     }
 
     .button-container {
-      margin: 25px 0;
+      margin: 0;
+      p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: #3676a8;
+        text-align: center;
+        width: 100%;
+      }
       .theme-button {
         width: 100%;
         color: #fff;
@@ -420,6 +431,10 @@
         align-items: center;
         margin-bottom: 20px;
         width: 100%;
+        img {
+          max-width: 50%;
+          max-height: 20px;
+        }
       }
       .review-name {
         color: #515151;
