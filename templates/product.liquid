@@ -2,6 +2,11 @@
     
   {% section '1-product-template' %} 
   {% section '1-Product-info' %} 
+  {% if product.handle contains 'package' %}
+    <h2 class="bottles-header">whats inside?</h2>
+  {% else %}
+    <h2 class="bottles-header">Other products</h2>
+  {% endif %}
   {% section '1-Combo-all-bottles'%} 
   {% section '1-Combo-review-section'%} 
   {% section '1-Combo-footer-section'%}
