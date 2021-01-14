@@ -165,7 +165,7 @@ function getRecommended(object) {
       };
       break;
     case question1 == "yes" && question3 == "yes":
-      id = 5972994654357;
+      id = 5972985643157;
       shopifyProduct = products.find((e) => e.id == id);
       product = {
         id: shopifyProduct.handle,
@@ -209,7 +209,7 @@ function getRecommended(object) {
       };
       break;
     default:
-      window.location = "/";
+      window.location = "/pages/choose-product";
       break;
   }
   return product;
@@ -235,3 +235,23 @@ if ($(".buy-now-container").length && location.pathname === "/") {
 if ($(".bottle-container").length && location.pathname === "/pages/questions") {
   $(".bottle-container").hide();
 }
+
+$(".bottles-info-links p").on("click", function () {
+  $(".active").removeClass("active");
+  $(this).addClass("active");
+
+  if ($(this).text().toLowerCase() === "ingredients") {
+    $("#info").fadeOut(function () {
+      $("#ingredients").removeClass("d-none").fadeIn();
+    });
+  } else {
+    $("#ingredients").fadeOut(function () {
+      $("#ingredients").addClass("d-none");
+      $("#info").fadeIn();
+    });
+  }
+});
+
+$(".close").on("click", function () {
+  window.location = $("#modal-button").attr("href");
+});
