@@ -2,18 +2,18 @@
 <script>
   var products = {{ all | json }}
 </script>
-<div class="modal-overlay d-none" >
+<div class="modal-overlay d-none">
   <div class="modal-container">
+    <div class="close">X</div>
     <div class="modal-body">
-      <p class="recommended"></p>
+      <h2 class="base">BASED ON THE ANSWERS YOU GAVE, WE RECCOMEND</h2>
       <div class="modal-content">
         <div class="modal-img">
-          <img class='modal-img' src="" alt="modal-img">
+          <img class="modal-img" src="" alt="modal-img" />
         </div>
         <div class="modal-bullet-points">
-          <ul>
-            
-          </ul>
+          <p class="recommended"></p>
+          <ul></ul>
         </div>
       </div>
     </div>
