@@ -255,3 +255,8 @@ $(".bottles-info-links p").on("click", function () {
 $(".close").on("click", function () {
   window.location = $("#modal-button").attr("href");
 });
+
+$(".navigate_page__link").on("click", function () {
+  $(".active").removeClass("active");
+  $(this).addClass("active");
+});

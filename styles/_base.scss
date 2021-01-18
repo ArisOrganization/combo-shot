@@ -3,6 +3,10 @@
   src: url(#{'{{"MagallanesRegular.ttf" | asset_url}}'}) format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-content {
   padding: 0 !important;
   margin: 0 !important;
@@ -88,4 +92,42 @@
 
 .slick-next:before {
   background-image: url(slick-arrow-right.svg);
+}
+.online-shop {
+  height: 100vh;
+  overflow-y: scroll;
+  .choose-package {
+    position: relative;
+    z-index: 10;
+  }
+  .navigate_page {
+    width: 100%;
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    ul {
+      display: flex;
+      cursor: pointer;
+      li {
+        flex: 1;
+        text-align: center;
+        padding: 10px 0;
+        font-weight: 700;
+        font-size: 18px;
+        a {
+          display: block;
+        }
+        &.active {
+          background-color: #3276af;
+          color: #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }

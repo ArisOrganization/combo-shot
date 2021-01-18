@@ -16,6 +16,12 @@ header {
         font-size: 20px;
         color: #525252;
       }
+      .theme-button {
+        margin-top: -15px;
+        border-radius: 20px;
+        color: #fff;
+        padding: 3px 25px 0px 25px;
+      }
     }
     &.light {
       .all_products {
@@ -44,6 +50,10 @@ header {
       a {
         font-size: 14px;
         font-weight: 700;
+      }
+      .theme-button {
+        font-size: 11px;
+        padding: 3px 10px 0px 10px;
       }
     }
   }

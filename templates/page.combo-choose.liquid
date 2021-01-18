@@ -1,8 +1,17 @@
-<body onunload="">
+<div class="online-shop">
   {% include '1-header' %}
+  <div class="navigate_page">
+    <ul>
+      <li class="navigate_page__link active">
+        <a href="#shopify-section-1-Combo-all-packages">Package</a>
+      </li>
+      <li class="navigate_page__link">
+        <a href="#shopify-section-1-Combo-all-bottles">Bottles</a>
+      </li>
+    </ul>
+  </div>
   <div class="choose-package">
-    {% section '1-Combo-all-packages' %}
-    {% section '1-Combo-all-bottles'%}
+    {% section '1-Combo-all-packages' %} {% section '1-Combo-all-bottles'%}
   </div>
   {% section '1-Combo-footer-section'%}
-</body>
+</div>
