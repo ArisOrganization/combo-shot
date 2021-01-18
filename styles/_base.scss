@@ -100,6 +100,15 @@ html {
     position: relative;
     z-index: 10;
   }
+  #shopify-section-1-Combo-all-bottles {
+    padding-top: 70px;
+  }
+  #shopify-section-1-Combo-all-packages {
+    padding-top: 100px;
+    &.more_top {
+      padding-top: 270px;
+    }
+  }
   .navigate_page {
     width: 100%;
     background-color: #fff;

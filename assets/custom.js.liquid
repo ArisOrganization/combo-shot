@@ -259,4 +259,9 @@ $(".close").on("click", function () {
 $(".navigate_page__link").on("click", function () {
   $(".active").removeClass("active");
   $(this).addClass("active");
+  if (this.textContent.includes("Package")) {
+    $("#shopify-section-1-Combo-all-packages").addClass("more_top");
+  } else {
+    $("#shopify-section-1-Combo-all-packages").removeClass("more_top");
+  }
 });
