@@ -31,8 +31,8 @@ html {
 
   &.green {
     color: white;
-    background-color: #00ae73;
-    border-color: #00ae73;
+    background-color: #40a737;
+    border-color: #40a737;
     transition: 0.25s;
     &:hover {
       color: #4a4a4a;
@@ -120,21 +120,39 @@ html {
     ul {
       display: flex;
       cursor: pointer;
+      padding: 0 15px;
+      background: #f5f5f5;
+      padding-top: 10px;
       li {
         flex: 1;
         text-align: center;
         padding: 10px 0;
         font-weight: 700;
         font-size: 18px;
+        margin: 0 10px;
+        color: #fff;
+        border-radius: 8px;
         a {
           display: block;
-        }
-        &.active {
-          background-color: #3276af;
           color: #fff;
-          a {
-            color: #fff;
-          }
+          font-size: 26px;
+          line-height: 35px;
+          text-transform: uppercase;
+          font-family: "Open Sans";
+          font-weight: 500;
+        }
+        // &.active {
+        //   background-color: #3276af;
+        //   color: #fff;
+        //   a {
+        //     color: #fff;
+        //   }
+        // }
+        &:first-of-type {
+          background: linear-gradient(90deg, #006fbc 7.22%, #46aee9 92.09%);
+        }
+        &:last-of-type {
+          background: linear-gradient(90deg, #ffe600 7.22%, #e99446 92.09%);
         }
       }
     }
