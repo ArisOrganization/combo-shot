@@ -1,4 +1,4 @@
-{% include '1-header-light' %}
+{% include '1-header' %}
 <!-- <div class="shape"></div> -->
 <div class="home-hero">
   <div class="home-hero-left">
@@ -10,14 +10,16 @@
         All of your essential health needs in one brilliant hydrolysed kit.
       </p>
     </div>
-    <div class="find-btn-container">
-      <a href="/pages/questions" class="theme-button green blink"
-        >FIND YOUR PERFECT PACKAGE</a
-      >
-      <a href="pages/choose-product" class="theme-button full-width">Visit our Shop</a>
+    <div class="img_container">
+      {{ "all-bottles.png" | asset_url | img_tag }}
     </div>
-  </div>
-  <div class="home-hero-right">
-    {{ "all-Boxes.png" | asset_url | img_tag }}
+    <div class="find-btn-container">
+      <a href="/pages/questions" class="theme-button large blue blink">
+        FIND YOUR PERFECT PACKAGE
+      </a>
+      <a href="pages/choose-product" class="theme-button large">
+        Visit our Shop
+      </a>
+    </div>
   </div>
 </div>
