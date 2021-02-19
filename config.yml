@@ -1,4 +1,5 @@
 development:
   password: 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
-  theme_id: "118439411861"
+  theme_id: "118439411861" # LIVE
+  # theme_id: "115354960021" # DEV
   store: combo-shot.myshopify.com
