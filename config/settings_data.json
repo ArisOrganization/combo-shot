@@ -1,5 +1,18 @@
 {
   "current": {
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_linkedIn_link": "",
+    "social_email_link": "info@comboshot.com",
+    "checkout_body_background_color": "#f7f5f5",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_button_color": "#18b9ad",
+    "social_pinterest_link": "https:\/\/twitter.com\/shopify",
+    "social_tumblr_link": "https:\/\/twitter.com\/shopify",
+    "social_snapchat_link": "https:\/\/twitter.com\/shopify",
+    "social_youtube_link": "https:\/\/twitter.com\/shopify",
+    "social_vimeo_link": "https:\/\/twitter.com\/shopify",
     "sections": {
       "header": {
         "type": "header",
@@ -119,6 +132,50 @@
         ],
         "settings": {
           "show_payment_icons": true
+        }
+      },
+      "combo-bottles-section-premium": {
+        "type": "combo-bottles-section-premium",
+        "settings": {}
+      },
+      "1-Combo-hero-home": {
+        "type": "1-Combo-hero-home",
+        "settings": {}
+      },
+      "1-Combo-all-packages": {
+        "type": "1-Combo-all-packages",
+        "settings": {}
+      },
+      "1-Combo-all-bottles": {
+        "type": "1-Combo-all-bottles",
+        "settings": {}
+      },
+      "1-Combo-review-section": {
+        "type": "1-Combo-review-section",
+        "settings": {}
+      },
+      "1-Combo-footer-section": {
+        "type": "1-Combo-footer-section",
+        "settings": {}
+      },
+      "1-Combo-questions": {
+        "type": "1-Combo-questions",
+        "settings": {}
+      },
+      "1-product-template": {
+        "type": "1-product-template",
+        "settings": {}
+      },
+      "1-Product-info": {
+        "type": "1-Product-info",
+        "settings": {}
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
         }
       }
     },
@@ -371,17 +428,6 @@
             "rows": 1,
             "show_vendor": true,
             "show_view_all": true
-          }
-        },
-        "product-template": {
-          "type": "product-template",
-          "settings": {
-            "show_quantity_selector": false,
-            "show_vendor": false,
-            "show_share_buttons": true,
-            "media_size": "medium",
-            "enable_image_zoom": true,
-            "enable_video_looping": false
           }
         },
         "collection-template": {
