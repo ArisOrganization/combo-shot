@@ -1,33 +1,31 @@
-#what-is-combo-hero{
+section{
+    padding: 0 clamp(15px, 6vw, 125px);
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+#sciency-hero{
     padding: 0 clamp(15px, 6vw, 125px);
     padding-top: 200px;
     padding-bottom: 160px;
 
-    font-family: Open Sans;
-    font-size: 18px;
     color: #525252;
-
-    background: url(WIC-hero-crop.png);
+    background-image: url(sciency-hero.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     position: relative;
-    display: flex;
-    align-items: center;
-
     .border-container{
         max-width: 1800px;
         margin: 0 auto;
     }
 
-    .what-is-container{
-        width: 55%;
+    .sciency-hero-container{
+        width: 750px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-
+        font-size: 18px;
         &-header{
             font-family: "Magallanes";
             font-weight: 600;
@@ -35,7 +33,7 @@
             text-transform: uppercase;
     
             span{
-                color: #EB75BC;
+                color: #3276af;
                 font-weight: bold;
             }
         }
@@ -50,16 +48,28 @@
                 align-items: center;
                 font-weight: bold;
                 font-size: 0.95em;
+                position: relative;
+                margin: 20px;
             }
           }
           
         &-list li::before {
             content: "\2022" !important;
-            color: #EB75BC;
+            color: #3276af;
             font-weight: bold; 
             font-size: 2.5em;
             display: inline-block;
             height: auto;
+            left: -6.25%;
+            top: -75%;
+            position:absolute;
+        }
+
+        &-list li:nth-of-type(2)::before,
+        &-list li:nth-of-type(3)::before{
+            position:absolute;
+            left: -4%;
+            top: -40%;
         }
     
         &-text-body{
@@ -83,7 +93,7 @@
         justify-content: center;
 
         &::after{
-            content: url(pink-arrow-down.svg);
+            content: url(blue-arrow-down.svg);
             padding-top: 25px;
             display: inline-block;
             text-align: center;
@@ -91,20 +101,17 @@
     }
 }
 
+
+
 ////////////////////////////////////////////////////////////////////////////
 
 //////////////////////      ***NEW SECTION**      /////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////
 
-
-#why-start-drinking{
-    padding: 0 clamp(15px, 6vw, 125px);
-    padding-top: 125px;
-    padding-bottom: 125px;
+#sciency-bit{
     text-align: center;
     position: relative;
-
     z-index: 1;
 
     &::after{
@@ -145,11 +152,15 @@
         justify-content: center;
     }
 
-    .why-start-header{
+    .sciency-bit-header{
         font-family: "Magallanes";
         font-weight: 600;
         font-size: clamp(21px, 3vw, 28px);     
         text-transform: uppercase;
+
+        span{
+            color: #3276af;
+        }
     }
 
     .swap-me-container{
@@ -210,11 +221,11 @@
                 outline:none;
                 height: 100%;
 
-                &:first-of-type{
-                    color: #6241BB;
+                &{
+                    position: relative;
                     background-color: transparent;
                     border: none;
-                    position: relative;
+
                     &::after{
                         content: "";
                         height: 100%;
@@ -222,34 +233,30 @@
                         top: 0;
                         left: 0;
                         border-radius: 50px;
-                        border: 1px solid #6241BB;
+                        background-color: transparent;
                         position: absolute;
                         display: block;
+                    }
+                }
+
+                &:first-of-type{
+                    color: #6241BB;
+                    &::after{
+                        border: 1px solid #6241BB;
                         border-top-right-radius: 0;
                         border-bottom-right-radius: 0;
                         border-right: none;
-                        background-color: transparent;
+
                     }
                 }
                 &:nth-of-type(2){
                     color: #3276af;
-                    background-color: transparent;
-                    position: relative;
-                    border: none;
                     &::after{
-                        content: "";
-                        height: 100%;
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                        border-radius: 50px;
                         border: 1px solid #3276af;
-                        position: absolute;
-                        display: block;
                         border-top-left-radius: 0;
                         border-bottom-left-radius: 0;
                         border-left: none;
-                        background-color: transparent;
+
                     }
                 }
             
@@ -259,8 +266,9 @@
 
     #toggle{
         display: flex;
+        
     }
-
+    .joint-info,
     .collagen-info{
         margin: 100px auto 0 auto;
         align-items: stretch;
@@ -271,9 +279,6 @@
         h3{
             font-family: 'Magallanes';
             text-transform: uppercase;
-            span{
-                color: #6241BB;
-            }
         }
 
         &-1,
@@ -286,9 +291,7 @@
 
             img{
                 margin: 0 auto;
-                width: 80%;
                 height: auto;
-                opacity: 1;
                 z-index: 1000;
             }
 
@@ -297,9 +300,11 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                width: 80%;
                 li{
                     display: flex;
                     align-items: center;
+                    font-weight: bold;
                 }
               }
               
@@ -310,58 +315,45 @@
                 display: inline-block;
                 height: auto;
                 margin-right: 10px;
+            }
+
+           
+            #tick-list li{
+                width: 100%;
+                margin: 10px 0 10px 20px;
+                position: relative;
+            }
+
+            #tick-list li::before{
+                content: url(green-tick.svg) !important;
+                display: inline-block;
+                top: -30px;
+                left: -25px;
+                position: absolute;
+            }
+        }
+    }
+
+    .collagen-info{
+        &-1,
+        &-2{
+            img{
+                width: 450px;
+            }
+            ul li::before {
+                color: #6241BB;
             }
         }
     }
 
     .joint-info{
-        margin: 100px auto 0 auto;
-        align-items: stretch;
-        text-align: left;
-        display: none;
-
-        h3{
-            font-family: 'Magallanes';
-            text-transform: uppercase;
-            span{
-                color: #3276af;
-            }
-        }
-
         &-1,
         &-2{
-            padding: 0 10px;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
             img{
-                margin: 0 auto;
-                width: 80%;
-                height: auto;
-                opacity: 1;
-                z-index: 1000;
+                width: 350px;
             }
-
-            ul {
-                list-style:circle;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                li{
-                    display: flex;
-                    align-items: center;
-                }
-              }
-              
             ul li::before {
-                content: "\2022" !important;
                 color: #3276af;
-                font-size: 3em;
-                display: inline-block;
-                height: auto;
-                margin-right: 10px;
             }
         }
     }
@@ -379,15 +371,8 @@
 
 ////////////////////////////////////////////////////////////////////////////
 
-#what-makes-better{
-    padding: 0 clamp(15px, 6vw, 125px);
-    padding-top: 75px;
-    padding-bottom: 160px;
-
-    background: url(science-chem-bond.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#sciency-bit-why{    
+    text-align: center;
 
     .border-container{
         max-width: 1800px;
@@ -398,88 +383,164 @@
         justify-content: center;
     }
 
-    .what-makes-better-container{
-        text-align: center;
-
+    .sciency-bit{
         &-header{
             font-family: "Magallanes";
             font-weight: 600;
             font-size: clamp(21px, 3vw, 28px);     
-            text-transform: uppercase;
+            text-transform: uppercase;    
+        }
+    }
+
+    .swap-me-container{
+        margin: 40px auto 0 auto;
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+
+        z-index: 1000;
+
+        &-text{
+            display: flex;
+            justify-content: center;
+            p{
+                text-align: center;
+                font-size: 1em;
+                font-weight: bold;
+                margin: 0 auto 10px auto;
+                display: inline-block;
+                position: relative;
+
+                &::after{
+                    content: url(border-arrows.svg);
+                    position:absolute;
+                    left: -175%;
+                }
+            }
         }
 
-        &-info{
-            margin-top: 65px;
-            display: flex;
-            align-items: center;
-            text-align: left;
+        #btn-active-creams{
+            background-color: #3276af;
+            color: white;
+            border-radius: 50px;
+        }
+        #btn-active-pills{
+            background-color: #6241BB;
+            color: white;
+            border-radius: 50px;
+        }
 
-            h4{
-                font-size: clamp(21px, 3vw, 28px);    
-                font-family: "Magallanes";
-                text-transform: uppercase;
-            }
-            &-1{
-                padding: 0 30px 30px 30px;
-                h4{
-                    color: #6241BB;
+        &-btn{
+            width: auto;
+            color: white;
+            font-family: 'Magallanes';
+            display: flex;
+            justify-content: center;
+
+            button{
+                width: 200px; 
+                padding: 10px 15px;
+
+                font-size: 1.2em;
+                font-weight: 600;
+
+                border-radius: 50px;
+
+                outline:none;
+                height: 100%;
+
+                &{
+                    position: relative;
+                    background-color: transparent;
+                    border: none;
+
+                    &::after{
+                        content: "";
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 50px;
+                        background-color: transparent;
+                        position: absolute;
+                        display: block;
+                    }
                 }
-               
+
+                &:first-of-type{
+                    color: #3276af;
+                    &::after{
+                        border: 1px solid #3276af;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border-right: none;
+
+                    }
+                }
+                &:nth-of-type(2){
+                    color: #6241BB;
+                    &::after{
+                        border: 1px solid #6241BB;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border-left: none;
+
+                    }
+                }
+            
             }
-            &-2{
-                padding: 0 30px 30px 30px;
-                h4{
+        }
+    }
+
+    #toggle{
+        display: flex;
+        
+    }
+
+    .creams-info,
+    .pills-info{
+        min-height: 300px;
+        display: none;
+
+        &-text{
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h3{
+                font-family: "Magallanes";
+                font-weight: 600;
+                font-size: clamp(21px, 3vw, 24px);     
+                text-transform: uppercase;
+
+                span:last-of-type{
                     color: #3276af;
                 }
             }
-        }
-    }
-}
 
-////////////////////////////////////////////////////////////////////////////
-
-//////////////////////      ***NEW SECTION**      /////////////////////////
-
-////////////////////////////////////////////////////////////////////////////
-
-#what-does-collagen{
-    padding: 0 clamp(15px, 6vw, 125px);
-    padding-top: 75px;
-    padding-bottom: 160px;
-
-    background: url(flower-arm.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .border-container{
-        max-width: 1800px;
-        margin: 0 auto;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .what-does-collagen-container{
-        text-align: center;
-        &-header{
-            font-family: "Magallanes";
-            font-weight: 600;
-            font-size: clamp(21px, 3vw, 28px);     
-            text-transform: uppercase;
-        }
-
-        &-info{
-            text-align: left;
-            margin-left: 40%;
-            margin-top: 100px;
-
-            h3{
-                font-size: clamp(20px, 2.5vw, 22px);  
-                font-family: "Magallanes";
-                text-transform: uppercase;
+            p{
+                #pill-span{
+                    color: orange;
+                    font-weight: 200;
+                }
+                span{
+                    color: #3276af;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                b{
+                    font-size: 18px;
+                }
             }
+        }
+
+        img{
+            margin: 0 auto;
+            width: auto;
+            height: 250px;
         }
     }
 
@@ -495,52 +556,56 @@
 
 ////////////////////////////////////////////////////////////////////////////
 
-#three-stages{
-    padding: 0 clamp(15px, 6vw, 125px);
-    padding-top: 75px;
-    padding-bottom: 160px;
-    position: relative;
+#sciency-bit-how{
     text-align: center;
-
-    border-bottom: 1px solid rgb(219, 217, 217);
-    
-    &::after{
-        position: absolute;
-        content: url(science-chem-bond.png);
-        display: inline-block;
-        top: -20%;
-        left: 40%;
-        transform: scaleX(-1);
-    }
 
     .border-container{
         max-width: 1800px;
         margin: 0 auto;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
-    .three-stages-container{
+    .sciency-bit-how-container{
         &-header{
             font-family: "Magallanes";
             font-weight: 600;
             font-size: clamp(21px, 3vw, 28px);     
-            text-transform: uppercase;
+            text-transform: uppercase;    
         }
 
-        &-grid{
-            margin-top: 100px;
+        &-info{
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
-            justify-content: space-around;
+
+            width: 100%;
 
             &-1,
             &-2,
-            &-3{
+            &-3,
+            &-4{
                 padding: 25px;
-                width: 33.3333%;
+                text-align: left;
+                width: 50%;
+
+                h3{
+                    font-family: "Magallanes";
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+
+
+            &-1{
+                h3:first-of-type{
+                    color: #6241BB;
+                }
+            }
+
+            &-2{
+                h3:first-of-type{
+                    color: #3276af;
+                }
             }
         }
     }

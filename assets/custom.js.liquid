@@ -309,3 +309,42 @@ $(".btn-collagen").on("click", function() {
     }, 500);
   }
 });
+
+
+$(".btn-pills").on("click", function() {
+  if($(".creams-info").attr("id") === "toggle"){
+    $(".creams-info").addClass("slide-out");
+    $(".creams-info").removeClass("slide-in");
+    $(".btn-creams").removeAttr("id", "btn-active-creams")
+    $(this).attr("id", "btn-active-pills");
+
+    setTimeout(function(){
+      $(".creams-info").removeAttr("id", "toggle").removeClass("slide-out");
+      $(".pills-info").addClass("slide-in");
+      $(".pills-info").attr("id", "toggle").addClass("slide-in");
+
+      setTime(function(){
+        $(".pills-info").removeClass("slide-in");
+      }, 550);
+    }, 500);
+  }
+});
+
+$(".btn-creams").on("click", function() {
+  if($(".pills-info").attr("id") === "toggle"){
+    $(".pills-info").addClass("slide-out");
+    $(".pills-info").removeClass("slide-in");
+    $(".btn-pills").removeAttr("id", "btn-active-creams")
+    $(".btn-creams").attr("id", "btn-active-creams");
+
+  setTimeout(function(){
+      $(".pills-info").removeAttr("id", "toggle").removeClass("slide-out");
+      $(".creams-info").addClass("slide-in");
+      $(".creams-info").attr("id", "toggle").addClass("slide-in");
+
+      setTime(function(){
+        $(".creams-info").removeClass("slide-in");
+      }, 550);
+    }, 500);
+  }
+});

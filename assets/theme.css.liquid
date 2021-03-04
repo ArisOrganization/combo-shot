@@ -1468,6 +1468,508 @@ html {
     margin: 10px auto;
   }
 }
+section {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+#sciency-hero {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 200px;
+  padding-bottom: 160px;
+  color: #525252;
+  background-image: url(sciency-hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#sciency-hero .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#sciency-hero .sciency-hero-container {
+  width: 750px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+#sciency-hero .sciency-hero-container-header {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#sciency-hero .sciency-hero-container-header span {
+  color: #3276af;
+  font-weight: bold;
+}
+#sciency-hero .sciency-hero-container-list {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sciency-hero .sciency-hero-container-list li {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.95em;
+  position: relative;
+  margin: 20px;
+}
+#sciency-hero .sciency-hero-container-list li::before {
+  content: "•" !important;
+  color: #3276af;
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+  height: auto;
+  left: -6.25%;
+  top: -75%;
+  position: absolute;
+}
+#sciency-hero .sciency-hero-container-list li:nth-of-type(2)::before, #sciency-hero .sciency-hero-container-list li:nth-of-type(3)::before {
+  position: absolute;
+  left: -4%;
+  top: -40%;
+}
+#sciency-hero .sciency-hero-container-text-body {
+  color: black;
+}
+#sciency-hero .border-ellipse {
+  width: 150px;
+  height: 150px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+#sciency-hero .border-ellipse::after {
+  content: url(blue-arrow-down.svg);
+  padding-top: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+#sciency-bit {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+#sciency-bit::after {
+  content: url(blue-wave.png);
+  width: auto;
+  top: 20%;
+  left: 0;
+  height: 200px;
+  position: absolute;
+  display: inline-block;
+  transform: scaleX(1.3), scaleY(1.3);
+  opacity: 0.1;
+  z-index: -500;
+}
+#sciency-bit::before {
+  content: url(science-chem-bond.png);
+  width: 30px;
+  top: 45%;
+  left: 0%;
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%, -50);
+  transform: scale(0.7);
+  z-index: -500;
+}
+#sciency-bit .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sciency-bit .sciency-bit-header {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#sciency-bit .sciency-bit-header span {
+  color: #3276af;
+}
+#sciency-bit .swap-me-container {
+  margin: 40px auto 0 auto;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+#sciency-bit .swap-me-container-text {
+  display: flex;
+  justify-content: center;
+}
+#sciency-bit .swap-me-container-text p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 auto 10px auto;
+  display: inline-block;
+  position: relative;
+}
+#sciency-bit .swap-me-container-text p::after {
+  content: url(border-arrows.svg);
+  position: absolute;
+  left: -175%;
+}
+#sciency-bit .swap-me-container #btn-active-joint {
+  background-color: #3276af;
+  color: white;
+  border-radius: 50px;
+}
+#sciency-bit .swap-me-container #btn-active-collagen {
+  background-color: #6241BB;
+  color: white;
+  border-radius: 50px;
+}
+#sciency-bit .swap-me-container-btn {
+  width: auto;
+  color: white;
+  font-family: "Magallanes";
+  display: flex;
+  justify-content: center;
+}
+#sciency-bit .swap-me-container-btn button {
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 50px;
+  outline: none;
+  height: 100%;
+}
+#sciency-bit .swap-me-container-btn button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+#sciency-bit .swap-me-container-btn button::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+}
+#sciency-bit .swap-me-container-btn button:first-of-type {
+  color: #6241BB;
+}
+#sciency-bit .swap-me-container-btn button:first-of-type::after {
+  border: 1px solid #6241BB;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+#sciency-bit .swap-me-container-btn button:nth-of-type(2) {
+  color: #3276af;
+}
+#sciency-bit .swap-me-container-btn button:nth-of-type(2)::after {
+  border: 1px solid #3276af;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+#sciency-bit #toggle {
+  display: flex;
+}
+#sciency-bit .joint-info,
+#sciency-bit .collagen-info {
+  margin: 100px auto 0 auto;
+  align-items: stretch;
+  text-align: left;
+  display: none;
+}
+#sciency-bit .joint-info h3,
+#sciency-bit .collagen-info h3 {
+  font-family: "Magallanes";
+  text-transform: uppercase;
+}
+#sciency-bit .joint-info-1, #sciency-bit .joint-info-2,
+#sciency-bit .collagen-info-1,
+#sciency-bit .collagen-info-2 {
+  padding: 0 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sciency-bit .joint-info-1 img, #sciency-bit .joint-info-2 img,
+#sciency-bit .collagen-info-1 img,
+#sciency-bit .collagen-info-2 img {
+  margin: 0 auto;
+  height: auto;
+  z-index: 1000;
+}
+#sciency-bit .joint-info-1 ul, #sciency-bit .joint-info-2 ul,
+#sciency-bit .collagen-info-1 ul,
+#sciency-bit .collagen-info-2 ul {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+}
+#sciency-bit .joint-info-1 ul li, #sciency-bit .joint-info-2 ul li,
+#sciency-bit .collagen-info-1 ul li,
+#sciency-bit .collagen-info-2 ul li {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+#sciency-bit .joint-info-1 ul li::before, #sciency-bit .joint-info-2 ul li::before,
+#sciency-bit .collagen-info-1 ul li::before,
+#sciency-bit .collagen-info-2 ul li::before {
+  content: "•" !important;
+  color: #6241BB;
+  font-size: 3em;
+  display: inline-block;
+  height: auto;
+  margin-right: 10px;
+}
+#sciency-bit .joint-info-1 #tick-list li, #sciency-bit .joint-info-2 #tick-list li,
+#sciency-bit .collagen-info-1 #tick-list li,
+#sciency-bit .collagen-info-2 #tick-list li {
+  width: 100%;
+  margin: 10px 0 10px 20px;
+  position: relative;
+}
+#sciency-bit .joint-info-1 #tick-list li::before, #sciency-bit .joint-info-2 #tick-list li::before,
+#sciency-bit .collagen-info-1 #tick-list li::before,
+#sciency-bit .collagen-info-2 #tick-list li::before {
+  content: url(green-tick.svg) !important;
+  display: inline-block;
+  top: -30px;
+  left: -25px;
+  position: absolute;
+}
+#sciency-bit .collagen-info-1 img, #sciency-bit .collagen-info-2 img {
+  width: 450px;
+}
+#sciency-bit .collagen-info-1 ul li::before, #sciency-bit .collagen-info-2 ul li::before {
+  color: #6241BB;
+}
+#sciency-bit .joint-info-1 img, #sciency-bit .joint-info-2 img {
+  width: 350px;
+}
+#sciency-bit .joint-info-1 ul li::before, #sciency-bit .joint-info-2 ul li::before {
+  color: #3276af;
+}
+#sciency-bit .btn-container {
+  display: inline-block;
+  margin: 25px auto 0 auto;
+}
+
+#sciency-bit-why {
+  text-align: center;
+}
+#sciency-bit-why .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sciency-bit-why .sciency-bit-header {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#sciency-bit-why .swap-me-container {
+  margin: 40px auto 0 auto;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+#sciency-bit-why .swap-me-container-text {
+  display: flex;
+  justify-content: center;
+}
+#sciency-bit-why .swap-me-container-text p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 auto 10px auto;
+  display: inline-block;
+  position: relative;
+}
+#sciency-bit-why .swap-me-container-text p::after {
+  content: url(border-arrows.svg);
+  position: absolute;
+  left: -175%;
+}
+#sciency-bit-why .swap-me-container #btn-active-creams {
+  background-color: #3276af;
+  color: white;
+  border-radius: 50px;
+}
+#sciency-bit-why .swap-me-container #btn-active-pills {
+  background-color: #6241BB;
+  color: white;
+  border-radius: 50px;
+}
+#sciency-bit-why .swap-me-container-btn {
+  width: auto;
+  color: white;
+  font-family: "Magallanes";
+  display: flex;
+  justify-content: center;
+}
+#sciency-bit-why .swap-me-container-btn button {
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 50px;
+  outline: none;
+  height: 100%;
+}
+#sciency-bit-why .swap-me-container-btn button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+#sciency-bit-why .swap-me-container-btn button::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+}
+#sciency-bit-why .swap-me-container-btn button:first-of-type {
+  color: #3276af;
+}
+#sciency-bit-why .swap-me-container-btn button:first-of-type::after {
+  border: 1px solid #3276af;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+#sciency-bit-why .swap-me-container-btn button:nth-of-type(2) {
+  color: #6241BB;
+}
+#sciency-bit-why .swap-me-container-btn button:nth-of-type(2)::after {
+  border: 1px solid #6241BB;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+#sciency-bit-why #toggle {
+  display: flex;
+}
+#sciency-bit-why .creams-info,
+#sciency-bit-why .pills-info {
+  min-height: 300px;
+  display: none;
+}
+#sciency-bit-why .creams-info-text,
+#sciency-bit-why .pills-info-text {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#sciency-bit-why .creams-info-text h3,
+#sciency-bit-why .pills-info-text h3 {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 24px);
+  text-transform: uppercase;
+}
+#sciency-bit-why .creams-info-text h3 span:last-of-type,
+#sciency-bit-why .pills-info-text h3 span:last-of-type {
+  color: #3276af;
+}
+#sciency-bit-why .creams-info-text p #pill-span,
+#sciency-bit-why .pills-info-text p #pill-span {
+  color: orange;
+  font-weight: 200;
+}
+#sciency-bit-why .creams-info-text p span,
+#sciency-bit-why .pills-info-text p span {
+  color: #3276af;
+  font-size: 22px;
+  font-weight: bold;
+}
+#sciency-bit-why .creams-info-text p b,
+#sciency-bit-why .pills-info-text p b {
+  font-size: 18px;
+}
+#sciency-bit-why .creams-info img,
+#sciency-bit-why .pills-info img {
+  margin: 0 auto;
+  width: auto;
+  height: 250px;
+}
+#sciency-bit-why .btn-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#sciency-bit-how {
+  text-align: center;
+}
+#sciency-bit-how .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#sciency-bit-how .sciency-bit-how-container-header {
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#sciency-bit-how .sciency-bit-how-container-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#sciency-bit-how .sciency-bit-how-container-info-1, #sciency-bit-how .sciency-bit-how-container-info-2, #sciency-bit-how .sciency-bit-how-container-info-3, #sciency-bit-how .sciency-bit-how-container-info-4 {
+  padding: 25px;
+  text-align: left;
+  width: 50%;
+}
+#sciency-bit-how .sciency-bit-how-container-info-1 h3, #sciency-bit-how .sciency-bit-how-container-info-2 h3, #sciency-bit-how .sciency-bit-how-container-info-3 h3, #sciency-bit-how .sciency-bit-how-container-info-4 h3 {
+  font-family: "Magallanes";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#sciency-bit-how .sciency-bit-how-container-info-1 h3:first-of-type {
+  color: #6241BB;
+}
+#sciency-bit-how .sciency-bit-how-container-info-2 h3:first-of-type {
+  color: #3276af;
+}
+
 #steps.steps-progress {
   width: 100%;
   max-width: 750px;
@@ -1861,7 +2363,7 @@ html {
 }
 #why-start-drinking .btn-container {
   display: inline-block;
-  margin: 50px auto 0 auto;
+  margin: 25px auto 0 auto;
 }
 
 #what-makes-better {
