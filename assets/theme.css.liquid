@@ -2052,6 +2052,394 @@ section {
     transform: scale(1);
   }
 }
+#ultravitamin-hero {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  font-family: Open Sans;
+  font-size: 18px;
+  color: #525252;
+  background: url(ultravitamin-hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#ultravitamin-hero .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#ultravitamin-hero .ultravitamin-container {
+  width: 55%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#ultravitamin-hero .ultravitamin-container-header {
+  margin-bottom: 50px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-hero .ultravitamin-container-header span {
+  color: #EB75BC;
+  font-weight: bold;
+}
+
+#ultravitamin-strength {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 125px;
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+#ultravitamin-strength::after {
+  content: url(blue-wave.png);
+  width: auto;
+  top: 20%;
+  left: 0;
+  height: 200px;
+  position: absolute;
+  display: inline-block;
+  transform: scaleX(1.3), scaleY(1.3);
+  opacity: 0.1;
+  z-index: -500;
+}
+#ultravitamin-strength::before {
+  content: url(science-chem-bond.png);
+  width: 30px;
+  top: 45%;
+  left: 0%;
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%, -50);
+  transform: scale(0.7);
+  z-index: -500;
+}
+#ultravitamin-strength .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#ultravitamin-strength .ultravitamin-strength-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: left;
+}
+#ultravitamin-strength .ultravitamin-strength-container-1, #ultravitamin-strength .ultravitamin-strength-container-2, #ultravitamin-strength .ultravitamin-strength-container-3, #ultravitamin-strength .ultravitamin-strength-container-4 {
+  width: 50%;
+  margin: 50px 0;
+}
+#ultravitamin-strength .ultravitamin-strength-container-1 h3, #ultravitamin-strength .ultravitamin-strength-container-2 h3, #ultravitamin-strength .ultravitamin-strength-container-3 h3, #ultravitamin-strength .ultravitamin-strength-container-4 h3 {
+  margin-bottom: 50px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-strength .ultravitamin-strength-container-1 img, #ultravitamin-strength .ultravitamin-strength-container-2 img, #ultravitamin-strength .ultravitamin-strength-container-3 img, #ultravitamin-strength .ultravitamin-strength-container-4 img {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+#ultravitamin-strength .ultravitamin-strength-container-2 {
+  text-align: center;
+  padding: 0px 100px 50px 100px;
+  font-weight: 600;
+  font-size: clamp(18px, 3vw, 20px);
+  font-family: "Magallanes";
+  text-transform: uppercase;
+}
+#ultravitamin-strength .ultravitamin-strength-container-2 p::after,
+#ultravitamin-strength .ultravitamin-strength-container-2 p::before {
+  content: url(quote.svg);
+  display: inline-block;
+  width: 100%;
+}
+#ultravitamin-strength .ultravitamin-strength-container-2 p::before {
+  text-align: left;
+}
+#ultravitamin-strength .ultravitamin-strength-container-2 p::after {
+  transform: scaleX(-1);
+  text-align: left;
+}
+#ultravitamin-strength .ultravitamin-strength-container-3 ul {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#ultravitamin-strength .ultravitamin-strength-container-3 ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+#ultravitamin-strength .ultravitamin-strength-container-3 ul li::before {
+  content: "•" !important;
+  color: #006FBC;
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+  height: auto;
+  margin-right: 15px;
+}
+
+#ultravitamin-one-shot {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+}
+#ultravitamin-one-shot .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#ultravitamin-one-shot .one-shot-container-header {
+  margin-bottom: 25px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-one-shot .one-shot-container-grid {
+  margin-top: 75px;
+  display: flex;
+}
+#ultravitamin-one-shot .one-shot-container-grid img {
+  height: 125px;
+  width: auto;
+}
+#ultravitamin-one-shot .one-shot-container-grid-1, #ultravitamin-one-shot .one-shot-container-grid-2, #ultravitamin-one-shot .one-shot-container-grid-3, #ultravitamin-one-shot .one-shot-container-grid-4 {
+  padding: 30px;
+}
+#ultravitamin-one-shot .one-shot-container-grid-1 p, #ultravitamin-one-shot .one-shot-container-grid-2 p, #ultravitamin-one-shot .one-shot-container-grid-3 p, #ultravitamin-one-shot .one-shot-container-grid-4 p {
+  margin-top: 40px;
+}
+
+#ultravitamin-fruitful {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+  background: url(fruitful-bg-new.png);
+  background-position: right;
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+}
+#ultravitamin-fruitful .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#ultravitamin-fruitful .fruitful-container-header {
+  margin-bottom: 25px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-fruitful .fruitful-container-info {
+  width: 60%;
+  margin-top: 80px;
+}
+#ultravitamin-fruitful .fruitful-container-info ul {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#ultravitamin-fruitful .fruitful-container-info ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95em;
+  width: 50%;
+}
+#ultravitamin-fruitful .fruitful-container-info ul li span {
+  font-weight: bold;
+}
+#ultravitamin-fruitful .fruitful-container-info ul li::before {
+  content: "•" !important;
+  color: #006FBC;
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+  height: auto;
+  margin-right: 15px;
+}
+#ultravitamin-fruitful .btn-container {
+  margin: 100px auto 0 auto;
+  display: inline-block;
+}
+
+#ultravitamin-plant-power {
+  height: auto;
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+  background: url(plant-power-bg.png);
+  background-position: left;
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+}
+#ultravitamin-plant-power .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#ultravitamin-plant-power .plant-power-container-header {
+  margin-bottom: 25px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-plant-power .plant-power-container-info {
+  width: 60%;
+  margin-top: 80px;
+  margin-left: 40%;
+}
+#ultravitamin-plant-power .plant-power-container-info ul {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#ultravitamin-plant-power .plant-power-container-info ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95em;
+  width: 50%;
+}
+#ultravitamin-plant-power .plant-power-container-info ul li span {
+  font-weight: bold;
+}
+#ultravitamin-plant-power .plant-power-container-info ul li::before {
+  content: "•" !important;
+  color: #006FBC;
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+  height: auto;
+  margin-right: 15px;
+}
+#ultravitamin-plant-power .btn-container {
+  margin: 100px auto 0 auto;
+  display: inline-block;
+}
+
+#ultravitamin-recharge {
+  padding-top: 200px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1;
+}
+#ultravitamin-recharge::after {
+  content: url(blue-wave.png);
+  width: auto;
+  top: -10%;
+  left: 0;
+  height: 200px;
+  position: absolute;
+  display: inline-block;
+  transform: scaleX(1.3), scaleY(1.3);
+  opacity: 0.1;
+  z-index: -500;
+}
+#ultravitamin-recharge::before {
+  content: url(science-chem-bond.png);
+  width: 30px;
+  top: 25%;
+  left: 0%;
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%, -50);
+  transform: scale(0.7);
+  z-index: -500;
+}
+#ultravitamin-recharge .border-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#ultravitamin-recharge .recharge-container-info-1 {
+  margin-bottom: 50px;
+  text-align: left;
+  display: flex;
+}
+#ultravitamin-recharge .recharge-container-info-1 img {
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+#ultravitamin-recharge .recharge-container-info-1 div {
+  width: 60%;
+}
+#ultravitamin-recharge .recharge-container-info-1 h2 {
+  margin-bottom: 25px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-recharge .recharge-container-info-1 ul {
+  list-style: circle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#ultravitamin-recharge .recharge-container-info-1 ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+#ultravitamin-recharge .recharge-container-info-1 ul li span {
+  font-weight: bold;
+}
+#ultravitamin-recharge .recharge-container-info-1 ul li::before {
+  content: "•" !important;
+  color: #006FBC;
+  font-weight: bold;
+  font-size: 2.5em;
+  display: inline-block;
+  height: auto;
+  margin-right: 15px;
+}
+#ultravitamin-recharge .recharge-container-info-2 {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+#ultravitamin-recharge .recharge-container-info-2 h2 {
+  margin-top: 100px;
+  margin-bottom: 25px;
+  font-family: "Magallanes";
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 28px);
+  text-transform: uppercase;
+}
+#ultravitamin-recharge .recharge-container-info-2 p {
+  text-align: left;
+}
+#ultravitamin-recharge .recharge-container-info-2 .btn-container {
+  margin: 0 auto;
+  display: inline-block;
+}
+
 #what-is-combo-hero {
   padding: 0 clamp(15px, 6vw, 125px);
   padding-top: 200px;
