@@ -1,0 +1,1012 @@
+// ***** RESPONSIVE MEASUREMENTS ***** //
+// @media(max-width: 950px)
+// @media(max-width: 850px)
+// @media(max-width: 750px)
+// @media(max-width: 650px)
+// @media(max-width: 510px)
+// @media(max-width: 420px)
+// @media(max-width: 350px)
+// @media(max-width: 330px)
+
+#ultravitamin-hero {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  font-family: Open Sans;
+  font-size: 18px;
+  color: #525252;
+
+  background: url(ultravitamin-hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .ultravitamin-container {
+    width: 55%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 50px;
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(21px, 3vw, 28px);
+      text-transform: uppercase;
+
+      span {
+        color: #f79e1b;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .border-ellipse {
+    width: 150px;
+    height: 150px;
+
+    clip-path: circle(50% at 50% 50%);
+    background-color: #f5f5f5;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: url(yellow-arrow-down.svg);
+      padding-top: 25px;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 650px) {
+    background: url(ultravitamin-hero-mobile.png);
+    background-position: -560px 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 230px;
+
+    .ultravitamin-container {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 510px) {
+    background-position: -500px 260px;
+    background-size: 1200px auto;
+
+    .ultravitamin-container {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 150px;
+    padding-bottom: 290px;
+    background-position: -420px 220px;
+    background-size: 1000px auto;
+
+    .ultravitamin-container {
+      margin-top: -80px;
+
+      &-text,
+      &-list {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      margin-top: 50px;
+      font-size: 12px;
+    }
+
+    .ultravitamin-container {
+      width: 100%;
+      &-header {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    background-position: -420px 140px;
+    padding-top: 150px;
+    padding-bottom: 180px;
+    .ultravitamin-container {
+      margin-top: -80px;
+      .container-text {
+        font-size: 13px;
+        width: 90%;
+      }
+    }
+    button {
+      margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 330px) {
+    background-position: -450px 70px;
+    padding-bottom: 100px;
+    button {
+      margin-top: 25px;
+    }
+
+    .border-ellipse {
+      top: 102%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////      ***NEW SECTION**      /////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#ultravitamin-strength {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-top: 125px;
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+  background-color: #F5F5F5;
+
+  z-index: 1;
+
+  #bg {
+    background-image: url(blue-wave.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 900px;
+    height: 900px;
+    width: 100vw;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    
+    mix-blend-mode: overlay;
+    background-blend-mode: screen;
+
+    z-index: -500;
+  }
+
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ultravitamin-strength-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+    &-1,
+    &-2,
+    &-3 {
+      width: 50%;
+      margin: 50px 0;
+      h3 {
+        margin-bottom: 50px;
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: clamp(21px, 3vw, 28px);
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &-4 {
+      margin: 0 auto;
+      display: block;
+      h3 {
+        margin-bottom: 50px;
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: clamp(21px, 3vw, 28px);
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &-2 {
+      text-align: center;
+      padding: 0px 100px 50px 100px;
+      font-weight: 600;
+      font-size: clamp(18px, 3vw, 20px);
+      font-family: "Magallanes";
+      text-transform: uppercase;
+
+      p::after,
+      p::before {
+        content: url(quote.svg);
+        display: inline-block;
+        width: 100%;
+      }
+
+      p::before {
+        text-align: left;
+      }
+
+      p::after {
+        transform: scaleX(-1);
+        text-align: left;
+      }
+    }
+
+    &-3 {
+      ul {
+        list-style: circle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 0.95em;
+        }
+      }
+
+      ul li::before {
+        content: "\2022" !important;
+        color: #006fbc;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+        height: auto;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+    #bg{
+      height: 87%;
+      width: 300vw;
+      background-size: 300vw 100%;
+      top: 18%;
+      left: -81%;
+    }
+    .ultravitamin-strength-container {
+      &-2 {
+        font-size: clamp(15px, 2.3vw, 17px);
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    .ultravitamin-strength-container {
+      flex-direction: column;
+      align-items: center;
+      &-1,
+      &-2,
+      &-3,
+      &-4 {
+        width: 100%;
+        margin: 10px auto;
+      }
+      &-2 {
+        padding: 10px 50px 10px 50px;
+      }
+      &-3 {
+        ul {
+          width: 50%;
+          li {
+            width: 100%;
+          }
+        }
+        button {
+          margin: 20px auto;
+        }
+      }
+
+      &-4 {
+        position: absolute;
+        top: 56%;
+        left: 19.5%;
+
+        img {
+          height: 300px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    #bg{
+      width: 500vw;
+      background-size: 500vw 100%;
+      top: 16%;
+      left: -155%;
+    }
+
+    .ultravitamin-strength-container {
+      &-4 {
+        position: absolute;
+        top: 60%;
+        left: 22.5%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .ultravitamin-strength-container {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &-1,
+      &-3 {
+        h3 {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+      }
+      &-3 {
+        ul {
+          width: 50%;
+          li {
+            width: 100%;
+          }
+        }
+
+        button {
+          margin-top: 50px;
+          font-size: 12px;
+        }
+      }
+      &-4 {
+        img {
+          height: 300px;
+          width: auto;
+        }
+      }
+    }
+
+    &::after {
+      top: 0%;
+      left: -107%;
+      transform: scale(1.5);
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .ultravitamin-strength-container {
+      &-4 {
+        position: absolute;
+        top: 60%;
+        left: 22.5%;
+
+        img {
+          height: 300px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .ultravitamin-strength-container {
+      &-4 {
+        position: absolute;
+        top: 63%;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////      ***NEW SECTION**      /////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#ultravitamin-one-shot {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  .one-shot-container {
+    &-header {
+      margin-bottom: 25px;
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(21px, 3vw, 28px);
+      text-transform: uppercase;
+    }
+    &-grid {
+      margin-top: 75px;
+      display: flex;
+
+      img {
+        height: 125px;
+        width: auto;
+      }
+
+      &-1,
+      &-2,
+      &-3,
+      &-4 {
+        padding: 30px;
+        p {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    .one-shot-container {
+      &-grid {
+        flex-direction: column;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    padding-bottom: 50px;
+
+    .one-shot-container {
+      &-header {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      &-grid {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////      ***NEW SECTION**      /////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#ultravitamin-fruitful {
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+
+  background: url(fruitful-bg-new.png);
+  background-position: right;
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .fruitful-container {
+    &-header {
+      margin-bottom: 25px;
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(21px, 3vw, 28px);
+      text-transform: uppercase;
+    }
+    &-info {
+      width: 60%;
+      margin-top: 80px;
+
+      ul {
+        list-style: circle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 0.95em;
+          width: 50%;
+          text-align: left;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      ul li::before {
+        content: "\2022" !important;
+        color: #006fbc;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+        height: auto;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .btn-container {
+    margin: 100px auto 0 auto;
+    display: inline-block;
+  }
+
+  @media (max-width: 950px) {
+    .fruitful-container {
+      &-info {
+        width: 70%;
+      }
+    }
+  }
+  @media (max-width: 850px) {
+    .fruitful-container {
+      &-info {
+        width: 60%;
+        margin-top: 15px;
+
+        ul {
+          li {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    background-position: 110px 20px;
+
+    .fruitful-container {
+      font-size: 14px;
+      &-info {
+        width: 100%;
+      }
+    }
+    .btn-container {
+      margin-top: 0px;
+
+      button {
+        margin-top: 50px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 80px;
+
+    .fruitful-container {
+      &-header {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      &-info {
+        ul li::before {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////      ***NEW SECTION**      /////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#ultravitamin-plant-power {
+  height: auto;
+  padding: 0 clamp(15px, 6vw, 125px);
+  padding-bottom: 125px;
+  text-align: center;
+  position: relative;
+
+  background: url(plant-power-bg.png);
+  background-position: left;
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .plant-power-container {
+    &-header {
+      margin-bottom: 25px;
+      font-family: "Magallanes";
+      font-weight: 600;
+      font-size: clamp(21px, 3vw, 28px);
+      text-transform: uppercase;
+    }
+    &-info {
+      width: 70%;
+      margin-top: 80px;
+      margin-left: 30%;
+
+      ul {
+        list-style: circle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 0.95em;
+          width: 50%;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      ul li::before {
+        content: "\2022" !important;
+        color: #006fbc;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+        height: auto;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .btn-container {
+    margin: 100px auto 0 auto;
+    display: inline-block;
+  }
+
+  @media (max-width: 1050px) {
+    background: url(plant-power-bg-right.png);
+    background-position: 100% 180px;
+    background-repeat: no-repeat;
+
+    .plant-power-container {
+      &-info {
+        width: 100%;
+        margin-left: 0%;
+        ul {
+          li {
+            width: 100%;
+            margin-left: 0%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    background-position: 100% 100px;
+    background-size: 350px 350px;
+
+    .plant-power-container {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-bottom: 50px;
+    background: url(plant-power-bg.png);
+    background-repeat: no-repeat;
+    background-size: 400px 360px;
+    background-position: 0px 50px;
+
+    .plant-power-container {
+      &-header {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      &-info {
+        margin-top: 275px;
+        ul li {
+          font-size: 12px;
+        }
+        ul li::before {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    background-size: 380px 300px;
+    background-position: 0px 100px;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////      ***NEW SECTION**      /////////////////////////
+
+////////////////////////////////////////////////////////////////////////////
+
+#ultravitamin-recharge {
+  // padding-top: 200px;
+  text-align: center;
+  position: relative;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid rgb(219, 217, 217);
+  z-index: 1;
+
+  #bg {
+    background-image: url(blue-wave.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 900px;
+    height: 900px;
+    width: 100vw;
+    position: absolute;
+    top: -2%;
+    left: 0;
+    
+    mix-blend-mode: overlay;
+    background-blend-mode: screen;
+
+    z-index: -500;
+  }
+
+  &::before {
+    content: url(science-chem-bond.png);
+    width: 30px;
+    top: 25%;
+    left: 0%;
+
+    position: absolute;
+    display: inline-block;
+    transform: translate(-50%, -50);
+    transform: scale(0.7);
+
+    z-index: -500;
+  }
+
+  .border-container {
+    max-width: 1800px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .recharge-container {
+    &-info-1 {
+      margin-bottom: 50px;
+      text-align: left;
+      display: flex;
+      img {
+        margin: 0 auto;
+        width: 200px;
+        height: auto;
+      }
+      div {
+        width: 60%;
+      }
+      h2 {
+        margin-bottom: 25px;
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: clamp(21px, 3vw, 28px);
+        text-transform: uppercase;
+      }
+      ul {
+        list-style: circle;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 0.95em;
+          margin: 0 20px;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+      ul li::before {
+        content: "\2022" !important;
+        color: #006fbc;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+        height: auto;
+        margin-right: 15px;
+      }
+    }
+
+    &-info-2 {
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+      h2 {
+        margin-top: 100px;
+        margin-bottom: 25px;
+        font-family: "Magallanes";
+        font-weight: 600;
+        font-size: clamp(21px, 3vw, 28px);
+        text-transform: uppercase;
+      }
+      p {
+        text-align: left;
+      }
+      .btn-container {
+        margin: 0 auto;
+        display: inline-block;
+      }
+    }
+  }
+  // @media (min-width: 1450px) {
+  //   &::after {
+  //     content: "";
+  //     background-image: url(blue-wave.png);
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+  //     background-size: 100vw 800px;
+
+  //     width: 100%;
+  //     top: 20%;
+  //     left: 0;
+  //     height: 800px;
+
+  //     position: absolute;
+  //     display: inline-block;
+  //     transform: scaleX(1.3), scaleY(1.3);
+  //     opacity: 0.1;
+
+  //     z-index: -500;
+  //   }
+  // }
+
+  @media(max-width: 950px){
+    #bg{
+      height: 87%;
+      width: 300vw;
+      background-size: 300vw 100%;
+      top: 18%;
+      left: -81%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .recharge-container {
+      &-info-1 {
+        position: relative;
+        div {
+          width: 100%;
+        }
+        ul {
+          li {
+            width: 100%;
+          }
+        }
+        img {
+          position: absolute;
+          height: 225px;
+          width: auto;
+          top: 30%;
+          left: 40%;
+        }
+      }
+
+      &-info-2 {
+        width: 100%;
+        h2 {
+          margin-top: 100px;
+          margin-bottom: 25px;
+          font-family: "Magallanes";
+          font-weight: 600;
+          font-size: clamp(21px, 3vw, 28px);
+          text-transform: uppercase;
+        }
+        .btn-container {
+          margin: 0 auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    #bg{
+      width: 500vw;
+      background-size: 500vw 100%;
+      top: -20%;
+      left: -155%;
+    }
+
+    &::before {
+      top: 30%;
+      left: -36%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 25px;
+    padding-bottom: 70px;
+    .recharge-container {
+      &-info-1 {
+        img {
+          position: absolute;
+          height: 200px;
+          width: auto;
+          top: 37%;
+          left: 40%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .recharge-container {
+      h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      &-info-2 {
+        .btn-container {
+          margin-top: 0px;
+
+          button {
+            margin-top: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &::after {
+      top: -27%;
+      left: -107%;
+      transform: scale(1.3);
+    }
+  }
+}

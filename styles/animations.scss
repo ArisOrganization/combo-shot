@@ -1,0 +1,27 @@
+.slide-out{
+    animation-name: slide-out;
+    animation-duration: 0.55s;
+
+    @keyframes slide-out {
+        100% {
+            transform: translateX(-1%);
+            opacity: 0;
+        }
+    }
+}
+
+.slide-in{
+    animation-name: slide-in;
+    animation-duration: 0.55s;
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(1%);
+            opacity: 0;
+        }
+
+        100% {
+            transform:translateX(0%);
+        }
+    }
+}

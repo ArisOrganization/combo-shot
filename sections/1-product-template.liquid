@@ -11,7 +11,7 @@
   data-ajax-enabled="{{ settings.enable_ajax }}"
   class="product-hero"
 >
-  {% include '1-header' %}
+  {% include '1-header-hover' %}
 
   <div class="checkout-container">
     <div class="direct-checkout">
@@ -48,8 +48,8 @@
               {{ variant.title }}
               <span class='subscription'>bundle</span>
               <span class="single">supply</span>
-              <br />
-              <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
+              <!-- <br /> -->
+              <span class="green discount"> {{ 100 | minus: percentage | round}}% Discount</span>
               <span class="cross">({{ variant.metafields.price_maths.RRP | money }})</span>
               <span class="save green">
                 Save {{ variant.metafields.price_maths.RRP |minus: variant.price | money_without_trailing_zeros }}
@@ -73,8 +73,8 @@
               {% if months != 1  %}
                 <span class='subscription'>bundle</span>
                 <span class="single">supply</span>
-                <br />
-                <span class="green"> {{ 100 | minus: percentage | round}}% Discount</span>
+                <!-- <br /> -->
+                <span class="green discount"> {{ 100 | minus: percentage | round}}% Discount</span>
                 <span class="cross">({{ max | money }})</span>
                 <span class="save green">
                   Save {{ savings | money_without_trailing_zeros }}
@@ -89,7 +89,7 @@
               {{ variant_month_price | money }}
             </p>
           </div>
-        </div>
+        </div> 
           <h1>  {{ discount }}</h1>
         {% endfor %}
         <div class="direct-checkout-link">

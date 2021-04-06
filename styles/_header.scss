@@ -7,6 +7,7 @@ header {
     position: relative;
     z-index: 10;
 
+    .hover-btn,
     .all_products {
       display: flex;
       align-items: center;
@@ -54,6 +55,242 @@ header {
       .theme-button {
         font-size: 11px;
         padding: 3px 10px 0px 10px;
+      }
+    }
+  }
+}
+
+////////// TEST //////////
+header {
+  &.header-hover-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px;
+    padding: 25px clamp(15px, 6vw, 125px);
+    // position: relative;
+    z-index: 10;
+
+    .header-right {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+
+      .header-hover-container {
+        position: relative;
+        .hover-btn {
+          font-size: 20px;
+          color: #525252;
+        }
+        #active {
+          display: block;
+        }
+
+        .header-hover-background {
+          position: absolute;
+          display: none;
+          opacity: 1;
+          top: 250%;
+          left: -100vw;
+          background-color: #f5f5f5;
+          width: 300vw;
+          height: 160px;
+          opacity: 0.96;
+          z-index: 1000;
+        }
+
+        .header-hover {
+          position: absolute;
+          display: none;
+          height: 200px;
+          top: 0%;
+          left: 0%;
+          padding-top: 100px;
+          width: 250px;
+          z-index: 1000;
+
+          .all_products-mobile {
+            display: none;
+          }
+
+          ul li {
+            font-size: 18px;
+            margin: 7px;
+
+            &:first-of-type a:hover {
+              color: #6241bb;
+            }
+            &:nth-of-type(2) a:hover {
+              color: #ffbf1c;
+            }
+            &:nth-of-type(3) a:hover {
+              color: #3276af;
+            }
+          }
+        }
+      }
+
+      .hover-btn,
+      .all_products {
+        display: flex;
+        align-items: center;
+        // margin-left: auto;
+        margin-right: 50px;
+        a {
+          font-size: 20px;
+          color: #525252;
+        }
+        .theme-button {
+          margin-top: -15px;
+          border-radius: 20px;
+          color: #fff;
+          padding: 3px 25px 0px 25px;
+        }
+      }
+      &.light {
+        .all_products {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    &.header-hover-container {
+      .header-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header-hover-container {
+          .hover-btn {
+            font-size: 17px;
+            color: #525252;
+          }
+          .header-hover-background {
+            top: 305%;
+            left: -50vw;
+            width: 300vw;
+            height: 160px;
+          }
+          .header-hover {
+            height: 200px;
+            padding-top: 85px;
+            width: 160px;
+          }
+        }
+        .hover-btn,
+        .all_products {
+          margin-right: 20px;
+        }
+        .trust-pilot {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.header {
+    a {
+      &:first-of-type {
+        order: 2;
+      }
+      &:last-of-type {
+        order: 1;
+        height: 35px;
+      }
+    }
+    div.all_products {
+      order: 3;
+      margin-left: 0;
+      margin-right: 0;
+      a {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .theme-button {
+        font-size: 11px;
+        padding: 3px 10px 0px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    &.header-hover-container {
+      .header-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header-hover-container {
+          .hover-btn {
+            font-size: 18px;
+            display: none;
+          }
+          .hover-btn-mobile {
+            content: url(bars-solid.svg);
+            width: 50px;
+            height: 50px;
+          }
+          .hover-btn-close {
+            content: url(cross-bar.svg);
+            width: 50px;
+            height: 50px;
+            display: none;
+          }
+          .header-hover-background {
+            top: 131%;
+            left: -110vw;
+            height: 245px;
+          }
+          .header-hover {
+            padding-top: 60px;
+            left: -190%;
+            top: 46%;
+
+            .all_products-mobile {
+              display: inline-block;
+              a {
+                margin-top: 20px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .all_products {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  header.header-hover-container {
+    .logo {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 324px) {
+  header {
+    &.header-hover-container {
+      .header-right {
+        .header-hover-container {
+          .hover-btn {
+            margin-right: 0;
+          }
+          .header-hover-background {
+            top: 150%;
+            height: 240px;
+          }
+        }
       }
     }
   }
