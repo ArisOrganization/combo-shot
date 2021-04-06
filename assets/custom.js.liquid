@@ -11,10 +11,9 @@
   };
 })();
 
-  if(window.location.href.includes('choose')){
-   $('.top ').hide();
-    
-  }
+if (window.location.href.includes("choose")) {
+  $(".top ").hide();
+}
 
 $(".top").on("click", function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -269,82 +268,119 @@ $(".navigate_page__link").on("click", function () {
   } else {
     $("#shopify-section-1-Combo-all-packages").removeClass("more_top");
   }
-  
 });
 
-$(".btn-joint-support").on("click", function() {
-  if($(".collagen-info").attr("id") === "toggle"){
+$(".btn-joint-support").on("click", function () {
+  if ($(".collagen-info").attr("id") === "toggle") {
     $(".collagen-info").addClass("slide-out");
     $(".collagen-info").removeClass("slide-in");
-    $(".btn-collagen").removeAttr("id", "btn-active-collagen")
+    $(".btn-collagen").removeAttr("id", "btn-active-collagen");
     $(this).attr("id", "btn-active-joint");
 
-    setTimeout(function(){
+    setTimeout(function () {
       $(".collagen-info").removeAttr("id", "toggle").removeClass("slide-out");
       $(".joint-info").addClass("slide-in");
       $(".joint-info").attr("id", "toggle").addClass("slide-in");
 
-      setTime(function(){
+      setTime(function () {
         $(".joint-info").removeClass("slide-in");
       }, 550);
     }, 500);
   }
 });
 
-$(".btn-collagen").on("click", function() {
-  if($(".joint-info").attr("id") === "toggle"){
+$(".btn-collagen").on("click", function () {
+  if ($(".joint-info").attr("id") === "toggle") {
     $(".joint-info").addClass("slide-out");
     $(".joint-info").removeClass("slide-in");
-    $(".btn-joint-support").removeAttr("id", "btn-active-collagen")
+    $(".btn-joint-support").removeAttr("id", "btn-active-collagen");
     $(".btn-collagen").attr("id", "btn-active-collagen");
 
-  setTimeout(function(){
+    setTimeout(function () {
       $(".joint-info").removeAttr("id", "toggle").removeClass("slide-out");
       $(".collagen-info").addClass("slide-in");
       $(".collagen-info").attr("id", "toggle").addClass("slide-in");
 
-      setTime(function(){
+      setTime(function () {
         $(".collagen-info").removeClass("slide-in");
       }, 550);
     }, 500);
   }
 });
 
-
-$(".btn-pills").on("click", function() {
-  if($(".creams-info").attr("id") === "toggle"){
+$(".btn-pills").on("click", function () {
+  if ($(".creams-info").attr("id") === "toggle") {
     $(".creams-info").addClass("slide-out");
     $(".creams-info").removeClass("slide-in");
-    $(".btn-creams").removeAttr("id", "btn-active-creams")
+    $(".btn-creams").removeAttr("id", "btn-active-creams");
     $(this).attr("id", "btn-active-pills");
 
-    setTimeout(function(){
+    setTimeout(function () {
       $(".creams-info").removeAttr("id", "toggle").removeClass("slide-out");
       $(".pills-info").addClass("slide-in");
       $(".pills-info").attr("id", "toggle").addClass("slide-in");
 
-      setTime(function(){
+      setTime(function () {
         $(".pills-info").removeClass("slide-in");
       }, 550);
     }, 500);
   }
 });
 
-$(".btn-creams").on("click", function() {
-  if($(".pills-info").attr("id") === "toggle"){
+$(".btn-creams").on("click", function () {
+  if ($(".pills-info").attr("id") === "toggle") {
     $(".pills-info").addClass("slide-out");
     $(".pills-info").removeClass("slide-in");
-    $(".btn-pills").removeAttr("id", "btn-active-creams")
+    $(".btn-pills").removeAttr("id", "btn-active-creams");
     $(".btn-creams").attr("id", "btn-active-creams");
 
-  setTimeout(function(){
+    setTimeout(function () {
       $(".pills-info").removeAttr("id", "toggle").removeClass("slide-out");
       $(".creams-info").addClass("slide-in");
       $(".creams-info").attr("id", "toggle").addClass("slide-in");
 
-      setTime(function(){
+      setTime(function () {
         $(".creams-info").removeClass("slide-in");
       }, 550);
     }, 500);
   }
 });
+
+$(
+  ".hover-btn, .header-hover, .header-hover-background, .hover-btn-mobile"
+).hover(
+  function () {
+    $(".header-hover").attr("id", "active");
+    $(".header-hover-background").attr("id", "active");
+    $(".hover-btn").css("font-weight", "bold");
+    $(".hover-btn-mobile").css("display", "none");
+    $(".hover-btn-close").css("display", "block");
+  },
+  function () {
+    $(".header-hover").removeAttr("id", "active");
+    $(".header-hover-background").removeAttr("id", "active");
+    $(".hover-btn").css("font-weight", "400");
+    $(".hover-btn-mobile").css("display", "block");
+    $(".hover-btn-close").css("display", "none");
+  }
+);
+
+
+$(".bottles-container-slider").slick({
+  dots: false,
+  arrrow: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ] 
+})

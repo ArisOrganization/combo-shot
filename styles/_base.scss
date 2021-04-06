@@ -29,6 +29,20 @@ html {
     display: block;
   }
 
+  &.orange {
+    color: white;
+    background-color: #ef6620;
+    border-color: #ef6620;
+    transition: 0.25s;
+  }
+
+  &.pink {
+    color: white;
+    background-color: #e8a8b6;
+    border-color: #e8a8b6;
+    transition: 0.25s;
+  }
+
   &.green {
     color: white;
     background-color: #40a737;
@@ -62,7 +76,10 @@ html {
     transition: 0.25s;
   }
 }
-
+h2,
+h3{
+  color: #525252 !important;
+}
 .d-none {
   display: none !important;
 }
@@ -157,4 +174,12 @@ html {
       }
     }
   }
+}
+
+.slick-list {margin: 0 -60px;}
+.slick-slide>div {padding: 0 60px;}
+
+@media(max-width: 750px){
+  .slick-list {margin: 0 -5px;}
+  .slick-slide>div {padding: 0 5px;}
 }

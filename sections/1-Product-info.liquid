@@ -34,6 +34,9 @@ assign pack_img = image | img_url: 'original'-%} {% endif %} {% endfor %}
     <div class="content" id="info">
       <p class="content-title">{{ product.title }}</p>
       {{ product.description }}
+      <div class="direct-checkout-link">
+        <a href="#" class="theme-button">BUY NOW</a>
+      </div>
     </div>
     {% if product.metafields.global.ingredients %}
     <div class="content d-none" id="ingredients">
@@ -42,7 +45,6 @@ assign pack_img = image | img_url: 'original'-%} {% endif %} {% endfor %}
         {{ product.metafields.global.ingredients }}
       </div>
     </div>
-
     {% endif %}
   </div>
 </section>
